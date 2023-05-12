@@ -1,0 +1,12 @@
+.banner-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    justify-items: center;
+    align-content: center;
+    padding: 50px;
+}
+.banner-image{
+    border-radius: 10px;
+    width: 600px;
+    height: 400px;
+}
