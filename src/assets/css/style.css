@@ -1,3 +1,7 @@
+.body{
+    background: #f0f2f5;
+}
+
 .banner-wrapper{
     display: flex;
     justify-content: flex-start;
@@ -7,6 +11,83 @@
 }
 .banner-image{
     border-radius: 10px;
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 450px;
 }
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 40px;
+}
+.banner-content h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.banner-content span{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.banner-content a{
+    color: #fff !important;
+    background: #380186;
+    padding: 7.5px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.banner-content a:hover{
+    background: #602a97;
+}
+
+/**************** Blog card **************/
+.blog-list{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 40px 40px;
+}
+.blog-card{
+    width: 22rem;
+    height: 28rem;
+    background:#fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.blog-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+.blog-content{
+    padding: 20px;
+}
+.blog-content h2{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.blog-content p{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20p;
+}
+
+.blog-content span{
+    font-size: 14px;
+    background: #35a79c;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
