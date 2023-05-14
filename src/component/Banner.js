@@ -15,7 +15,9 @@ export default function Banner(){
                     </div>
                     <div className='banner-content'>
                         <h2>Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.</h2>
-                        <span>Nature - 13 May 2023</span>
+                        <div className='blog-info'>
+                            <p><span className="catagory catagory-nature">Nature</span> - 13 May 2023 12:00pm</p>
+                        </div>
                         <a>Keep reading...</a>
                     </div>
                 </div>

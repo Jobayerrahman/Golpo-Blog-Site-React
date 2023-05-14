@@ -70,24 +70,45 @@
 .blog-content{
     padding: 20px;
 }
-.blog-content h2{
+
+.blog-content .blog-shortline{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/************** Gobal CSS ******************/
+.blog-heading h2{
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
     margin-bottom: 20px;
 }
 
-.blog-content p{
+.blog-info p{
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 20p;
 }
 
-.blog-content span{
+/************** Catagory *******************/
+.catagory{
     font-size: 14px;
-    background: #35a79c;
     color: #fff;
     padding: 5px;
     border-radius: 5px;
 }
+.catagory-nature{
+    background: #008080;
+}
 
+.catagory-entertainment{
+    background: #ff4d00;
+}
+
+.catagory-history{
+    background: #65737e;
+}
+
+.catagory-health{
+    background: #008080;
+}
