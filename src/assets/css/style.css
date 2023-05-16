@@ -87,7 +87,13 @@
 .blog-info p{
     font-size: 14px;
     font-weight: 500;
-    margin-bottom: 20p;
+    margin-bottom: 20px;
+}
+
+.icon-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 /************** Catagory *******************/

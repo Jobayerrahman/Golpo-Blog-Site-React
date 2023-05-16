@@ -1,14 +1,14 @@
 import Container from 'react-bootstrap/Container';
 import Bannerposter from './Bannerposter';
-import Mainbannercontent from './Mainbannercontent';
+import Singlebannercontent from './Singlebannercontent';
 
-export default function Banner(){
+export default function Blogbanner(){
     return(
         <div>
             <Container>
                 <div className="banner-wrapper">
                     <Bannerposter/>
-                    <Mainbannercontent/>
+                    <Singlebannercontent/>
                 </div>
             </Container>
         </div>
