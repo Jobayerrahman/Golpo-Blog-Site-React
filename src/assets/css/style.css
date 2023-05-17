@@ -76,6 +76,18 @@
     font-weight: 400;
 }
 
+.blog-details{
+    padding: 40px 180px;
+}
+
+.blog-details p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px !important;
+    letter-spacing: .3px !important;
+    color: #222222;
+}
+
 /************** Gobal CSS ******************/
 .blog-heading h2{
     font-size: 20px;
