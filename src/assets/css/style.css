@@ -90,11 +90,26 @@
     margin-bottom: 20px;
 }
 
+/************** Icons ****************/
 .icon-wrapper{
     display: flex;
-    justify-content: center;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 10px 0px;
 }
+.icon{
+    margin: 0px 10px 0px 0px;
+    font-size: 30px;
+}
+.icon-facebook{
+    color: #3b5998;
+}
+.icon-youtube{
+    color: #c4302b;
+}
+.icon-twitter{
+    color: #00acee;
+}
+
 
 /************** Catagory *******************/
 .catagory{
