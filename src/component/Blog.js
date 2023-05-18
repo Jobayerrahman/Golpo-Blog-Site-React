@@ -1,7 +1,5 @@
 import Blogbanner from "./Blogbanner";
 import Relatedblog from "./Relatedblog";
-import Socialmediaicon from "./Socialmediaicon";
-import Catagorymenu from "./Catagorymenu";
 
 export default function Blog(){
     return(
