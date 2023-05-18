@@ -50,7 +50,7 @@
 .relatedblog-wrapper{
     border: 2px solid #d7d8df;
     padding: 30px;
-    margin: 20px 0px;
+    margin: 60px 0px;
 }
 .relatedblog-header{
     display: flex;
@@ -176,28 +176,46 @@
 
 
 /************** Catagory *******************/
+
+.catagory-menu-wrapper{
+    display: flex;
+    justify-content: start;
+    margin: 30px 0px;
+}
+
+.catagory-menu-wrapper h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.catagories{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .catagory{
     font-size: 14px;
     color: #fff;
     padding: 5px;
     border-radius: 5px;
+    height: 30px;
 }
 .catagory-nature{
-    background: #008080;
+    background: #25b1b1;
 }
 
 .catagory-technology{
-    background: #0000ff;
+    background: #3545ffe8;
 }
 
 .catagory-entertainment{
-    background: #ff4d00;
+    background: #ff4444;
 }
 
 .catagory-history{
-    background: #65737e;
+    background: #7f8b94;
 }
 
 .catagory-health{
-    background: #008080;
+    background: #07854a;
 }
