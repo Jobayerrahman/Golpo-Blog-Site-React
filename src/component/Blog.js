@@ -3,6 +3,7 @@ import Relatedblog from "./Relatedblog";
 import Catagorymenu from "./Catagorymenu";
 import Socialmediaicon from "./Socialmediaicon";
 import Commentform from "./Commentform";
+import Comment from "./Comment";
 
 export default function Blog(){
     return(
@@ -17,6 +18,7 @@ export default function Blog(){
                 <Catagorymenu/>
                 <Socialmediaicon/>
             </div>
+            <Comment/>
             <Commentform/>
             <Relatedblog/>
         </div>
