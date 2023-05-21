@@ -219,3 +219,19 @@
 .catagory-health{
     background: #07854a;
 }
+
+
+/*************** Comment ******************/
+.commentform-wrapper{
+    padding: 0px 80px;
+    margin: 80px 0px;
+}
+
+.comment-form{
+    padding: 40px 80px;
+}
+
+.form-control{
+    background-color: #f0f2f5;
+    height: 40px;
+}
