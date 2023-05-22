@@ -177,6 +177,36 @@
 
 /************** Catagory *******************/
 
+.catagory-wrapper{
+    margin: 40px 0px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.catagory-card{
+    width: 20rem;
+    height: 12em;
+    margin: 10px;
+}
+
+.card-focus{
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    width: 35rem;
+    height: 20rem;
+}
+
+.catagory-image{
+    width: 100%;
+}
+
+.catagory-content{
+    margin-top: -50px;
+    padding: 0px 20px;
+}
+
 .catagory-menu-wrapper{
     display: flex;
     justify-content: start;
@@ -200,6 +230,11 @@
     border-radius: 5px;
     height: 30px;
 }
+
+.catagory-common{
+    background: #4c4747;
+}
+
 .catagory-nature{
     background: #25b1b1;
 }

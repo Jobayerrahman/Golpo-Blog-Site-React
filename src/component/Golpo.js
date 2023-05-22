@@ -1,13 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Banner from "./Banner";
-import Blogbanner from "./Blogbanner";
-import Blog from "./Blog";
+import Blogs from "./Blogs"
+import Catagories from './Catagories';
 
 export default function Golpo(){
     return(
         <div className="body">
             <Container>
-                <Blog/>
+                <Banner/>
+                <Blogs/>
+                <Catagories/>
             </Container>
         </div>
     ); 
