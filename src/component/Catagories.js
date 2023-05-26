@@ -13,7 +13,31 @@ export default function Catagories(){
                     />
                 </div>
                 <div className="catagory-content">
-                    <span className="catagory catagory-common">Nature</span>
+                    <span className="catagory catagory-common">History</span>
+                </div>
+            </div>
+            <div className="catagory-card">
+                <div className="catagory-poster">
+                    <img
+                    className="catagory-image"
+                    src={technology}
+                    alt="Updating Blog" 
+                    />
+                </div>
+                <div className="catagory-content">
+                    <span className="catagory catagory-common">Technology</span>
+                </div>
+            </div>
+            <div className="catagory-card">
+                <div className="catagory-poster">
+                    <img
+                    className="catagory-image"
+                    src={health}
+                    alt="Updating Blog" 
+                    />
+                </div>
+                <div className="catagory-content">
+                    <span className="catagory catagory-common">Health</span>
                 </div>
             </div>
             <div className="catagory-card">
@@ -28,7 +52,7 @@ export default function Catagories(){
                     <span className="catagory catagory-common">Nature</span>
                 </div>
             </div>
-            <div className="catagory-card">
+            <div className="catagory-card end-card">
                 <div className="catagory-poster">
                     <img
                     className="catagory-image"
@@ -37,31 +61,7 @@ export default function Catagories(){
                     />
                 </div>
                 <div className="catagory-content">
-                    <span className="catagory catagory-common">Nature</span>
-                </div>
-            </div>
-            <div className="catagory-card">
-                <div className="catagory-poster">
-                    <img
-                    className="catagory-image"
-                    src={natureimage}
-                    alt="Updating Blog" 
-                    />
-                </div>
-                <div className="catagory-content">
-                    <span className="catagory catagory-common">Nature</span>
-                </div>
-            </div>
-            <div className="catagory-card">
-                <div className="catagory-poster">
-                    <img
-                    className="catagory-image"
-                    src={natureimage}
-                    alt="Updating Blog" 
-                    />
-                </div>
-                <div className="catagory-content">
-                    <span className="catagory catagory-common">Nature</span>
+                    <span className="catagory catagory-common">Entertainment</span>
                 </div>
             </div>
         </div>
