@@ -173,6 +173,9 @@
 .icon-twitter{
     color: #00acee;
 }
+.icon-drive{
+    color: #fcd10f;
+}
 
 
 /************** Catagory *******************/
@@ -325,7 +328,7 @@
 
 /************ Footer ************/
 .footer-wrapper{
-    background: #3f76eb;
+    background: #114cc9;
     width: 100%;
     height: 300px;
 }
