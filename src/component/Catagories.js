@@ -20,7 +20,7 @@ export default function Catagories(){
                 <div className="catagory-poster">
                     <img
                     className="catagory-image"
-                    src={technology}
+                    src={histiryimage}
                     alt="Updating Blog" 
                     />
                 </div>
@@ -32,7 +32,7 @@ export default function Catagories(){
                 <div className="catagory-poster">
                     <img
                     className="catagory-image"
-                    src={health}
+                    src={histiryimage}
                     alt="Updating Blog" 
                     />
                 </div>
