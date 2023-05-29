@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import Blogs from "./Blogs"
 import Blog from "./Blog"
 import Catagories from './Catagories';
+import Footer from './Footer';
 
 export default function Golpo(){
     return(
@@ -13,6 +14,7 @@ export default function Golpo(){
                 <Catagories/> */}
                 <Blog/>
             </Container>
+            <Footer/>
         </div>
     ); 
 }
