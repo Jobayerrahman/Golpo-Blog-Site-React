@@ -1,12 +1,14 @@
+import withHover from "./Hoc/withHover";
 import bannerimage from "../assets/images/mocha.webp";
-export default function Relatedblog(){
+
+const Relatedblog = ({relatedBlogCard,onHover,onWithoutHover}) =>{
     return(
         <div className="relatedblog-wrapper">
             <div className="relatedblog-header">
                 <h3>You May Like Those</h3>
             </div>
             <div className="relatedblog-cards">
-                <div className="relatedblog-card">
+                <div onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={relatedBlogCard}>
                     <div className="relatedblog-poster">
                         <img
                             className=""
@@ -18,7 +20,7 @@ export default function Relatedblog(){
                         <h2>Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.</h2>
                     </div>
                 </div>
-                <div className="relatedblog-card">
+                <div onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={relatedBlogCard}>
                     <div className="relatedblog-poster">
                         <img
                             className=""
@@ -30,7 +32,7 @@ export default function Relatedblog(){
                         <h2>Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.</h2>
                     </div>
                 </div>
-                <div className="relatedblog-card">
+                <div onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={relatedBlogCard}>
                     <div className="relatedblog-poster">
                         <img
                             className=""
@@ -46,3 +48,5 @@ export default function Relatedblog(){
         </div>
     )
 }
+
+export default withHover(Relatedblog);
