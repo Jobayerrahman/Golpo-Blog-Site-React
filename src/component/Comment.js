@@ -1,11 +1,11 @@
-import Singlecomment from "./Singlecomment";
+import SingleCommentComponent from "./SingleCommentComponent";
 
 export default function Comment(){
     return(
         <div className="comment-wrapper">
-            <Singlecomment/>
-            <Singlecomment/>
-            <Singlecomment/>
+            <SingleCommentComponent/>
+            <SingleCommentComponent/>
+            <SingleCommentComponent/>
         </div>
     )
 }

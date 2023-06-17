@@ -347,6 +347,7 @@
 
 .footer-header{
     padding: 40px;
+    width: 400px;
 }
 
 .footer-header h2{
@@ -358,4 +359,52 @@
 .footer-header p{
     font-size: 14px;
     color: #fff;
+}
+
+.footer-navbar{
+    padding: 40px 10px;
+    height: 100%;
+    width: 200px;
+}
+
+.footer-navbar h2{
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer-navbar ul{
+    padding: 0px;
+}
+
+.footer-navbar ul>li{
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer-catagory{
+    padding: 40px 10px;
+    height: 100%;
+    width: 200px;
+}
+
+.footer-catagory h2{
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer-catagory ul{
+    padding: 0px;
+}
+
+.footer-catagory ul>li{
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
 }
