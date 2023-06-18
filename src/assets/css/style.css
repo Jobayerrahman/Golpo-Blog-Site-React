@@ -357,7 +357,7 @@
 }
 
 .footer-header p{
-    font-size: 14px;
+    font-size: 15px;
     color: #fff;
 }
 
@@ -407,4 +407,47 @@
     color: #fff;
     text-decoration: none;
     list-style: none;
+}
+
+.footer-newsletter{
+    padding: 40px 10px;
+    height: 100%;
+    width: 400px;
+}
+
+.footer-newsletter h4{
+    font-size: 16px;
+    font-weight: 400;
+    color: #dddddd;
+}
+
+.newsletter{
+    display: flex;
+    background: #f8f9fa;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.newsletter-input{
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.newsletter input:focus {
+    outline: none !important;
+  }
+
+.newsletter-button{
+    border: none;
+    border-radius: 10px;
+    background: #114cc9;
+    color: #fff;
+}
+
+.newsletter-button:hover{
+    background: #3267da;
 }
