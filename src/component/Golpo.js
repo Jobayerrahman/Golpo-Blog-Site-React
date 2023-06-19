@@ -4,10 +4,12 @@ import Blogs from "./Blogs"
 import Blog from "./Blog"
 import Catagories from './Catagories';
 import Footer from './Footer';
+import Navigation from './Navigation';
 
 export default function Golpo(){
     return(
         <div className="body">
+            <Navigation/>
             <Container>
                 {/* <Banner/>
                 <Blogs/>

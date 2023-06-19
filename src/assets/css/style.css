@@ -2,6 +2,43 @@
     background: #f0f2f5;
 }
 
+/****** Navigation CSS *******/
+.navigation-container{
+    padding: 10px;
+    border-radius: 10px;
+    background: #dc354563;
+}
+.navigation-header{
+    font-size: 32px;
+    color: #3267da;
+    font-weight: 700;
+}
+
+.navigation-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.navigation-link{
+    color: #161616;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navigation-link:hover{
+    color: #3267da;
+}
+
+.navbar-collapse{
+    justify-content: space-between !important;
+}
+
+.navigation-menu{
+    width: 100%;
+}
+
 .banner-wrapper{
     display: flex;
     justify-content: flex-start;
