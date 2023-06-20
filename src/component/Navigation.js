@@ -13,7 +13,7 @@ export default function Navigation(){
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="navigation-menu">
-                            <Nav.Link className='navigation-link'>Home</Nav.Link>
+                            <NavLink aria-current="page" to="/"><Nav.Link className='navigation-link'>Home</Nav.Link></NavLink>
                             <NavDropdown title="Catagories" className='navigation-link' id="basic-nav-dropdown">
                                 <NavDropdown.Item className='navigation-link' >History</NavDropdown.Item>
                                 <NavDropdown.Item className='navigation-link' >Nature</NavDropdown.Item>
