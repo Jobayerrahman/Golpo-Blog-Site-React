@@ -3,14 +3,13 @@
 }
 
 /****** Navigation CSS *******/
-.navigation-container{
-    padding: 10px;
-    border-radius: 10px;
-    background: #dc354563;
+.navigation-wrapper{
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
 .navigation-header{
     font-size: 32px;
-    color: #3267da;
+    color: #1d4b8f;
     font-weight: 700;
 }
 
@@ -25,10 +24,11 @@
     color: #161616;
     font-size: 16px;
     font-weight: 500;
+    text-decoration: none;
 }
 
 .navigation-link:hover{
-    color: #3267da;
+    color: #1d4b8f;
 }
 
 .navbar-collapse{
@@ -72,7 +72,7 @@
 }
 .banner-content a{
     color: #fff !important;
-    background: #380186;
+    background: #1d4b8f;
     padding: 7.5px;
     width: 200px;
     text-align: center;
@@ -80,7 +80,7 @@
 }
 
 .banner-content a:hover{
-    background: #602a97;
+    background: #2b5ca5;
 }
 
 /*********** Related Blogs ****************/
@@ -195,7 +195,7 @@
 .blog-info p{
     font-size: 14px;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /************** Icons ****************/
@@ -372,7 +372,7 @@
 
 /************ Footer ************/
 .footer-wrapper{
-    background: #114cc9;
+    background: #1d4b8f;
     width: 100%;
     height: 300px;
 }
@@ -481,10 +481,10 @@
 .newsletter-button{
     border: none;
     border-radius: 10px;
-    background: #114cc9;
+    background: #1d4b8f;
     color: #fff;
 }
 
 .newsletter-button:hover{
-    background: #3267da;
+    background: #2b5ca5;
 }
