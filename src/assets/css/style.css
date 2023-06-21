@@ -117,12 +117,6 @@
     border-radius: 10px;
 }
 
-.relatedblog-card-hover{
-    width: 20rem;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-}
 .relatedblog-poster img{
     width: 100%;
     border-radius: 10px 10px 0px 0px;
@@ -487,4 +481,10 @@
 
 .newsletter-button:hover{
     background: #2b5ca5;
+}
+
+
+/********** Box Shadow For Hover *************/
+.onHover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }

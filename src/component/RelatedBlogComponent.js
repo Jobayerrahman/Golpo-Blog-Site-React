@@ -1,9 +1,9 @@
 import withHover from "./Hoc/withHover";
 import bannerimage from "../assets/images/mocha.webp";
 
-const RelatedBlogComponent = ({relatedBlogCard,onHover,onWithoutHover}) =>{
+const RelatedBlogComponent = ({hoverEffect,onHover,onWithoutHover,isHover}) =>{
     return(
-        <div onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={relatedBlogCard}>
+        <div onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={isHover ? 'relatedblog-card '+hoverEffect : 'relatedblog-card'}>
             <div className="relatedblog-poster">
                 <img
                     className=""

@@ -3,22 +3,24 @@ import React from 'react'
 const withHover =(OriginalComponent) =>{
     class NewComponent extends React.Component{
         state = {
-            relatedBlogCard : ""
+            hoverEffect : "",
+            isHover         : ""
         };
 
         onHover = () =>{
-            this.setState({relatedBlogCard:"relatedblog-card-hover"})
+            this.setState({hoverEffect:"onHover",isHover: true})
         }
 
         onWithoutHover = () =>{
-            this.setState({relatedBlogCard:"relatedblog-card"})
+            this.setState({hoverEffect:"", isHover: false})
         }
 
         render(){
-            const {relatedBlogCard} = this.state;
+            const {hoverEffect,isHover} = this.state;
             return <OriginalComponent
-                        relatedBlogCard={relatedBlogCard}
+                        hoverEffect={hoverEffect}
                         onHover={this.onHover}
+                        isHover={isHover}
                         onWithoutHover={this.onWithoutHover}
                     />
         }
