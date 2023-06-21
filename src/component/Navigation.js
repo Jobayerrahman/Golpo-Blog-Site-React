@@ -14,13 +14,13 @@ export default function Navigation(){
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="navigation-menu">
-                                <NavLink aria-current="page" to="/" className='navigation-link'><Nav.Link>Home</Nav.Link></NavLink>
+                                <Nav.Link><NavLink aria-current="page" to="/" className='navigation-link'>Home</NavLink></Nav.Link>
                                 <NavDropdown title="Catagories" className='navigation-link' id="basic-nav-dropdown">
-                                    <NavDropdown.Item className='navigation-link' >History</NavDropdown.Item>
-                                    <NavDropdown.Item className='navigation-link' >Nature</NavDropdown.Item>
-                                    <NavDropdown.Item className='navigation-link' >Technology</NavDropdown.Item>
-                                    <NavDropdown.Item className='navigation-link' >Health</NavDropdown.Item>
-                                    <NavDropdown.Item className='navigation-link' >Entertainment</NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink className='navigation-link'  to="/Catagory">History</NavLink></NavDropdown.Item>
+                                    <NavLink  to="/Catagory" className='navigation-link'><NavDropdown.Item>Nature</NavDropdown.Item></NavLink>
+                                    <NavLink  to="/Catagory" className='navigation-link'><NavDropdown.Item>Technology</NavDropdown.Item></NavLink>
+                                    <NavLink  to="/Catagory" className='navigation-link'><NavDropdown.Item>Health</NavDropdown.Item></NavLink>
+                                    <NavLink  to="/Catagory" className='navigation-link'><NavDropdown.Item>Entertainment</NavDropdown.Item></NavLink>
                                 </NavDropdown>
                                 <Nav.Link className='navigation-link' >About</Nav.Link>
                                 <Nav.Link className='navigation-link' >Contact</Nav.Link>
