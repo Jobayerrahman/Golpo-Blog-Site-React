@@ -1,8 +1,9 @@
+import withHover from "./Hoc/withHover";
 import bannerimage from "../assets/images/mocha.webp";
 
-export default function Blogcard(){
+const Blogcard =({hoverEffect,onHover,onWithoutHover,isHover}) =>{
     return(
-        <div className="blog-card">
+        <div onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={isHover ? 'blog-card '+hoverEffect : 'blog-card'}>
             <div className="blog-poster">
                 <img
                     className="blog-image"
@@ -23,3 +24,5 @@ export default function Blogcard(){
         </div>
     )
 }
+
+export default withHover(Blogcard);
