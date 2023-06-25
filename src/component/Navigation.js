@@ -10,17 +10,17 @@ export default function Navigation(){
             <div className='navigation-wrapper'>
                 <Navbar expand="lg" className="bg-body-tertiary">
                     <Container>
-                        <div className='navigation-header'>Golpo</div>
+                        <div><NavLink className='navigation-header' aria-current="page" to="/" >Golpo</NavLink></div>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="navigation-menu">
                                 <Nav.Link><NavLink aria-current="page" to="/" className='navigation-link'>Home</NavLink></Nav.Link>
                                 <NavDropdown title="Catagories" className='navigation-link' id="basic-nav-dropdown">
-                                    <NavDropdown.Item><NavLink className='navigation-link'  to="/Catagory">History</NavLink></NavDropdown.Item>
-                                    <NavLink  to="/Catagory" className='navigation-link'><NavDropdown.Item>Nature</NavDropdown.Item></NavLink>
-                                    <NavLink  to="/Catagory" className='navigation-link'><NavDropdown.Item>Technology</NavDropdown.Item></NavLink>
-                                    <NavLink  to="/Catagory" className='navigation-link'><NavDropdown.Item>Health</NavDropdown.Item></NavLink>
-                                    <NavLink  to="/Catagory" className='navigation-link'><NavDropdown.Item>Entertainment</NavDropdown.Item></NavLink>
+                                    <NavDropdown.Item><NavLink className='navigation-link'  to="/History">History</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink  to="/Nature" className='navigation-link'>Nature</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink  to="/Technology" className='navigation-link'>Technology</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink  to="/Health" className='navigation-link'>Health</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink  to="/Entertainment" className='navigation-link'>Entertainment</NavLink></NavDropdown.Item>
                                 </NavDropdown>
                                 <Nav.Link className='navigation-link' >About</Nav.Link>
                                 <Nav.Link className='navigation-link' >Contact</Nav.Link>

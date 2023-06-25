@@ -11,9 +11,10 @@ export default function AppRouter(){
                 <Route exact path="/" Component={Homepage}></Route>
                 {/* <Route exact path="/About" Component={Aboutpage}></Route> */}
                 {/* <Route exact path="/Contact" Component={Contactpage}></Route> */}
-                <Route exact path="/Catagory" Component={Catagorypage}></Route>
+                <Route exact path="/:id" Component={Catagorypage} catagory={':id'}></Route>
                 <Route exact path="/Blog" Component={Blogpage}></Route>
             </Routes>
         </>
     );
 }
+  
