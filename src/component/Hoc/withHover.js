@@ -1,6 +1,6 @@
 import React from 'react'
 
-const withHover =(OriginalComponent) =>{
+const withHover =(OriginalComponent) => (props)=>{
     class NewComponent extends React.Component{
         state = {
             hoverEffect : "",
@@ -18,6 +18,7 @@ const withHover =(OriginalComponent) =>{
         render(){
             const {hoverEffect,isHover} = this.state;
             return <OriginalComponent
+                        cetagory = {props.cetagory}
                         hoverEffect={hoverEffect}
                         onHover={this.onHover}
                         isHover={isHover}
@@ -27,7 +28,7 @@ const withHover =(OriginalComponent) =>{
 
     }
 
-    return NewComponent;
+    return <NewComponent {...props}/>;
 }
 
 export default withHover;

@@ -1,11 +1,11 @@
 import Banner from "../component/Banner";
-import Blogs from "../component/Blogs"
+import BlogList from "../component/BlogList"
 import Catagories from '../component/Catagories';
 export default function Homepage(){
     return(
         <div>
             <Banner/>
-            <Blogs/>
+            <BlogList/>
             <Catagories/>
         </div>
     )
