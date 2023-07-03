@@ -1,5 +1,6 @@
 import Banner from "../component/Banner";
-import BlogList from "../component/BlogList"
+import BlogList from "../component/BlogList";
+import Blogcard from "../component/Blogcard";
 import { useParams } from 'react-router';
 
 export default function Cetagorypage(){
@@ -7,7 +8,13 @@ export default function Cetagorypage(){
     return(
         <div>
             <Banner/>
-            <BlogList cetagory={cetagory}/>
+            <BlogList>
+                <Blogcard cetagory={cetagory}/>
+                <Blogcard cetagory={cetagory}/>
+                <Blogcard cetagory={cetagory}/>
+                <Blogcard cetagory={cetagory}/>
+                <Blogcard cetagory={cetagory}/>
+            </BlogList>
         </div>
     );
 }

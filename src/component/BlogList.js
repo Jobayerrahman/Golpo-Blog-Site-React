@@ -1,15 +1,10 @@
 import { Container } from "react-bootstrap";
-import Blogcard from "./Blogcard";
 
-export default function BlogList({cetagory=null}){
-    console.log(cetagory)
+export default function BlogList({children}){
     return(
         <Container>
             <div className="blog-list">
-                <Blogcard cetagory={cetagory}/>
-                <Blogcard cetagory={cetagory}/>
-                <Blogcard cetagory={cetagory}/>
-                <Blogcard cetagory={cetagory}/>
+                {children}
             </div>
         </Container>
     )
