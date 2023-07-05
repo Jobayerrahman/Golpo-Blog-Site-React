@@ -1,7 +1,7 @@
-import Banner from "../component/Banner";
-import BlogList from "../component/BlogList"
-import Catagories from '../component/Catagories';
-import Blogcard from "../component/Blogcard";
+import Banner from "../component/Banner/Banner";
+import BlogList from "../component/Blog/BlogList"
+import Catagories from '../component/Cetagory/Catagories';
+import Blogcard from "../component/Blog/Blogcard";
 export default function Homepage(){
     const cetagory = "Nature";
     return(

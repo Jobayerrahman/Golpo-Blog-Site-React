@@ -1,6 +1,6 @@
-import natureimage from "../assets/images/mocha.webp";
-import histiryimage from "../assets/images/history.jpg"
-import entertainment from "../assets/images/entertainment.png"
+import natureimage from "../../assets/images/mocha.webp";
+import histiryimage from "../../assets/images/history.jpg"
+import entertainment from "../../assets/images/entertainment.png"
 export default function Catagories(){
     return(
         <div className="catagory-wrapper">

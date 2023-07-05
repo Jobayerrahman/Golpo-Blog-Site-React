@@ -1,4 +1,4 @@
-import bannerimage from "../assets/images/mocha.webp";
+import bannerimage from "../../assets/images/mocha.webp";
 
 export default function Bannerposter(){
     return(

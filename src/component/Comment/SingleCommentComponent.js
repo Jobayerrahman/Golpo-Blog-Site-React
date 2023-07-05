@@ -1,5 +1,5 @@
-import withHover from "./Hoc/withHover";
-import bannerimage from "../assets/images/mocha.webp";
+import withHover from "../Hoc/withHover";
+import bannerimage from "../../assets/images/mocha.webp";
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment } from '@fortawesome/free-solid-svg-icons'

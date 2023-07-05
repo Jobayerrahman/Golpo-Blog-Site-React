@@ -1,5 +1,5 @@
-import withHover from "./Hoc/withHover";
-import bannerimage from "../assets/images/mocha.webp";
+import withHover from "../Hoc/withHover";
+import bannerimage from "../../assets/images/mocha.webp";
 
 const Blogcard =({hoverEffect,onHover,onWithoutHover,isHover,cetagory}) =>{
     return(

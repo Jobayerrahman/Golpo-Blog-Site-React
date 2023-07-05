@@ -1,4 +1,4 @@
-import Blog from "../component/Blog"
+import Blog from "../component/Blog/Blog"
 
 export default function Blogpage(){
    return(

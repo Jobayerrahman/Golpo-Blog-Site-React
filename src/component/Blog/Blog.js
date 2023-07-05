@@ -1,9 +1,9 @@
-import Blogbanner from "./Blogbanner";
+import Blogbanner from "../Banner/Blogbanner";
 import Relatedblog from "./Relatedblog";
-import Catagorymenu from "./Catagorymenu";
-import Socialmediaicon from "./Socialmediaicon";
-import Commentform from "./Commentform";
-import Comment from "./Comment";
+import Catagorymenu from "../Cetagory/Catagorymenu";
+import Socialmediaicon from "../Socialmediaicon";
+import Commentform from "../Comment/Commentform";
+import Comment from "../Comment/Comment";
 
 export default function Blog(){
     return(
