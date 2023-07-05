@@ -1,6 +1,6 @@
-import Banner from "../component/Banner/Banner";
-import BlogList from "../component/Blog/BlogList";
-import Blogcard from "../component/Blog/Blogcard";
+import Banner from "../components/Banner/Banner";
+import BlogList from "../components/Blog/BlogList";
+import Blogcard from "../components/Blog/Blogcard";
 import { useParams } from 'react-router';
 
 export default function Cetagorypage(){

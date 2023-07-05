@@ -1,6 +1,6 @@
 import '../src/assets/css/bootstrap.min.css'
 import '../src/assets/css/style.css'
-import Golpo from "./component/Golpo";
+import Golpo from "./components/Golpo";
 function App() {
   return (
     <div className="App">

@@ -1,4 +1,4 @@
-import Socialmediaicon from "../Socialmediaicon";
+import Socialmediaicon from "../Socialmedia/Socialmediaicon";
 
 export default function Singlebannercontent(){
     return(

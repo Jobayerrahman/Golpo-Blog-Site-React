@@ -1,7 +1,7 @@
 import Blogbanner from "../Banner/Blogbanner";
 import Relatedblog from "./Relatedblog";
 import Catagorymenu from "../Cetagory/Catagorymenu";
-import Socialmediaicon from "../Socialmediaicon";
+import Socialmediaicon from "../Socialmedia/Socialmediaicon";
 import Commentform from "../Comment/Commentform";
 import Comment from "../Comment/Comment";
 
