@@ -31,7 +31,7 @@ export default function Banner({banner}){
                     <Cetagory cetagory={cetagory}/>
                     <p> - 13 May 2023 12:00pm</p>
                 </div>
-                <div className={displayX}>
+                <div className={'mt-3 '+displayX}>
                     <a>Read more...</a>
                 </div>
                 <div className={displayY}>
