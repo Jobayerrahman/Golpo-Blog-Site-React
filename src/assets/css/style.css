@@ -187,10 +187,15 @@
     margin-bottom: 20px;
 }
 
+.blog-info{
+    display: flex;
+    margin: 10px 0px;
+}
+
 .blog-info p{
     font-size: 14px;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin: 5px 0px; 
 }
 
 /************** Icons ****************/
@@ -281,29 +286,30 @@
     padding: 5px;
     border-radius: 5px;
     height: 30px;
+    margin-right: 5px;
 }
 
 .catagory-common{
     background: #4c4747;
 }
 
-.catagory-nature{
+.catagory-Nature{
     background: #25b1b1;
 }
 
-.catagory-technology{
+.catagory-Technology{
     background: #3545ffe8;
 }
 
-.catagory-entertainment{
+.catagory-Entertainment{
     background: #ff4444;
 }
 
-.catagory-history{
+.catagory-History{
     background: #7f8b94;
 }
 
-.catagory-health{
+.catagory-Health{
     background: #07854a;
 }
 

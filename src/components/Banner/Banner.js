@@ -1,11 +1,12 @@
 import { useState,useEffect } from "react";
 import bannerimage from "../../assets/images/mocha.webp";
 import Socialmediaicon from "../Socialmedia/Socialmediaicon";
+import Cetagory from "../Cetagory/Cetagory";
 
 export default function Banner({banner}){
     const [displayX,setDisplayX] = useState("nodisplay"); 
     const [displayY,setDisplayY] = useState("nodisplay"); 
-
+    const cetagory               = "History"
     useEffect(() => {
         if(banner === "HomeBanner"){
             setDisplayX("display");
@@ -27,7 +28,8 @@ export default function Banner({banner}){
             <div className='banner-content'>
                 <h2>Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.</h2>
                 <div className='blog-info'>
-                    <p><span className="catagory catagory-nature">Nature</span> - 13 May 2023 12:00pm</p>
+                    <Cetagory cetagory={cetagory}/>
+                    <p> - 13 May 2023 12:00pm</p>
                 </div>
                 <div className={displayX}>
                     <a>Read more...</a>
