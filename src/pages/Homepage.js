@@ -3,6 +3,7 @@ import BlogList from "../components/Blog/BlogList"
 import Catagories from '../components/Cetagory/Catagories';
 import Blogcard from "../components/Blog/Blogcard";
 import {blogs} from "../Data/Data";
+import YoutubeBanner from "../components/Banner/YoutubeBanner";
 export default function Homepage(){
     const homebanner    = "HomeBanner";
     const bloglist      = blogs.map(blog => 
@@ -15,6 +16,7 @@ export default function Homepage(){
                 {bloglist}
             </BlogList>
             <Catagories/>
+            <YoutubeBanner/>
         </div>
     )
 }

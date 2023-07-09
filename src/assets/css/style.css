@@ -85,6 +85,35 @@
     background: #2b5ca5;
 }
 
+/*********** YoutubeBanner ****************/
+.youtubeBanner-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    justify-items: center;
+    align-content: center;
+    padding: 50px;
+}
+
+.youtubeBanner-content{
+    padding: 60px 0px;
+}
+
+.youtubeBanner-wrapper h2{
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.youtubeBanner-wrapper a{
+    color: #fff !important;
+    background: #e00e18;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
 /*********** Related Blogs ****************/
 .relatedblog-wrapper{
     border: 2px solid #d7d8df;
