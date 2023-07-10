@@ -8,8 +8,9 @@ import Blogcarousel from "../components/Blog/Blogcarousel";
 export default function Homepage(){
     const homebanner    = "HomeBanner";
     const bloglist      = blogs.map(blog => 
-        <Blogcard title={blog.title} cetagory={blog.cetagory} date={blog.date} time={blog.time} image={blog.image}/>
-    );
+        // <Blogcard title={blog.title} cetagory={blog.cetagory} date={blog.date} time={blog.time} image={blog.image}/>
+        <Blogcard {...blog}/>
+        );
     return(
         <div>
             <Banner banner={homebanner}/>

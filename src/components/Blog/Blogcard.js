@@ -1,7 +1,7 @@
 import withHover from "../Hoc/withHover";
 import Cetagory from "../Cetagory/Cetagory";
 
-const Blogcard =({hoverEffect,onHover,onWithoutHover,isHover,cetagory,title,date,time,image}) =>{
+const Blogcard =({hoverEffect,onHover,onWithoutHover,isHover,cetagory,title,date,time,image,describe}) =>{
     return(
         <div onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={isHover ? 'blog-card '+hoverEffect : 'blog-card'}>
             <div className="blog-poster">
@@ -18,8 +18,7 @@ const Blogcard =({hoverEffect,onHover,onWithoutHover,isHover,cetagory,title,date
                 <div className="blog-info">
                     <Cetagory cetagory={cetagory}/> <p> - {date} {time}</p>
                 </div>
-                <p className="blog-shortline">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                <p className="blog-shortline">{describe}</p>
             </div>
         </div>
     )
