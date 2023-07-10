@@ -5,6 +5,7 @@ import Blogcard from "../components/Blog/Blogcard";
 import {blogs} from "../Data/Data";
 import YoutubeBanner from "../components/Banner/YoutubeBanner";
 import Blogcarousel from "../components/Blog/Blogcarousel";
+import Container from 'react-bootstrap/Container';
 export default function Homepage(){
     const homebanner    = "HomeBanner";
     const bloglist      = blogs.map(blog => 
@@ -13,12 +14,14 @@ export default function Homepage(){
         );
     return(
         <div>
-            <Banner banner={homebanner}/>
-            <BlogList>
-                {bloglist}
-            </BlogList>
-            <Catagories/>
-            <YoutubeBanner/>
+            <Container>
+                <Banner banner={homebanner}/>
+                <BlogList>
+                    {bloglist}
+                </BlogList>
+                <Catagories/>
+                <YoutubeBanner/>
+            </Container>
             <Blogcarousel>
                 {bloglist}
             </Blogcarousel>
