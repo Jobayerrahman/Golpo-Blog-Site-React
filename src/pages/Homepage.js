@@ -4,6 +4,7 @@ import Catagories from '../components/Cetagory/Catagories';
 import Blogcard from "../components/Blog/Blogcard";
 import {blogs} from "../Data/Data";
 import YoutubeBanner from "../components/Banner/YoutubeBanner";
+import Blogcarousel from "../components/Blog/Blogcarousel";
 export default function Homepage(){
     const homebanner    = "HomeBanner";
     const bloglist      = blogs.map(blog => 
@@ -17,6 +18,9 @@ export default function Homepage(){
             </BlogList>
             <Catagories/>
             <YoutubeBanner/>
+            <Blogcarousel>
+                {bloglist}
+            </Blogcarousel>
         </div>
     )
 }
