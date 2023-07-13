@@ -522,6 +522,15 @@
 }
 
 
+/********** AdSpace Component design *********/
+.adSpace-wrapper{
+    height: 150px;
+    border-radius: 10px;
+    background: #fff;
+    margin: 40px 40px;
+}
+
+
 /********** Box Shadow For Hover *************/
 .onHover{
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);

@@ -6,6 +6,7 @@ import {blogs} from "../Data/Data";
 import YoutubeBanner from "../components/Banner/YoutubeBanner";
 import Blogcarousel from "../components/Blog/Blogcarousel";
 import Container from 'react-bootstrap/Container';
+import AdSpace from "../components/AdSpace/AdSpace";
 export default function Homepage(){
     const homebanner    = "HomeBanner";
     const bloglist      = blogs.map(blog => 
@@ -18,8 +19,11 @@ export default function Homepage(){
                 <BlogList>
                     {bloglist}
                 </BlogList>
+                <AdSpace/>
                 <Catagories/>
+                <AdSpace/>
                 <YoutubeBanner/>
+                <AdSpace/>
             </Container>
             <Blogcarousel>
                 {bloglist}
