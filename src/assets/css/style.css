@@ -275,6 +275,10 @@
     height: 35rem;
 }
 
+.slider-item-wrapper{
+    height: 100%;
+}
+
 .catagory-poster{
     height: 100%;
 }
@@ -542,4 +546,28 @@
 
 .display{
     display: block;
+}
+
+
+
+
+
+/************** React slick slider *************/
+.slick-slider{
+    height: 100% !important;
+}
+.slick-slide div{
+    height: 100% !important;
+}
+.slick-list{
+    height: 100% !important;
+}
+.slick-track{
+    height: 100% !important;
+}
+.slick-arrow{
+    display: none !important;
+}
+.slick-dots{
+    bottom: 20px !important;
 }
