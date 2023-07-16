@@ -79,6 +79,7 @@
     text-align: center;
     border-radius: 5px;
     margin: 10px 0px;
+    text-decoration: none;
 }
 
 .banner-content a:hover{
@@ -210,6 +211,10 @@
 }
 
 /************** Gobal CSS ******************/
+.blog-heading{
+    text-decoration: none;
+    color: #161616;
+}
 .blog-heading h2{
     font-size: 20px;
     font-weight: 700;
@@ -322,6 +327,11 @@
     border-radius: 5px;
     height: 30px;
     margin-right: 5px;
+    text-decoration: none;
+}
+
+.catagory:hover{
+    color: #fff;
 }
 
 .catagory-common{
@@ -570,4 +580,14 @@
 }
 .slick-dots{
     bottom: 20px !important;
+}
+
+
+
+.owl-nav{
+    display: none;
+}
+
+.owl-dots{
+    display: none;
 }

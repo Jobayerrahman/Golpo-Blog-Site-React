@@ -8,7 +8,8 @@ export default function AppRouter(){
             <Routes>
                 <Route exact path="/" Component={Homepage}></Route>
                 <Route exact path="/:cetagory" Component={Cetagorypage} cetagory={':cetagory'}></Route>
-                <Route exact path="/blog" Component={Blogpage}></Route>
+                <Route exact path="/blog/:slug" Component={Blogpage}></Route>
+                {/* <Route path="/:slug" component={Blogpage} /> */}
             </Routes>
         </>
     );
