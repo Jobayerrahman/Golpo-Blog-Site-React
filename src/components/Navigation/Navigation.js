@@ -16,14 +16,15 @@ export default function Navigation(){
                             <Nav className="navigation-menu">
                                 <Nav.Link><NavLink aria-current="page" to="/" className='navigation-link'>Home</NavLink></Nav.Link>
                                 <NavDropdown title="Catagories" className='navigation-link' id="basic-nav-dropdown">
-                                    <NavDropdown.Item><NavLink className='navigation-link'  to="/History">History</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item className='navdropdown-item'><NavLink className='navigation-link'  to="/History">History</NavLink></NavDropdown.Item>
                                     <NavDropdown.Item><NavLink  to="/Nature" className='navigation-link'>Nature</NavLink></NavDropdown.Item>
                                     <NavDropdown.Item><NavLink  to="/Technology" className='navigation-link'>Technology</NavLink></NavDropdown.Item>
                                     <NavDropdown.Item><NavLink  to="/Health" className='navigation-link'>Health</NavLink></NavDropdown.Item>
                                     <NavDropdown.Item><NavLink  to="/Entertainment" className='navigation-link'>Entertainment</NavLink></NavDropdown.Item>
                                 </NavDropdown>
-                                <Nav.Link className='navigation-link' >About</Nav.Link>
-                                <Nav.Link className='navigation-link' >Contact</Nav.Link>
+                                <Nav.Link><NavLink className='navigation-link' to="/Quotes">Quotes</NavLink></Nav.Link>
+                                <Nav.Link><NavLink className='navigation-link' to="/About">About</NavLink></Nav.Link>
+                                <Nav.Link><NavLink className='navigation-link' to="/Contact">Contact</NavLink></Nav.Link>
                             </Nav>
                             <Form className="d-flex">
                                 <Form.Control
