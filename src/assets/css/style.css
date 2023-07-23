@@ -603,6 +603,95 @@
 }
 
 
+
+/*********** About ************/
+
+.about-wrapper{
+    padding: 20px 0px;
+    display: flex;
+}
+
+.about-introduction{
+    padding: 140px 20px;
+}
+
+.about-introduction h4{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d4b8f;
+}
+
+.about-introduction h2{
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.about-introduction a{
+    padding: .5rem;
+    background-color: transparent;
+    border: 2px solid #1d4b8f;
+    border-radius: 5px;
+}
+
+.about-introduction a:hover{
+    background-color: #1d4b8f;
+    color: #fff !important;
+}
+
+.about-content{
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.about-content h2{
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+}
+
+.about-content p{
+    font-size: 14px;
+    color: #000;
+}
+
+.about-mission{
+    padding: 20px;
+    background-color: #fff;
+    grid-row: 1/2;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.about-vision{
+    padding: 20px;
+    background-color: #fff;
+    grid-row: 2/-1;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.about-story{
+    padding: 20px;
+    background-color: #fff;
+    grid-row: 1/2;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.about-work{
+    padding: 20px;
+    background-color: #fff;
+    grid-row: 2/-1;
+    margin: 10px;
+    border-radius: 10px;
+}
+
 /********** Box Shadow For Hover *************/
 .onHover{
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
