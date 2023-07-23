@@ -8,10 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faMagnifyingGlass,faGlobe,faMoon  } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 export default function Navigation(){
-    const [search, setSearch] = useState('nodisplay');
+    const [toggle, setToggle] = useState(false)
 
     const handleSearch = () =>{
-        setSearch('display')
+        toggle? setToggle(false): setToggle(true)
     }
     return(
             <div className='navigation-wrapper'>
@@ -33,14 +33,16 @@ export default function Navigation(){
                                 <Nav.Link><NavLink className='navigation-link' to="/About">About</NavLink></Nav.Link>
                                 <Nav.Link><NavLink className='navigation-link' to="/Contact">Contact</NavLink></Nav.Link>
                             </Nav>
-                            <Form className={search}>
-                                <Form.Control
-                                type="search"
-                                placeholder="Search"
-                                className="me-2"
-                                aria-label="Search"
-                                />
-                            </Form>
+                            {toggle ? 
+                                <Form>
+                                    <Form.Control
+                                    type="search"
+                                    placeholder="Search"
+                                    className="me-2"
+                                    aria-label="Search"
+                                    />
+                                </Form> : <div></div>
+                            }
                             <div className='navigation-icon-wrapper'>
                                 <FontAwesomeIcon onClick={handleSearch} className='navigation-icon' icon={faMagnifyingGlass} />
                                 <FontAwesomeIcon className='navigation-icon' icon={faGlobe} />
