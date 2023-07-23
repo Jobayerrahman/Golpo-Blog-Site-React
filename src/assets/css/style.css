@@ -44,6 +44,16 @@
     width: 100%;
 }
 
+.navigation-icon-wrapper{
+    display: flex;
+}
+
+.navigation-icon{
+    padding: 0px 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 .banner-wrapper{
     display: flex;
     justify-content: flex-start;

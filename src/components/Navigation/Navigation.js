@@ -4,8 +4,15 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import { NavLink } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faMagnifyingGlass,faGlobe,faMoon  } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react';
 export default function Navigation(){
+    const [search, setSearch] = useState('nodisplay');
+
+    const handleSearch = () =>{
+        setSearch('display')
+    }
     return(
             <div className='navigation-wrapper'>
                 <Navbar expand="lg" className="bg-body-tertiary">
@@ -26,15 +33,19 @@ export default function Navigation(){
                                 <Nav.Link><NavLink className='navigation-link' to="/About">About</NavLink></Nav.Link>
                                 <Nav.Link><NavLink className='navigation-link' to="/Contact">Contact</NavLink></Nav.Link>
                             </Nav>
-                            <Form className="d-flex">
+                            <Form className={search}>
                                 <Form.Control
                                 type="search"
                                 placeholder="Search"
                                 className="me-2"
                                 aria-label="Search"
                                 />
-                                <Button variant="outline-success">Search</Button>
                             </Form>
+                            <div className='navigation-icon-wrapper'>
+                                <FontAwesomeIcon onClick={handleSearch} className='navigation-icon' icon={faMagnifyingGlass} />
+                                <FontAwesomeIcon className='navigation-icon' icon={faGlobe} />
+                                <FontAwesomeIcon className='navigation-icon' icon={faMoon} />
+                            </div>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
