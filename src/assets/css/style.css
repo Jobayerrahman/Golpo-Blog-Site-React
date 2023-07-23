@@ -353,23 +353,23 @@
 }
 
 .catagory-Nature{
-    background: #25b1b1;
+    background: #35a7a7;
 }
 
 .catagory-Technology{
-    background: #3545ffe8;
+    background: #0c1de5e8;
 }
 
 .catagory-Entertainment{
-    background: #ff4444;
+    background: #e52954;
 }
 
 .catagory-History{
-    background: #7f8b94;
+    background: #687783;
 }
 
 .catagory-Health{
-    background: #07854a;
+    background: #1d734b;
 }
 
 
@@ -690,6 +690,38 @@
     grid-row: 2/-1;
     margin: 10px;
     border-radius: 10px;
+}
+
+/************* Blog Counter **************/
+.blogcounter-wrapper{
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.blogcounter-content{
+    width: 20rem;
+    height: 12rem;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogcounter-content h1{
+    color: #fff;
+}
+
+.blogcounter-content h4{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
 }
 
 /********** Box Shadow For Hover *************/
