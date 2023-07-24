@@ -1,0 +1,173 @@
+/************** Query *************/
+.query-wrapper{
+    padding: 100px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.query-introduction{
+    padding: 70px 40px;
+    grid-column: 1/2;
+}
+
+.query-introduction h6{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d4b8f;
+}
+
+.query-introduction h2{
+    margin-bottom: 30px;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.query-introduction a{
+    padding: .5rem;
+    background-color: transparent;
+    border: 2px solid #1d4b8f;
+    border-radius: 5px;
+}
+
+.query-introduction a:hover{
+    background-color: #1d4b8f;
+    color: #fff !important;
+}
+
+.query-form{
+    padding: 20px 40px;
+    grid-column: 2/-1;
+}
+
+.query-form a{
+    color: #fff !important;
+    background: #1d4b8f;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.query-form a:hover{
+    background: #2b5ca5;
+}
+
+
+/************** Contact *************/
+.contact-wrapper{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.contact-content{
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 18rem;
+    height: 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.contact-content:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.contact-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.contact-context{
+    text-align: left;
+}
+
+.contact-context h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.contact-context p{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+/************** Career *************/
+.career-wrapper{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.career-introduction{
+    padding: 60px 80px;
+}
+
+.career-introduction h6{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d4b8f;
+}
+
+.career-introduction h2{
+    margin-bottom: 40px;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.career-introduction a{
+    padding: .5rem;
+    background-color: transparent;
+    border: 2px solid #1d4b8f;
+    border-radius: 5px;
+}
+
+.career-introduction a:hover{
+    background-color: #1d4b8f;
+    color: #fff !important;
+}
+
+.career-test{
+    padding: 20px 100px;
+}
+
+.career-test h4{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.career-textinput{
+    width: 30rem;
+    height: 14rem !important;
+    background: #fff;
+    border: 2px solid #e9e9e9;
+    margin-bottom: 20px;
+}
+
+.career-test a{
+    color: #fff !important;
+    background: #1d4b8f;
+    padding: 10px 30px;
+    width: 150px !important;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.career-test a:hover{
+    background: #2b5ca5;
+}

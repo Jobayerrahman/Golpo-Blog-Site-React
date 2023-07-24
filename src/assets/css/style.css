@@ -724,6 +724,13 @@
     color: #fff;
 }
 
+/************* Partner **************/
+.partner-wrapper{
+    padding: 150px;
+    background-color: #fff;
+    margin-top: 60px;
+}
+
 /********** Box Shadow For Hover *************/
 .onHover{
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);

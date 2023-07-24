@@ -6,11 +6,13 @@ import Container from 'react-bootstrap/Container';
 
 function Aboutpage(props) {
     return (
+        <>
         <Container>
             <About/>
             <Blogcounter/>
-            <Partner/>
         </Container>
+        <Partner/>
+        </>
     );
 }
 
