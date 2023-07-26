@@ -1,0 +1,42 @@
+/************ Quote **************/
+.allQuote-wrapper{
+    padding: 0px 120px;
+    margin: 40px 0px;
+}
+
+.quote-wrapper{
+    background-color: #fff;
+    margin: 20px 40px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.quote-header{
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.quote-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.quote-header h2{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.quote-content{
+    padding: 0px 40px 20px;
+}
+
+.quote-content p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}

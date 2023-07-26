@@ -1,6 +1,6 @@
 import React from 'react';
 import bannerimage from "../../assets/images/mocha.webp";
-
+import '../../assets/css/quote.css';
 function Quote({...quote}) {
     return (
         <div className='quote-wrapper'>

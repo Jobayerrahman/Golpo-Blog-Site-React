@@ -1,5 +1,5 @@
 import {Container} from "react-bootstrap";
-
+import '../../assets/css/footer.css';
 export default function Footer(){
     return(
         <div className="footer-wrapper">

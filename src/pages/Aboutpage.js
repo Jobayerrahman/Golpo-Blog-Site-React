@@ -3,7 +3,7 @@ import About from '../components/About/About';
 import Blogcounter from '../components/Blog/Blogcounter';
 import Partner from '../components/Partner/Partner';
 import Container from 'react-bootstrap/Container';
-
+import '../assets/css/about.css';
 function Aboutpage(props) {
     return (
         <>

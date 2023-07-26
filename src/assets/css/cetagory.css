@@ -1,0 +1,100 @@
+/************** Catagory *******************/
+
+.catagory-wrapper{
+    margin: 40px 0px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.catagory-card{
+    width: 100%;
+    height: 10.8rem;
+    margin: 10px;
+}
+
+.card-focus{
+    grid-column: 1/3;
+    grid-row: 1/-1;
+    width: 50rem;
+    height: 35rem;
+}
+
+.slider-item-wrapper{
+    height: 100%;
+}
+
+.catagory-poster{
+    height: 100%;
+}
+
+.catagory-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.end-card{
+    grid-column: 1/-1;
+}
+
+.catagory-content{
+    margin-top: -50px;
+    padding: 0px 20px;
+}
+
+.catagory-menu-wrapper{
+    display: flex;
+    justify-content: start;
+    margin: 30px 0px;
+}
+
+.catagory-menu-wrapper h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.catagories{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.catagory{
+    font-size: 14px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    height: 30px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.catagory:hover{
+    color: #fff;
+}
+
+.catagory-common{
+    background: #4c4747;
+}
+
+.catagory-Nature{
+    background: #35a7a7;
+}
+
+.catagory-Technology{
+    background: #0c1de5e8;
+}
+
+.catagory-Entertainment{
+    background: #e52954;
+}
+
+.catagory-History{
+    background: #687783;
+}
+
+.catagory-Health{
+    background: #1d734b;
+}
