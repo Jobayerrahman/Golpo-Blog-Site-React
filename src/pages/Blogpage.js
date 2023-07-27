@@ -7,19 +7,34 @@ import Relatedblog from "../components/Blog/Relatedblog";
 import SingleCommentComponent from "../components/Comment/SingleCommentComponent";
 import {blogs} from "../Data/Data";
 import { useParams } from 'react-router';
+import { useEffect, useState } from "react";
+import Preloader from '../components/Preloader/Preloader';
 
 export default function Blogpage(){
+    const [isLoading, setIsLoading] = useState([true]);
     const blogbanner = "BlogBanner";
     const { id }   = useParams();
     const blog = blogs.find((blog)=> blog.id == id);
 
+    useEffect(()=>{
+        setTimeout(()=>{
+            setIsLoading(false);
+        },1000)
+    })
+
    return(
-    <Container>
-        <Banner blog={blog} banner={blogbanner}/>
-        <Blog blog={blog}/>
-        <SingleCommentComponent/>
-        <Commentform/>
-        <Relatedblog/>
-    </Container>
+    <>
+        {
+            isLoading ? <Preloader/> : (
+                <Container>
+                    <Banner blog={blog} banner={blogbanner}/>
+                    <Blog blog={blog}/>
+                    <SingleCommentComponent/>
+                    <Commentform/>
+                    <Relatedblog/>
+                </Container>
+            )
+        }
+    </>
    ) 
 }
