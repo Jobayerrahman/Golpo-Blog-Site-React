@@ -1,9 +1,8 @@
 import Blog from "../components/Blog/Blog";
 import { Container } from "react-bootstrap";
 import Comment from "../components/Comment/Comment";
-import Commentform from "../components/Comment/Commentform";
 import Banner from "../components/Banner/Banner";
-import Relatedblog from "../components/Blog/Relatedblog";
+import Relatedblog from "../components/RelatedBlog/Relatedblog";
 import {blogs} from "../Data/Data";
 import { useParams } from 'react-router';
 import { useEffect, useState } from "react";
@@ -29,7 +28,7 @@ export default function Blogpage(){
                     <Banner blog={blog} banner={blogbanner}/>
                     <Blog blog={blog}/>
                     <Comment/>
-                    <Relatedblog/>
+                    <Relatedblog slug={blog.id} cetagory={blog.cetagory}/>
                 </Container>
             )
         }

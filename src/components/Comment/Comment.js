@@ -2,6 +2,7 @@ import Commentform from "./Commentform";
 import SingleCommentComponent from "./SingleCommentComponent";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import '../../assets/css/comment.css';
 
 export default function Comment(){
     return(
