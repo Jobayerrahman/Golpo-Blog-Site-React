@@ -25,6 +25,9 @@ const withHover =(OriginalComponent) => (props)=>{
                         time={props.time}
                         image={props.image}
                         describe={props.describe}
+                        commentId={props.commentId}
+                        commentator={props.commentator}
+                        comment={props.comment}
                         hoverEffect={hoverEffect}
                         onHover={this.onHover}
                         isHover={isHover}

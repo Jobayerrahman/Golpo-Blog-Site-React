@@ -27,7 +27,7 @@ export default function Blogpage(){
                 <Container>
                     <Banner blog={blog} banner={blogbanner}/>
                     <Blog blog={blog}/>
-                    <Comment/>
+                    <Comment comments={blog.comments}/>
                     <Relatedblog slug={blog.id} cetagory={blog.cetagory}/>
                 </Container>
             )
