@@ -5,10 +5,22 @@ import { Container } from "react-bootstrap";
 import { useParams } from 'react-router';
 import {blogs} from "../Data/Data";
 import bannerimage from "../assets/images/mocha.webp";
+import { useState } from "react";
 
 export default function Cetagorypage(){
+    const blogPerRow = 3;
     const { cetagory } = useParams();
-    const cetagories   = blogs.filter(blog=> blog.cetagory === cetagory);
+    const [next, setNext] = useState(blogPerRow);
+
+    const handleMoreBlog = () => {
+        setNext(next + blogPerRow);
+      };
+
+    const handleLessBlog = () => {
+        setNext(next - blogPerRow);
+      };
+    
+    const cetagories   = blogs.slice(0, next).filter(blog=> blog.cetagory === cetagory);
     const bloglist     = cetagories.map(blog => <Blogcard {...blog}/>);
     const blog = {
         id: 1,
@@ -26,7 +38,7 @@ export default function Cetagorypage(){
         <div>
             <Container>
                 <Banner banner={cetagorybanner} blog={blog}/>
-                <BlogList>
+                <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
                     {bloglist}
                 </BlogList>
             </Container>
