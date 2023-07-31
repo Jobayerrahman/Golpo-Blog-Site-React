@@ -8,11 +8,25 @@ import Blogcarousel from "../components/Blog/Blogcarousel";
 import Container from 'react-bootstrap/Container';
 import AdSpace from "../components/AdSpace/AdSpace";
 import bannerimage from "../assets/images/mocha.webp";
+import { useState } from "react";
 export default function Homepage(){
     const homebanner    = "HomeBanner";
-    const bloglist      = blogs.map(blog => 
+    const blogPerRow = 3;
+    const [next, setNext] = useState(blogPerRow);
+
+    const handleMoreBlog = () => {
+        setNext(next + blogPerRow);
+      };
+
+    const handleLessBlog = () => {
+        setNext(next - blogPerRow);
+      };
+    
+
+    const bloglist      = blogs.slice(0, next).map(blog => 
         <Blogcard {...blog}/>
         );
+
     const blog = {
         id: 1,
         title: "Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.",
@@ -24,11 +38,12 @@ export default function Homepage(){
         time: '12:00',
         image: bannerimage
       };
+
     return(
         <div>
             <Container>
                 <Banner banner={homebanner} blog={blog}/>
-                <BlogList>
+                <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
                     {bloglist}
                 </BlogList>
                 <AdSpace/>
