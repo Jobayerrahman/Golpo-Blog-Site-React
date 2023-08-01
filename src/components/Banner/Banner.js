@@ -11,7 +11,7 @@ export default function Banner({banner,blog}){
         if(banner === "HomeBanner"){
             setDisplayX("display");
         }
-        else if(banner === "CetgoryBanner"){
+        else if(banner === "CetagoryBanner"){
             setDisplayX("display");
         }
         else if(banner === "BlogBanner"){
@@ -34,7 +34,7 @@ export default function Banner({banner,blog}){
                     <Cetagory cetagory={cetagory}/>
                     <p> - 13 May 2023 12:00pm</p>
                 </div>
-                <div className={'mt-3 '+displayX}>
+                <div className={'mt-4 '+displayX} style={{ width: '100%' }}>
                     <Link to={`/blog/${blog.id}`}><a>Read more</a></Link>
                 </div>
                 <div className={displayY}>

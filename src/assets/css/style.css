@@ -88,11 +88,11 @@
 .banner-content a{
     color: #fff !important;
     background: #1d4b8f;
-    padding: 10px;
-    width: 200px;
+    padding: 9px;
+    width: 200px !important;
     text-align: center;
     border-radius: 5px;
-    margin: 10px 0px;
+    margin: 20px 0px;
     text-decoration: none;
 }
 
@@ -200,7 +200,7 @@
 }
 
 .display{
-    display: block;
+    display: contents;
 }
 
 

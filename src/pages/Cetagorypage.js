@@ -11,6 +11,7 @@ export default function Cetagorypage(){
     const blogPerRow = 3;
     const { cetagory } = useParams();
     const [next, setNext] = useState(blogPerRow);
+    const cetagorybanner    = "CetagoryBanner"; 
 
     const handleMoreBlog = () => {
         setNext(next + blogPerRow);
@@ -20,9 +21,10 @@ export default function Cetagorypage(){
         setNext(next - blogPerRow);
       };
     
-    const cetagories   = blogs.slice(0, next).filter(blog=> blog.cetagory === cetagory);
-    const bloglist     = cetagories.map(blog => <Blogcard {...blog}/>);
-    const blog = {
+    const cetagories   = blogs.filter(blog=> blog.cetagory === cetagory);
+    const bloglist     = cetagories.slice(0, next).map(blog => <Blogcard {...blog}/>);
+    
+    const latestBlog = {
         id: 1,
         title: "Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.",
         slug: "Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.",
@@ -33,11 +35,12 @@ export default function Cetagorypage(){
         time: '12:00',
         image: bannerimage
       };
-    const cetagorybanner    = "CategoryBanner";
+
+
     return(
         <div>
             <Container>
-                <Banner banner={cetagorybanner} blog={blog}/>
+                <Banner banner={cetagorybanner} blog={latestBlog}/>
                 <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
                     {bloglist}
                 </BlogList>
