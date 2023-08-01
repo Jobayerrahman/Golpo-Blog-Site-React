@@ -25,16 +25,27 @@
     background-color: none !important;
 }
 
+.nav-link{
+    padding: 0px;
+}
+
 .navigation-link{
     color: #161616;
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 .navigation-link:hover{
     color: #1d4b8f;
 }
+
+.nav-link a.active{
+    color: #fff;
+    background-color: #1d4b8f;
+} 
 
 .navbar-collapse{
     justify-content: space-between !important;
@@ -53,6 +64,20 @@
     font-size: 18px;
     cursor: pointer;
 }
+
+.navigation-search{
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 .banner-wrapper{
     display: flex;

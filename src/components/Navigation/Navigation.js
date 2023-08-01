@@ -38,7 +38,7 @@ export default function Navigation(){
                                     <Form.Control
                                     type="search"
                                     placeholder="Search"
-                                    className="me-2"
+                                    className="me-2 navigation-search"
                                     aria-label="Search"
                                     />
                                 </Form> : <div></div>
