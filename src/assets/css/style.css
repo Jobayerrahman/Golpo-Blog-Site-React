@@ -79,6 +79,42 @@
 }
 
 
+.navigation-langdropdown{
+    position: relative;
+}
+
+.langdropdown-wrapper{
+    position: absolute;
+    margin: 5px 0;
+    padding: 0px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    width: 10rem;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.langdropdown-menu{
+    list-style-type: none;
+    padding: 0;
+}
+
+.langdropdown-item{
+    color: #161616;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 0px;
+    border-bottom: 1px solid #e7e7e7;
+    cursor: pointer;
+}
+
+.langdropdown-flag{
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+
 .banner-wrapper{
     display: flex;
     justify-content: flex-start;

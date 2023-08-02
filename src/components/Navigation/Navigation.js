@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faMagnifyingGlass,faGlobe,faMoon  } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
+import Navigationlang from './Navigationlang';
 export default function Navigation(){
     const [toggle, setToggle] = useState(false)
 
@@ -45,7 +46,7 @@ export default function Navigation(){
                             }
                             <div className='navigation-icon-wrapper'>
                                 <FontAwesomeIcon onClick={handleSearch} className='navigation-icon' icon={faMagnifyingGlass} />
-                                <FontAwesomeIcon className='navigation-icon' icon={faGlobe} />
+                                <Navigationlang/>
                                 <FontAwesomeIcon className='navigation-icon' icon={faMoon} />
                             </div>
                         </Navbar.Collapse>
