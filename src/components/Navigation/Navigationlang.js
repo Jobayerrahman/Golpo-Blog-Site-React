@@ -46,7 +46,7 @@ export default function Navigationlang(){
                             />
                             English (GB)
                         </li>
-                        <li className="langdropdown-item">
+                        <li className="langdropdown-item" style={{ borderBottom: "none" }}>
                         <img
                                 className="langdropdown-flag"
                                 src="https://cdn.muzz.com/website-v4/img/shared/flags/in.svg"

@@ -5,9 +5,11 @@ import Container from 'react-bootstrap/Container';
 import { NavLink } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faMagnifyingGlass,faGlobe,faMoon  } from '@fortawesome/free-solid-svg-icons'
+import { faMoon  } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 import Navigationlang from './Navigationlang';
+import '../../assets/css/navigation.css';
+import Navigationsearch from './Navigationsearch';
 export default function Navigation(){
     const [toggle, setToggle] = useState(false)
 
@@ -45,7 +47,7 @@ export default function Navigation(){
                                 </Form> : <div></div>
                             }
                             <div className='navigation-icon-wrapper'>
-                                <FontAwesomeIcon onClick={handleSearch} className='navigation-icon' icon={faMagnifyingGlass} />
+                                <Navigationsearch/>
                                 <Navigationlang/>
                                 <FontAwesomeIcon className='navigation-icon' icon={faMoon} />
                             </div>

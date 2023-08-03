@@ -1,0 +1,147 @@
+/****** Navigation CSS *******/
+.navigation-wrapper{
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+.navigation-header{
+    font-size: 32px;
+    color: #1d4b8f;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navigation-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.navdropdown-item:active{
+    background-color: none !important;
+}
+
+.nav-link{
+    padding: 0px;
+}
+
+.navigation-link{
+    color: #161616;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.navigation-link:hover{
+    color: #1d4b8f;
+}
+
+.nav-link a.active{
+    color: #fff;
+    background-color: #1d4b8f;
+} 
+
+.navbar-collapse{
+    justify-content: space-between !important;
+}
+
+.navigation-menu{
+    width: 100%;
+}
+
+.navigation-icon-wrapper{
+    display: flex;
+}
+
+.navigation-icon{
+    padding: 0px 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/********************** Navigation Search ***********************/
+
+.navigation-search{
+    position: relative;
+}
+
+.serach-wrapper{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: 5px 0;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    width: 18rem;
+    height: 8rem;
+    background: #fff;
+    border-radius: 8px;
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.serach-tag h4{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.searchTag-title {
+    display: flex;
+    justify-content: space-around;
+}
+
+.searchTag-title span{
+    font-size: 12px;
+    font-weight: 400;
+    color: #1d4b8f;
+    cursor: pointer;
+}
+
+
+/**************** Navigation Language Dropdown ******************/
+.navigation-langdropdown{
+    position: relative;
+}
+
+.langdropdown-wrapper{
+    position: absolute;
+    margin: 5px 0;
+    padding: 0px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    width: 10rem;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.langdropdown-menu{
+    list-style-type: none;
+    padding: 0;
+}
+
+.langdropdown-item{
+    color: #161616;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 0px;
+    border-bottom: 1px solid #e7e7e7;
+    cursor: pointer;
+}
+
+.langdropdown-flag{
+    width: 35px;
+    height: 25px;
+    margin: 0px;
+    margin-right: 10px;
+    border-radius: 0.2rem;
+}
