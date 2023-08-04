@@ -1,21 +1,13 @@
+import '../../assets/css/navigation.css';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import { NavLink } from "react-router-dom";
-import Form from 'react-bootstrap/Form';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon  } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react';
 import Navigationlang from './Navigationlang';
-import '../../assets/css/navigation.css';
 import Navigationsearch from './Navigationsearch';
+import Navigationtheme from './Navigationtheme';
 export default function Navigation(){
-    const [toggle, setToggle] = useState(false)
-
-    const handleSearch = () =>{
-        toggle? setToggle(false): setToggle(true)
-    }
     return(
             <div className='navigation-wrapper'>
                 <Navbar expand="lg" className="bg-body-tertiary">
@@ -36,20 +28,10 @@ export default function Navigation(){
                                 <Nav.Link><NavLink className='navigation-link' to="/About">About</NavLink></Nav.Link>
                                 <Nav.Link><NavLink className='navigation-link' to="/Contact">Contact</NavLink></Nav.Link>
                             </Nav>
-                            {toggle ? 
-                                <Form>
-                                    <Form.Control
-                                    type="search"
-                                    placeholder="Search"
-                                    className="me-2 navigation-search"
-                                    aria-label="Search"
-                                    />
-                                </Form> : <div></div>
-                            }
                             <div className='navigation-icon-wrapper'>
                                 <Navigationsearch/>
                                 <Navigationlang/>
-                                <FontAwesomeIcon className='navigation-icon' icon={faMoon} />
+                                <Navigationtheme/>
                             </div>
                         </Navbar.Collapse>
                     </Container>
