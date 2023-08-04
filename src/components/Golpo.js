@@ -5,12 +5,12 @@ import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from './ScrollToPlaces/ScrollToTop';
 
 
-export default function Golpo(){
+export default function Golpo({switchTheme,mode}){
     return(
         <div className="body">
             <BrowserRouter>
                 <ScrollToTop/>
-                <Navigation/>
+                <Navigation switchTheme={switchTheme} mode={mode}/>
                 <AppRouter/>
                 <Footer/>
             </BrowserRouter>

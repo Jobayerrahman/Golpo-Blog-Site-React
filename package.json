@@ -25,6 +25,7 @@
     "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1",
     "typewriter-effect": "^2.20.1",
+    "use-local-storage-state": "^18.3.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

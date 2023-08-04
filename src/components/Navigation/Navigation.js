@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 import Navigationlang from './Navigationlang';
 import Navigationsearch from './Navigationsearch';
 import Navigationtheme from './Navigationtheme';
-export default function Navigation(){
+export default function Navigation({switchTheme,mode}){
     return(
             <div className='navigation-wrapper'>
                 <Navbar expand="lg" className="bg-body-tertiary">
@@ -31,7 +31,7 @@ export default function Navigation(){
                             <div className='navigation-icon-wrapper'>
                                 <Navigationsearch/>
                                 <Navigationlang/>
-                                <Navigationtheme/>
+                                <Navigationtheme switchTheme={switchTheme} mode={mode}/>
                             </div>
                         </Navbar.Collapse>
                     </Container>

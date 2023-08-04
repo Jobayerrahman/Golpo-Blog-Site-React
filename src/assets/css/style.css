@@ -1,5 +1,14 @@
+:root{
+    --background: #f0f2f5;
+  }
+  
+  [data-theme='dark']{
+    --background: #161616;
+  }
+  
+
 .body{
-    background: #f0f2f5;
+    background: var(--background);
 }
 
 
