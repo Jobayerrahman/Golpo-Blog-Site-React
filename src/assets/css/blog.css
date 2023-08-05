@@ -1,3 +1,5 @@
+@import "./style.css";
+
 /**************** Blog card **************/
 .bloglist-wrapper{
     display: flex;
@@ -17,7 +19,7 @@
 .blog-card{
     width: 22rem;
     height: 28rem;
-    background:#fff;
+    background:var(--card-background);
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -34,6 +36,7 @@
 .blog-content .blog-shortline{
     font-size: 14px;
     font-weight: 400;
+    color: var(--blog-details);
 }
 
 .blog-details{
@@ -45,7 +48,7 @@
     font-weight: 400;
     line-height: 40px !important;
     letter-spacing: .3px !important;
-    color: #222222;
+    color: var(--blog-details);
 }
 
 .blog-details-footer{

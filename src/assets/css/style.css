@@ -1,9 +1,27 @@
 :root{
     --background: #f0f2f5;
+    --text-color: #161616;
+    --card-background: #fff;
+    --blog-details:#222222;
+    --nav-background: #fff;
+    --nav-heading: #1d4b8f;
+    --nav-linkactive:#1d4b8f;
+    --nav-linkcolor: #161616;
+    --nav-linkactivecolor: #fff;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   }
   
   [data-theme='dark']{
     --background: #161616;
+    --text-color: #f0f2f5;
+    --card-background: #080808;
+    --blog-details:#f0f0f0;
+    --nav-background: #1d4b8f;
+    --nav-heading: #fff;
+    --nav-linkactive:#fff;
+    --nav-linkcolor: #fff;
+    --nav-linkactivecolor: #161616;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   }
   
 
@@ -17,7 +35,7 @@
     justify-content: flex-start;
     justify-items: center;
     align-content: center;
-    padding: 50px;
+    padding: 100px 50px 50px;
 }
 .banner-image{
     border-radius: 10px;
@@ -37,11 +55,13 @@
     font-size: 50px;
     margin-bottom: 20px;
     font-weight: 600;
+    color: var(--text-color);
 }
 .banner-content span{
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 .banner-content a{
     color: #fff !important;
@@ -75,6 +95,7 @@
     font-size: 50px;
     margin-bottom: 30px;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 .youtubeBanner-wrapper a{
@@ -91,13 +112,14 @@
 /************** Gobal CSS ******************/
 .blog-heading{
     text-decoration: none;
-    color: #161616;
+    color: var(--text-color);
 }
 .blog-heading h2{
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 .blog-info{
@@ -109,6 +131,7 @@
     font-size: 14px;
     font-weight: 500;
     margin: 5px 0px; 
+    color: var(--text-color);
 }
 
 /************** Icons ****************/
@@ -142,7 +165,7 @@
 .adSpace-wrapper{
     height: 150px;
     border-radius: 10px;
-    background: #fff;
+    background: var(--card-background);
     margin: 40px 40px;
 }
 
@@ -150,7 +173,7 @@
 
 /********** Box Shadow For Hover *************/
 .onHover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
 }
 
 .nodisplay{

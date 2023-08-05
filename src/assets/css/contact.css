@@ -1,3 +1,4 @@
+@import "./style.css";
 /************** Query *************/
 .query-wrapper{
     padding: 100px 0px;
@@ -22,7 +23,7 @@
     font-size: 42px;
     font-weight: 500;
     letter-spacing: 2px;
-    color: #000;
+    color: var(--text-color);
 }
 
 .query-introduction a{
@@ -40,6 +41,10 @@
 .query-form{
     padding: 20px 40px;
     grid-column: 2/-1;
+}
+
+.query-form label{
+    color: var(--text-color);
 }
 
 .query-form a{
@@ -65,7 +70,7 @@
     justify-content: space-around;
 }
 .contact-content{
-    background: #fff;
+    background: var(--card-background);
     padding: 10px;
     border-radius: 5px;
     width: 18rem;
@@ -77,12 +82,13 @@
 }
 
 .contact-content:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
 }
 
 .contact-icon{
     width: 50px;
     height: 50px;
+    color: var(--text-color);
 }
 
 .contact-context{
@@ -94,6 +100,7 @@
     font-weight: 700;
     margin-bottom: 5px;
     margin-top: 15px;
+    color: var(--text-color);
 }
 
 .contact-context p{
@@ -101,6 +108,7 @@
     font-weight: 500;
     margin-top: 0px;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 /************** Career *************/
 .career-wrapper{
@@ -124,7 +132,7 @@
     font-size: 42px;
     font-weight: 500;
     letter-spacing: 2px;
-    color: #000;
+    color: var(--text-color);
 }
 
 .career-introduction a{
@@ -146,6 +154,7 @@
 .career-test h4{
     font-size: 16px;
     font-weight: 500;
+    color: var(--text-color);
 }
 
 .career-textinput{

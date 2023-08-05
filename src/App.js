@@ -13,11 +13,11 @@ function App() {
   const switchTheme = () =>{
     if(mode === faMoon){
       setMode(faSun);
+      setTheme('dark');
     }else{
       setMode(faMoon);
+      setTheme('light');
     }
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme)
   }
   return (
     <div className="App" data-theme={theme}>

@@ -1,11 +1,11 @@
+@import "./style.css";
 /************ Quote **************/
 .allQuote-wrapper{
-    padding: 0px 120px;
-    margin: 40px 0px;
+    padding: 80px 120px;
 }
 
 .quote-wrapper{
-    background-color: #fff;
+    background-color: var(--card-background);
     margin: 20px 40px;
     border-radius: 10px;
     padding: 20px;
@@ -29,6 +29,7 @@
     font-size: 20px;
     font-weight: 700;
     margin-top: 10px;
+    color: var(--text-color);
 }
 
 .quote-content{
@@ -39,4 +40,5 @@
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 20px;
+    color: var(--text-color);
 }

@@ -1,3 +1,4 @@
+@import "./style.css";
 /*********** About ************/
 .about-wrapper{
     padding: 20px 0px;
@@ -19,7 +20,7 @@
     font-size: 28px;
     font-weight: 500;
     letter-spacing: 2px;
-    color: #000;
+    color: var(--text-color);
 }
 
 .about-introduction a{
@@ -45,17 +46,17 @@
     margin-bottom: 10px;
     font-size: 22px;
     font-weight: 600;
-    color: #000;
+    color: var(--text-color) !important;
 }
 
 .about-content p{
     font-size: 14px;
-    color: #000;
+    color: var(--text-color);
 }
 
 .about-mission{
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--card-background);
     grid-row: 1/2;
     margin: 10px;
     border-radius: 10px;
@@ -63,7 +64,7 @@
 
 .about-vision{
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--card-background);
     grid-row: 2/-1;
     margin: 10px;
     border-radius: 10px;
@@ -71,7 +72,7 @@
 
 .about-story{
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--card-background);
     grid-row: 1/2;
     margin: 10px;
     border-radius: 10px;
@@ -79,7 +80,7 @@
 
 .about-work{
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--card-background);
     grid-row: 2/-1;
     margin: 10px;
     border-radius: 10px;
@@ -120,6 +121,7 @@
 /************* Partner **************/
 .partner-wrapper{
     padding: 150px;
-    background-color: #fff;
+    background-color: var(--background);
     margin-top: 60px;
+    color: var(--text-color);
 }
