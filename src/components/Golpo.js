@@ -6,12 +6,12 @@ import StartFromTop from './ScrollToPlaces/StartFromTop';
 import ScrollToTop from './ScrollToPlaces/ScrollToTop';
 
 
-export default function Golpo({switchTheme,mode}){
+export default function Golpo(){
     return(
         <div className="body">
             <BrowserRouter>
                 <StartFromTop/>
-                <Navigation switchTheme={switchTheme} mode={mode}/>
+                <Navigation/>
                 <AppRouter/>
                 <Footer/>
                 <ScrollToTop/>
