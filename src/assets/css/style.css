@@ -171,6 +171,26 @@
 
 
 
+/*************** Scroll *****************/
+.scrollToTop-wrapper{
+    background: var(--card-background);
+    color: var(--text-color);
+}
+.scrollToTop-icon{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    background: var(--card-background);
+    color: var(--text-color);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+
 /********** Box Shadow For Hover *************/
 .onHover{
     box-shadow: var(--box-shadow);
