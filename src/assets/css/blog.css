@@ -55,3 +55,28 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+
+@media only screen and (max-width: 1024px) {
+    .blog-list{
+        padding: 0;
+    }
+    .blog-card{
+        width: 20rem;
+    }
+    .blog-details{
+        padding: 40px 20px;
+    }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .blog-card{
+        width: 22rem;
+    }
+    .blog-details{
+        padding: 40px 10px;
+    }
+}
