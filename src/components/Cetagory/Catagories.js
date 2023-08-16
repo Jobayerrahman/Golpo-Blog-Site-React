@@ -14,9 +14,9 @@ export default function Catagories(){
       };
       
     return(
-        <div className="catagory-wrapper">
-            <div className="catagory-card card-focus">
-                <Slider {...settings}>
+        <div className="cetagory-wrapper">
+            <div className="cetagory-card card-focus">
+                {/* <Slider {...settings}>
                     <div className="slider-item-wrapper">
                         <div className="catagory-poster">
                             <img
@@ -77,9 +77,21 @@ export default function Catagories(){
                             <span className="catagory catagory-History">History</span>
                         </div>
                     </div>
-                </Slider>
+                </Slider> */}
+                <div className="slider-item-wrapper">
+                    <div className="catagory-poster">
+                        <img
+                        className="catagory-image"
+                        src={histiryimage}
+                        alt="Updating Blog" 
+                        />
+                    </div>
+                    <div className="catagory-content">
+                        <span className="catagory catagory-History">History</span>
+                    </div>
+                </div>
             </div>
-            <div className="catagory-card">
+            <div className="cetagory-card">
                 <div className="catagory-poster">
                     <img
                     className="catagory-image"
@@ -91,7 +103,7 @@ export default function Catagories(){
                     <span className="catagory catagory-Technology">Technology</span>
                 </div>
             </div>
-            <div className="catagory-card">
+            <div className="cetagory-card">
                 <div className="catagory-poster">
                     <img
                     className="catagory-image"
@@ -103,7 +115,7 @@ export default function Catagories(){
                     <span className="catagory catagory-Health">Health</span>
                 </div>
             </div>
-            <div className="catagory-card">
+            <div className="cetagory-card">
                 <div className="catagory-poster">
                     <img
                     className="catagory-image"
@@ -115,8 +127,8 @@ export default function Catagories(){
                     <span className="catagory catagory-Nature">Nature</span>
                 </div>
             </div>
-            <div className="catagory-card end-card">
-                <Slider {...settings}>
+            <div className="cetagory-card end-card">
+                {/* <Slider {...settings}>
                     <div className="slider-item-wrapper">
                         <div className="catagory-poster">
                             <img
@@ -177,7 +189,19 @@ export default function Catagories(){
                             <span className="catagory catagory-Entertainment">Entertainment</span>
                         </div>
                     </div>
-                </Slider>
+                </Slider> */}
+                <div className="slider-item-wrapper">
+                    <div className="catagory-poster">
+                        <img
+                        className="catagory-image"
+                        src={entertainment}
+                        alt="Updating Blog" 
+                        />
+                    </div>
+                    <div className="catagory-content">
+                        <span className="catagory catagory-Entertainment">Entertainment</span>
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -9,7 +9,7 @@ function YoutubeBanner(props) {
                 <a>Subscribe Us</a>
             </div>
             <div className='youtubeBanner-Video'>
-                <ReactPlayer url='https://www.youtube.com/watch?v=K4TOrB7at0Y' />
+                <ReactPlayer className="youtube-Video" url='https://www.youtube.com/watch?v=K4TOrB7at0Y' />
             </div>
         </div>
     );
