@@ -151,9 +151,13 @@
     padding: 20px 100px;
 }
 
+.career-test .form-floating{
+    position: revert !important;
+}
+
 .career-test h4{
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     color: var(--text-color);
 }
 
@@ -179,4 +183,65 @@
 
 .career-test a:hover{
     background: #2b5ca5;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .query-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .query-introduction{
+        padding: 40px;
+        grid-column: 1/-1;
+    }
+
+    .query-form{
+        padding: 20px 40px;
+        grid-column: 1/-1;
+    }
+
+    .contact-wrapper{
+        padding: 40px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .contact-content{
+        margin: 10px;
+    }
+
+    .career-wrapper{
+        padding: 30px 40px;
+        flex-direction: column-reverse;
+        margin-bottom: 20px;
+    }
+
+    .career-introduction{
+        padding: 30px 0px;
+    }
+
+    .career-test{
+        padding: 20px 0px;
+    }
+
+    .career-textinput{
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .career-wrapper{
+        padding: 30px 20px;
+    }
+    .career-introduction h2{
+        margin-bottom: 10px;
+        font-size: 32px;
+    }
+    .career-textinput{
+        height: 10rem !important;
+    }
 }

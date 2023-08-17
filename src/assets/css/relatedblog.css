@@ -12,7 +12,7 @@
     font-size: 26px;
     font-weight: 700;
     padding: 20px;
-    color: #000000;
+    color: var(--text-color);
     letter-spacing: 0.1rem;
 }
 
@@ -61,4 +61,26 @@
     font-size: 24px;
     font-weight: 500;
     color: #000;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .relatedblog-cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .relatedblog-card{
+        width: 18rem;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .relatedblog-header h3{
+        font-size: 22px;
+    }
+    
 }
