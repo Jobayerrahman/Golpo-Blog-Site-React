@@ -82,3 +82,21 @@
     background-color: #f0f2f5;
     height: 40px;
 }
+
+
+@media only screen and (max-width: 1024px) {
+    .commentform-wrapper{
+        padding: 0px;
+    }
+    .single-comment-wrapper{
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .comment-section{
+        margin-top: 10px;
+    }
+}

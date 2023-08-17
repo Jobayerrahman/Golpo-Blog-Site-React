@@ -68,6 +68,9 @@
     .blog-details{
         padding: 40px 20px;
     }
+    .blog-details-footer{
+        align-items: center;
+    }
 }
 
 
@@ -78,5 +81,10 @@
     }
     .blog-details{
         padding: 40px 10px;
+    }
+    .blog-details-footer{
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0px 10px;
     }
 }
