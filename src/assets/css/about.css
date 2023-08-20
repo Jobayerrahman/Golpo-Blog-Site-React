@@ -128,11 +128,48 @@
 
 
 @media only screen and (max-width: 1024px) {
+    .about-wrapper{
+        flex-wrap: wrap;
+        padding: 100px 0px;
+    }
+    
+    .about-introduction{
+        padding: 0px 40px;
+    }
 
+    .blogcounter-wrapper{
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: row;
+    }
+
+    .blogcounter-content{
+        width: 18rem;
+    }
 }
 
 
 
 @media only screen and (max-width: 500px) {
+    .about-content{
+        padding: 60px 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
 
+    .about-mission{
+        grid-row: 1;
+    }
+
+    .about-vision{
+        grid-row: 2;
+    }
+    
+    .about-story{
+        grid-row: 3;
+    }
+    
+    .about-work{
+        grid-row: 4;
+    }
 }
