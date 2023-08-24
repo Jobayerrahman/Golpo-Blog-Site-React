@@ -6,11 +6,16 @@
     background: var(--nav-background);
     box-shadow: var(--box-shadow);
 }
+
 .navigation-header{
     font-size: 32px;
     color: var(--nav-heading);
     font-weight: 700;
     text-decoration: none;
+}
+
+.navigation-header:hover{
+    color: var(--nav-hover);
 }
 
 .navigation-menu{
@@ -35,6 +40,10 @@
     text-decoration: none;
     padding: 8px;
     border-radius: 5px;
+}
+
+.navigation-link:hover{
+    color: var(--nav-hover);
 }
 
 .nav-item .dropdown-menu .dropdown-item{

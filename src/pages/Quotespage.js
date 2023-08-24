@@ -7,7 +7,7 @@ import Preloader from '../components/Preloader/Preloader';
 function Quotespage(props) {
     const [quotes, setQuotes] = useState([]);
     const [isLoading, setIsLoading] = useState([true]);
-    const quoteURL = "https://dummyjson.com/quotes";
+    const quoteURL = "https://dummyjson.com/quotes"; 
 
     useEffect(() => getQuote(), []);
     useEffect(()=>{
@@ -29,7 +29,7 @@ function Quotespage(props) {
                 isLoading ? (<Preloader/>) :(
                     <div className='allQuote-wrapper'>
                         {quotes.map((quote) => (
-                            <Quote quote={quote}/>
+                            <Quote quote={quote} key={quote.id}/>
                         ))}
                     </div>
                 )

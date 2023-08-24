@@ -2,17 +2,22 @@ import Banner from "../components/Banner/Banner";
 import BlogList from "../components/Blog/BlogList"
 import Catagories from '../components/Cetagory/Catagories';
 import Blogcard from "../components/Blog/Blogcard";
-import {blogs} from "../Data/Data";
 import YoutubeBanner from "../components/Banner/YoutubeBanner";
 import Blogcarousel from "../components/Blog/Blogcarousel";
 import Container from 'react-bootstrap/Container';
 import AdSpace from "../components/AdSpace/AdSpace";
 import bannerimage from "../assets/images/mocha.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 export default function Homepage(){
     const homebanner    = "HomeBanner";
-    const blogPerRow = 3;
+    const blogPerRow = 6;
     const [next, setNext] = useState(blogPerRow);
+    const [blogs, setBlogs] = useState([]);
+    const blogURL = "http://localhost:5000/blogs"; 
+
+    useEffect(() => getBlog(), []);
 
     const handleMoreBlog = () => {
         setNext(next + blogPerRow);
@@ -22,6 +27,14 @@ export default function Homepage(){
         setNext(next - blogPerRow);
       };
     
+
+    const getBlog = () => {
+        axios.get(blogURL).then((response) => {
+        const blogs = response.data;
+        console.log(blogs);
+        setBlogs(blogs);
+        });
+    }
 
     const bloglist      = blogs.slice(0, next).map(blog => 
         <Blogcard {...blog}/>

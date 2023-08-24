@@ -5,6 +5,7 @@
     --blog-details:#222222;
     --nav-background: #fff;
     --nav-heading: #1d4b8f;
+    --nav-hover: #0559d8;
     --nav-linkactive:#1d4b8f;
     --nav-linkcolor: #161616;
     --nav-linkactivecolor: #fff;
@@ -18,6 +19,7 @@
     --blog-details:#f0f0f0;
     --nav-background: #1d4b8f;
     --nav-heading: #fff;
+    --nav-hover: #e7e7e7;
     --nav-linkactive:#fff;
     --nav-linkcolor: #fff;
     --nav-linkactivecolor: #161616;
