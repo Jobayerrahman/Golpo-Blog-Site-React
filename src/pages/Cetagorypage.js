@@ -3,15 +3,20 @@ import BlogList from "../components/Blog/BlogList";
 import Blogcard from "../components/Blog/Blogcard";
 import { Container } from "react-bootstrap";
 import { useParams } from 'react-router';
-import {blogs} from "../Data/Data";
 import bannerimage from "../assets/images/mocha.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Cetagorypage(){
-    const blogPerRow = 3;
+    const blogURL = "http://localhost:5000/blogs"; 
+    const blogPerRow = 6;
     const { cetagory } = useParams();
     const [next, setNext] = useState(blogPerRow);
+    const [blogs, setBlogs] = useState([]);
     const cetagorybanner    = "CetagoryBanner"; 
+
+    useEffect(() => getBlog(), []);
+
 
     const handleMoreBlog = () => {
         setNext(next + blogPerRow);
@@ -20,9 +25,17 @@ export default function Cetagorypage(){
     const handleLessBlog = () => {
         setNext(next - blogPerRow);
       };
+
+    
+    const getBlog = () => {
+        axios.get(blogURL).then((response) => {
+        const blogs = response.data;
+        setBlogs(blogs);
+        });
+    }
     
     const cetagories   = blogs.filter(blog=> blog.cetagory === cetagory);
-    const bloglist     = cetagories.slice(0, next).map(blog => <Blogcard {...blog}/>);
+    const bloglist     = cetagories.slice(0, next).map(blog => <Blogcard key={blog.id} {...blog}/>);
     
     const latestBlog = {
         id: 1,
@@ -35,7 +48,6 @@ export default function Cetagorypage(){
         time: '12:00',
         image: bannerimage
       };
-
 
     return(
         <div>

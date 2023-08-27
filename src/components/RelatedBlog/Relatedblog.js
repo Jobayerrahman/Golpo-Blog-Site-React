@@ -8,7 +8,7 @@ export default function Relatedblog({cetagory,slug}){
     const [isEmpty,setIsEmpty ] = useState(false);
     const blog           = blogs.filter(blog=> blog.cetagory === cetagory && blog.id !== slug);
     const bloglist       = blog.slice(0, 4).map(blog =><RelatedBlogComponent {...blog} />);
-    console.log(bloglist);
+    
     useEffect(()=>{
         if(bloglist.every(item => Object.keys(item).length === 0)){
             setIsEmpty(true)

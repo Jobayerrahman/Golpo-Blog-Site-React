@@ -31,13 +31,12 @@ export default function Homepage(){
     const getBlog = () => {
         axios.get(blogURL).then((response) => {
         const blogs = response.data;
-        console.log(blogs);
         setBlogs(blogs);
         });
     }
 
     const bloglist      = blogs.slice(0, next).map(blog => 
-        <Blogcard {...blog}/>
+        <Blogcard key={blog.id} {...blog}/>
         );
 
     const blog = {
