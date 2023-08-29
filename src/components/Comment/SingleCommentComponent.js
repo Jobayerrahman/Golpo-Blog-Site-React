@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
 import Replyinput from "../Reply/Replyinput";
+import CommentContext from "../Library/CommentContext";
 
-const Singlecomment=({hoverEffect,onHover,onWithoutHover,isHover,commentId,commentator,comment})=>{
+const Singlecomment=({hoverEffect,onHover,onWithoutHover,isHover})=>{
     const [isDisplay, setIsDiplay] = useState(false);
     const openReply = () =>{
         setIsDiplay(true)
@@ -16,18 +17,19 @@ const Singlecomment=({hoverEffect,onHover,onWithoutHover,isHover,commentId,comme
         setIsDiplay(false)
     }
     return(
-        <div key={commentId}>
-            <div onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={isHover ? 'single-comment-wrapper '+hoverEffect : 'single-comment-wrapper'}>
+        <div>
+            <CommentContext.Consumer>
+                {({indexKey, comment}) => (<div key={indexKey} onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={isHover ? 'single-comment-wrapper '+hoverEffect : 'single-comment-wrapper'}>
                 <div className="single-comment-header">
                     <img
                         className="commentetor-image"
                         src={bannerimage}
                         alt="Commentetor" 
                     />
-                    <h2>{commentator}</h2>
+                    <h2>{comment.comment.commentorName}</h2>
                 </div>
                 <div className="single-comment-content">
-                    <p>{comment}</p>
+                    <p>{comment.comment.commentorMessage}</p>
                     {
                         isDisplay ? (
                             <div>
@@ -42,6 +44,8 @@ const Singlecomment=({hoverEffect,onHover,onWithoutHover,isHover,commentId,comme
                     }
                 </div>
             </div>
+                )}
+            </CommentContext.Consumer>
         </div>
     )
 }
