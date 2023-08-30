@@ -24,12 +24,17 @@ export default function Comment({comments}){
     }
 
     const handleComment = (e) =>{
-        setCommentList([...commentList, {comment:{commentorName: name, commentorMessage: textarea}}])
-        setName('');
-        setTextarea('');
+        if( name === '' && textarea === ''){
+            console.log('Comment can not be empty!')
+        }else{
+            setCommentList([...commentList, {comment:{commentorName: name, commentorMessage: textarea}}])
+            setName('');
+            setTextarea('');
+        }
     }
 
     // const commentlist     = comments.map((comment)=>{<SingleCommentComponent {...comment} />});
+    console.log(comments[0].commentator);
 
     return(
         <div className="comment-wrapper">
