@@ -5,6 +5,7 @@
     position: fixed;
     background: var(--nav-background);
     box-shadow: var(--box-shadow);
+    z-index: 999;
 }
 
 .navigation-header{
