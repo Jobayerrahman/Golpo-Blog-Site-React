@@ -6,9 +6,15 @@ import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
 import Replyinput from "../Reply/Replyinput";
 import CommentContext from "../Library/CommentContext";
+import { useContext } from "react";
 
 const Singlecomment=({hoverEffect,onHover,onWithoutHover,isHover})=>{
+
+    const context  = useContext(CommentContext);
+    const { comment } = context;
+
     const [isDisplay, setIsDiplay] = useState(false);
+
     const openReply = () =>{
         setIsDiplay(true)
     }
@@ -16,10 +22,10 @@ const Singlecomment=({hoverEffect,onHover,onWithoutHover,isHover})=>{
     const closeReply = () =>{
         setIsDiplay(false)
     }
+    
     return(
         <div>
-            <CommentContext.Consumer>
-                {({indexKey, comment}) => (<div key={indexKey} onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={isHover ? 'single-comment-wrapper '+hoverEffect : 'single-comment-wrapper'}>
+            <div key={comment.id} onMouseEnter={onHover} onMouseLeave={onWithoutHover} className={isHover ? 'single-comment-wrapper '+hoverEffect : 'single-comment-wrapper'}>
                 <div className="single-comment-header">
                     <img
                         className="commentetor-image"
@@ -30,8 +36,7 @@ const Singlecomment=({hoverEffect,onHover,onWithoutHover,isHover})=>{
                 </div>
                 <div className="single-comment-content">
                     <p>{comment.comment.commentorMessage}</p>
-                    {
-                        isDisplay ? (
+                    {isDisplay ? (
                             <div>
                                 <Replyinput closeReply={closeReply}/>
                             </div>
@@ -40,12 +45,9 @@ const Singlecomment=({hoverEffect,onHover,onWithoutHover,isHover})=>{
                                 <FontAwesomeIcon icon={faComment} style={{ marginRight: '20px' }} />
                                 Reply
                             </Button>
-                        )
-                    }
+                        )}
                 </div>
             </div>
-                )}
-            </CommentContext.Consumer>
         </div>
     )
 }

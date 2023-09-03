@@ -7,6 +7,7 @@ import Blogcarousel from "../components/Blog/Blogcarousel";
 import Container from 'react-bootstrap/Container';
 import AdSpace from "../components/AdSpace/AdSpace";
 import Preloader from '../components/Preloader/Preloader';
+import BlogContext from "../components/Library/BlogContext";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -41,7 +42,12 @@ export default function Homepage(){
         });
     }
 
-    const bloglist      = blogs.slice(0, next).map(blog => <Blogcard key={blog.id} {...blog}/>);
+    const bloglist      = blogs.slice(0, next).map(blog => (
+        <BlogContext.Provider value={{ blogs: blog }}>
+            <Blogcard/>
+        </BlogContext.Provider>
+    ));
+    
     const latestBlog     = blogs[Object.keys(blogs).length-1];
 
     return(

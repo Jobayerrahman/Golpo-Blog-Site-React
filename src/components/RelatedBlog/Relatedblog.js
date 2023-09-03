@@ -1,4 +1,5 @@
 import RelatedBlogComponent from "./RelatedBlogComponent";
+import BlogContext from "../Library/BlogContext";
 import '../../assets/css/relatedblog.css';
 import {blogs} from "../../Data/Data";
 import { useState } from "react";
@@ -7,7 +8,11 @@ import { useEffect } from "react";
 export default function Relatedblog({cetagory,slug}){
     const [isEmpty,setIsEmpty ] = useState(false);
     const blog           = blogs.filter(blog=> blog.cetagory === cetagory && blog.id !== slug);
-    const bloglist       = blog.slice(0, 4).map(blog =><RelatedBlogComponent {...blog} />);
+    const bloglist       = blog.slice(0, 4).map(blog =>(
+        <BlogContext.Provider value={{ blogs: blog }}>
+            <RelatedBlogComponent />
+        </BlogContext.Provider>
+    ));
     
     useEffect(()=>{
         if(bloglist.every(item => Object.keys(item).length === 0)){

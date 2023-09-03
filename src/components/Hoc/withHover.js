@@ -18,13 +18,6 @@ const withHover =(OriginalComponent) => (props)=>{
         render(){
             const {hoverEffect,isHover} = this.state;
             return <OriginalComponent
-                        id ={props.id}
-                        title={props.title}
-                        cetagory = {props.cetagory}
-                        date={props.date}
-                        time={props.time}
-                        image={props.image}
-                        describe={props.describe}
                         commentId={props.commentId}
                         commentator={props.commentator}
                         comment={props.comment}
