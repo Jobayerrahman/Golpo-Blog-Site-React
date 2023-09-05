@@ -42,19 +42,19 @@ function Query(props) {
             <div className='query-form'>
                 <Form>
                     <Row>
-                        <Col>
+                        <Col sm={12}>
                             <Form.Group className="mb-3" controlId="formName">
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control type="text" value={name} onChange={handleInput} />
                             </Form.Group>
                         </Col>
-                        <Col>
+                        <Col sm={12}>
                             <Form.Group className="mb-3" controlId="formEmail">
                                 <Form.Label>Email address</Form.Label>
                                 <Form.Control type="email" value={email} onChange={handleInput} placeholder="" />
                             </Form.Group>
                         </Col>
-                        <Col>
+                        <Col sm={12}>
                             <Form.Group className="mb-3" controlId="formNumber">
                                 <Form.Label>Contact number</Form.Label>
                                 <Form.Control type="number" value={contact} onChange={handleInput} placeholder="" />
@@ -62,7 +62,7 @@ function Query(props) {
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
+                        <Col sm={12}>
                             <Form.Group className="mb-3" controlId="formTextarea">
                                 <Form.Label>Message</Form.Label>
                                 <FloatingLabel controlId="floatingTextarea2">

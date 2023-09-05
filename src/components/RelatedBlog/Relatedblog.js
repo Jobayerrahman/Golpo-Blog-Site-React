@@ -1,24 +1,37 @@
-import RelatedBlogComponent from "./RelatedBlogComponent";
-import BlogContext from "../Library/BlogContext";
 import '../../assets/css/relatedblog.css';
-import {blogs} from "../../Data/Data";
-import { useState } from "react";
-import { useEffect } from "react";
+import axios from "axios";
+import { useState,useEffect } from "react";
+import BlogContext from "../Library/BlogContext";
+import RelatedBlogComponent from "./RelatedBlogComponent";
 
 export default function Relatedblog({cetagory,slug}){
+    const blogURL = "http://localhost:5000/blogs"; 
+    const [blogs, setBlogs] = useState([]);
     const [isEmpty,setIsEmpty ] = useState(false);
+
+    useEffect(() => getBlog(), []);
+
+    const getBlog = () => {
+        axios.get(blogURL).then((response) => {
+        const blogs = response.data;
+        setBlogs(blogs);
+        });
+    }
+
     const blog           = blogs.filter(blog=> blog.cetagory === cetagory && blog.id !== slug);
     const bloglist       = blog.slice(0, 4).map(blog =>(
         <BlogContext.Provider value={{ blogs: blog }}>
             <RelatedBlogComponent />
         </BlogContext.Provider>
     ));
-    
+
     useEffect(()=>{
         if(bloglist.every(item => Object.keys(item).length === 0)){
             setIsEmpty(true)
         }   
     })
+    
+
     return(
         <div className="relatedblog-wrapper">
             <div className="relatedblog-header">

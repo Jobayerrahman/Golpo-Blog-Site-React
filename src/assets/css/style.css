@@ -1,16 +1,19 @@
 :root{
+    --primary-color: #1d4b8f;
+    --secondary-color: #0559d8;
     --background: #f0f2f5;
     --text-color: #161616;
     --card-background: #fff;
     --blog-details:#222222;
     --nav-background: #fff;
-    --nav-heading: #1d4b8f;
+    --nav-heading: var(--primary-color);
     --nav-hover: #0559d8;
     --nav-linkactive:#1d4b8f;
     --nav-linkcolor: #161616;
     --nav-linkactivecolor: #fff;
     --box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  }
+    --box-shadow-md: 0 0 10px rgba(0, 0, 0, .6);
+}
   
   [data-theme='dark']{
     --background: #161616;
@@ -43,6 +46,7 @@
     border-radius: 10px;
     width: 700px;
     height: 450px;
+    box-shadow: var(--box-shadow-md);
 }
 .banner-content{
     display: flex;
@@ -67,7 +71,7 @@
 }
 .banner-content a{
     color: #fff !important;
-    background: #1d4b8f;
+    background: var(--primary-color);
     padding: 9px;
     width: 200px !important;
     text-align: center;
@@ -77,7 +81,7 @@
 }
 
 .banner-content a:hover{
-    background: #2b5ca5;
+    background: var(--secondary-color);
 }
 
 /*********** YoutubeBanner ****************/
@@ -102,7 +106,7 @@
 
 .youtubeBanner-wrapper a{
     color: #fff !important;
-    background: #e00e18;
+    background: #e4363f;
     padding: 10px;
     width: 200px;
     text-align: center;

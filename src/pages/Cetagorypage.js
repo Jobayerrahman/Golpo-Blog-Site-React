@@ -2,6 +2,7 @@ import Banner from "../components/Banner/Banner";
 import BlogList from "../components/Blog/BlogList";
 import Blogcard from "../components/Blog/Blogcard";
 import Preloader from '../components/Preloader/Preloader';
+import BlogContext from "../components/Library/BlogContext";
 import { Container } from "react-bootstrap";
 import { useParams } from 'react-router';
 import { useEffect, useState } from "react";
@@ -41,7 +42,11 @@ export default function Cetagorypage(){
     }
     
     const cetagories   = blogs.filter(blog=> blog.cetagory === cetagory);
-    const bloglist     = cetagories.slice(0, next).map(blog => <Blogcard key={blog.id} {...blog}/>);
+    const bloglist     = cetagories.slice(0, next).map(blog => (
+        <BlogContext.Provider value={{ blogs: blog }}>
+            <Blogcard/>
+        </BlogContext.Provider>
+    ));
     const latestBlog     = cetagories[Object.keys(bloglist).length-1];
 
     return(
