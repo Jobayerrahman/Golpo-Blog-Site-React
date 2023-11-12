@@ -102,6 +102,7 @@
 
 .youtubeBanner-wrapper h2{
     font-size: 50px;
+    font-family: "Trirong", serif;
     margin-bottom: 30px;
     font-weight: 600;
     color: var(--text-color);
@@ -115,6 +116,7 @@
     text-align: center;
     border-radius: 5px;
     margin: 10px 0px;
+    font-family: 'Lora', serif;
 }
 
 
