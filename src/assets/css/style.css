@@ -62,12 +62,14 @@
     margin-bottom: 20px;
     font-weight: 600;
     color: var(--text-color);
+    font-family: "Trirong", serif;
 }
 .banner-content span{
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 20px;
     color: var(--text-color);
+    font-family: 'Lora', serif;
 }
 .banner-content a{
     color: #fff !important;
@@ -78,6 +80,7 @@
     border-radius: 5px;
     margin: 20px 0px;
     text-decoration: none;
+    font-family: 'Lora', serif;
 }
 
 .banner-content a:hover{
@@ -118,11 +121,13 @@
 /************** Gobal CSS ******************/
 .blog-heading{
     text-decoration: none;
+    font-family: "Trirong", serif;
     color: var(--text-color);
 }
 .blog-heading h2{
     font-size: 20px;
     font-weight: 700;
+    font-family: "Trirong", serif;
     line-height: 24px;
     margin-bottom: 20px;
     color: var(--text-color);
@@ -136,6 +141,7 @@
 .blog-info p{
     font-size: 14px;
     font-weight: 500;
+    font-family: 'Lora', serif;
     margin: 5px 0px; 
     color: var(--text-color);
 }

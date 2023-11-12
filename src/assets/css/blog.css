@@ -46,6 +46,7 @@
 .blog-details p{
     font-size: 18px;
     font-weight: 400;
+    font-family: 'Lora', serif;
     line-height: 40px !important;
     letter-spacing: .3px !important;
     color: var(--blog-details);
@@ -54,6 +55,7 @@
 .blog-details-footer{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 

@@ -11,6 +11,7 @@
 .relatedblog-header h3{
     font-size: 26px;
     font-weight: 700;
+    font-family: "Trirong", serif;
     padding: 20px;
     color: var(--text-color);
     letter-spacing: 0.1rem;
@@ -27,6 +28,7 @@
     font-size: 30px;
     font-weight: 700;
     color: #e7e7e7;
+    font-family: 'Lora', serif;
 }
 
 .relatedblog-cards{
