@@ -1,6 +1,6 @@
 import Banner from "../components/Banner/Banner";
 import BlogList from "../components/Blog/BlogList"
-import Catagories from '../components/Cetagory/Catagories';
+import Categories from '../components/Category/Categories';
 import Blogcard from "../components/Blog/Blogcard";
 import YoutubeBanner from "../components/Banner/YoutubeBanner";
 import Blogcarousel from "../components/Blog/Blogcarousel";
@@ -61,7 +61,7 @@ export default function Homepage(){
                                 {bloglist}
                             </BlogList>
                             <AdSpace/>
-                            <Catagories/>
+                            <Categories/>
                             <AdSpace/>
                             <YoutubeBanner/>
                             <AdSpace/>

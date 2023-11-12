@@ -11,11 +11,11 @@ import axios from "axios";
 export default function Cetagorypage(){
     const blogURL = "http://localhost:5000/blogs"; 
     const blogPerRow = 6;
-    const { cetagory } = useParams();
+    const { category } = useParams();
     const [next, setNext] = useState(blogPerRow);
     const [blogs, setBlogs] = useState([]);
     const [isLoading, setIsLoading] = useState([true]);
-    const cetagorybanner    = "CetagoryBanner"; 
+    const categorybanner    = "CategoryBanner"; 
 
     useEffect(() => getBlog(), []);
     useEffect(()=>{
@@ -41,20 +41,20 @@ export default function Cetagorypage(){
         });
     }
     
-    const cetagories   = blogs.filter(blog=> blog.cetagory === cetagory);
-    const bloglist     = cetagories.slice(0, next).map(blog => (
+    const categories   = blogs.filter(blog=> blog.category === category);
+    const bloglist     = categories.slice(0, next).map(blog => (
         <BlogContext.Provider value={{ blogs: blog }}>
             <Blogcard/>
         </BlogContext.Provider>
     ));
-    const latestBlog     = cetagories[Object.keys(bloglist).length-1];
-
+    const latestBlog     = categories[Object.keys(bloglist).length-1];
+ 
     return(
         <>
             {
                 isLoading ? (<Preloader/>) :(
                     <Container>
-                        <Banner banner={cetagorybanner} blog={latestBlog}/>
+                        <Banner banner={categorybanner} blog={latestBlog}/>
                         <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
                             {bloglist}
                         </BlogList>

@@ -1,5 +1,5 @@
 import withHover from "../Hoc/withHover";
-import Cetagory from "../Cetagory/Cetagory";
+import Category from "../Category/Category";
 import BlogContext from "../Library/BlogContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -25,7 +25,7 @@ const Blogcard =({hoverEffect,onHover,onWithoutHover,isHover}) =>{
             <div className="blog-content">
                 <Link className="blog-heading" to={`/blog/${blogs.id}`}><h2>{blogs.title}</h2></Link>
                 <div className="blog-info">
-                    <Cetagory cetagory={blogs.cetagory}/> <p> - {finalDate} {blogs.time}</p>
+                    <Category cetagory={blogs.category}/> <p> - {finalDate} {blogs.time}</p>
                 </div>
                 <p className="blog-shortline">{blogs.describe}</p>
             </div>

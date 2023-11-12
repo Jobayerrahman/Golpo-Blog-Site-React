@@ -1,17 +1,17 @@
 import { useState,useEffect } from "react";
 import Socialmediaicon from "../Socialmedia/Socialmediaicon";
-import Cetagory from "../Cetagory/Cetagory";
+import Category from "../Category/Category";
 import { Link } from "react-router-dom";
 
 export default function Banner({banner,blog}){
     const [displayX,setDisplayX] = useState("nodisplay"); 
     const [displayY,setDisplayY] = useState("nodisplay"); 
-    const cetagory               = blog.cetagory
+    const category               = blog.category
     useEffect(() => {
         if(banner === "HomeBanner"){
             setDisplayX("display");
         }
-        else if(banner === "CetagoryBanner"){
+        else if(banner === "CategoryBanner"){
             setDisplayX("display");
         }
         else if(banner === "BlogBanner"){
@@ -38,7 +38,7 @@ export default function Banner({banner,blog}){
             <div className='banner-content'>
                 <h2>{blog.title}</h2>
                 <div className='blog-info'>
-                    <Cetagory cetagory={cetagory}/>
+                    <Category cetagory={category}/>
                     <p> - {finalDate} 12:00pm</p>
                 </div>
                 <div className={'mt-4 '+displayX} style={{ width: '100%' }}>

@@ -1,4 +1,4 @@
-import Catagorymenu from "../Cetagory/Catagorymenu";
+import Categorymenu from "../Category/Categorymenu";
 import Socialmediaicon from "../Socialmedia/Socialmediaicon";
 export default function Blog({blog}){
     return(
@@ -7,7 +7,7 @@ export default function Blog({blog}){
                 <p>{blog.detail} </p>
             </div>
             <div className="blog-details-footer">
-                <Catagorymenu/>
+                <Categorymenu/>
                 <Socialmediaicon/>
             </div>
         </div>
