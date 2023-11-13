@@ -32,6 +32,7 @@
 
 .body{
     background: var(--background);
+    transition: background 0.5s;
 }
 
 

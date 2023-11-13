@@ -5,10 +5,11 @@
 }
 
 .quote-wrapper{
-    background-color: var(--card-background);
+    background: var(--card-background);
     margin: 20px 40px;
     border-radius: 10px;
     padding: 20px;
+    transition: background 0.5s;
 }
 
 .quote-header{
