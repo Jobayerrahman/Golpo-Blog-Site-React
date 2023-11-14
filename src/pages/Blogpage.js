@@ -9,7 +9,7 @@ import axios from "axios";
 import Preloader from '../components/Preloader/Preloader';
 
 export default function Blogpage(){
-    const blogURL = "http://localhost:5000/blogs"; 
+    const blogURL = "https://jsonserverdatagolpo.onrender.com/blogs"; 
     const [isLoading, setIsLoading] = useState([true]);
     const [blogs, setBlogs] = useState([]);
     const blogbanner = "BlogBanner";

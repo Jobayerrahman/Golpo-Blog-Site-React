@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Cetagorypage(){
-    const blogURL = "http://localhost:5000/blogs"; 
+    const blogURL = "https://jsonserverdatagolpo.onrender.com/blogs"; 
     const blogPerRow = 6;
     const { category } = useParams();
     const [next, setNext] = useState(blogPerRow);

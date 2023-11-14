@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Homepage(){
-    const blogURL = "http://localhost:5000/blogs"; 
+    const blogURL = "https://jsonserverdatagolpo.onrender.com/blogs"; 
     const homebanner    = "HomeBanner";
     const blogPerRow = 6;
     const [next, setNext] = useState(blogPerRow);

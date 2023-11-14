@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import Navigationlang from './Navigationlang';
 import Navigationsearch from './Navigationsearch';
 import Navigationtheme from './Navigationtheme';
+
 export default function Navigation(){
     return(
             <div className='navigation-wrapper'>
@@ -19,10 +20,10 @@ export default function Navigation(){
                                 <Nav.Link><NavLink aria-current="page" to="/" className='navigation-link'>Home</NavLink></Nav.Link>
                                 <NavDropdown title="Catagories" className='navigation-link' id="basic-nav-dropdown">
                                     <NavDropdown.Item className='navdropdown-item'><NavLink className='navigationLink-item'  to="/History">History</NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item><NavLink  to="/Nature" className='navigationLink-item'>Nature</NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item><NavLink  to="/Technology" className='navigationLink-item'>Technology</NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item><NavLink  to="/Health" className='navigationLink-item'>Health</NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item><NavLink  to="/Entertainment" className='navigationLink-item'>Entertainment</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/Nature" className='navigationLink-item'>Nature</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/Technology" className='navigationLink-item'>Technology</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/Health" className='navigationLink-item'>Health</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/Entertainment" className='navigationLink-item'>Entertainment</NavLink></NavDropdown.Item>
                                 </NavDropdown>
                                 <Nav.Link><NavLink className='navigation-link' to="/Quotes">Quotes</NavLink></Nav.Link>
                                 <Nav.Link><NavLink className='navigation-link' to="/About">About</NavLink></Nav.Link>
