@@ -5,6 +5,7 @@ import Blogpage from "../src/pages/Blogpage";
 import Aboutpage from "../src/pages/Aboutpage";
 import Contactpage from "../src/pages/Contactpage";
 import Quotespage from "../src/pages/Quotespage";
+import Postpage from "./pages/Postpage";
 export default function AppRouter(){
     return(
         <>
@@ -14,7 +15,7 @@ export default function AppRouter(){
                 <Route exact path="/blog/:id" Component={Blogpage}></Route>
                 <Route exact path="/About" Component={Aboutpage}></Route>
                 <Route exact path="/Contact" Component={Contactpage}></Route>
-                <Route exact path="/Quotes" Component={Quotespage}></Route>
+                <Route exact path="/Quotes" Component={Postpage}></Route>
             </Routes>
         </>
     );

@@ -1,7 +1,7 @@
-function Cetagory({cetagory}) {
+function Category({category}) {
     return (
-        <div className={'catagory catagory-'+cetagory}>{cetagory}</div>
+        <div className={'catagory catagory-'+category}>{category}</div>
     );
 }
 
-export default Cetagory;
+export default Category;

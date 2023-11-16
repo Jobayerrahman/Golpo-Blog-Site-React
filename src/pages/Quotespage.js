@@ -3,6 +3,7 @@ import Quote from '../components/Quote/Quote';
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Preloader from '../components/Preloader/Preloader';
+import PostBlog from '../components/Post/PostBlog';
 
 function Quotespage(props) {
     const [quotes, setQuotes] = useState([]);
@@ -28,9 +29,10 @@ function Quotespage(props) {
             {
                 isLoading ? (<Preloader/>) :(
                     <div className='allQuote-wrapper'>
-                        {quotes.map((quote) => (
+                        {/* {quotes.map((quote) => (
                             <Quote quote={quote} key={quote.id}/>
-                        ))}
+                        ))} */}
+                        <PostBlog/>
                     </div>
                 )
             }

@@ -38,7 +38,7 @@ export default function Banner({banner,blog}){
             <div className='banner-content'>
                 <h2>{blog.title}</h2>
                 <div className='blog-info'>
-                    <Category cetagory={category}/>
+                    <Category category={category}/>
                     <p> - {finalDate} 12:00pm</p>
                 </div>
                 <div className={'mt-4 '+displayX} style={{ width: '100%' }}>

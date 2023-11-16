@@ -23,7 +23,7 @@ export default function Homepage(){
     useEffect(()=>{
         setTimeout(()=>{
             setIsLoading(false);
-        },1500)
+        },2500)
     })
 
     const handleMoreBlog = () => {
