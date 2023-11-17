@@ -1,7 +1,9 @@
 import { Container } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
-import PeoplePost from '../components/Post/PeoplePost';
+import UserPost from '../components/Post/UserPost';
 import Preloader from '../components/Preloader/Preloader';
+import TypePost from '../components/Post/TypePost/TypePost';
+import CreatePost from '../components/Post/AddPost/CreatePost';
 
 function Postpage(props) {
     const [isLoading, setIsLoading] = useState([true]);
@@ -16,7 +18,9 @@ function Postpage(props) {
         <>
             {isLoading ? (<Preloader/>) :(
                     <Container>
-                            <PeoplePost/>
+                        <CreatePost/>
+                        <TypePost/>
+                        <UserPost/>
                     </Container>
                 )}
         </>

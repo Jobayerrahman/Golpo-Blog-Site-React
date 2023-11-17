@@ -1,7 +1,7 @@
 @import "./style.css";
 
 .postblogs-container{
-    padding: 100px 50px 50px;
+    padding: 30px 50px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,6 +66,73 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.createPost-wrapper{
+    padding: 100px 0px 0px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createPost-Button{
+    background: var(--card-background);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Trirong", serif;
+    padding: 10px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    width: 45rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+}
+
+.createPost-Button:hover{
+    background: var(--card-background);
+    color: var(--text-color);
+    box-shadow: var(--box-shadow);
+}
+
+
+/***************** TypePost ********************/
+.typePost-wrapper{
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.type-button{
+    background: var(--card-background);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Trirong", serif;
+    padding: 10px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    width: 22rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+}
+
+.type-button:hover{
+    background: var(--card-background);
+    color: var(--text-color);
+    box-shadow: var(--box-shadow);
 }
 
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import Category from '../Category/Category';
+import Category from '../../Category/Category';
 import { Link } from "react-router-dom";
-import bannerimage from "../../assets/images/mocha.webp";
-import '../../assets/css/post.css';
+import bannerimage from "../../../assets/images/mocha.webp";
+import '../../../assets/css/post.css';
 
-function PostBlog() {
+function ViewPost() {
     const category               = "Default";
     return (
         <div className='postblog-wrapper'>
@@ -31,4 +31,4 @@ function PostBlog() {
     );
 }
 
-export default PostBlog;
+export default ViewPost;
