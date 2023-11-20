@@ -6,16 +6,20 @@ import { Link } from "react-router-dom";
 export default function Banner({banner,blog}){
     const [displayX,setDisplayX] = useState("nodisplay"); 
     const [displayY,setDisplayY] = useState("nodisplay"); 
-    const category               = blog.category
+    const [category,setCategory] = useState(); 
+    
     useEffect(() => {
         if(banner === "HomeBanner"){
             setDisplayX("display");
+            setCategory(blog.category);
         }
         else if(banner === "CategoryBanner"){
             setDisplayX("display");
+            setCategory(blog.category);
         }
         else if(banner === "BlogBanner"){
             setDisplayY("display");
+            setCategory(blog.category);
         }
     }, [banner]);
     

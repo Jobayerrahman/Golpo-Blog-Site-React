@@ -19,11 +19,13 @@
     font-size: 42px;
     font-weight: 600;
     color: #fff;
+    font-family: "Trirong", serif;
 }
 
 .footer-header p{
     font-size: 15px;
     color: #fff;
+    font-family: 'Lora', serif;
 }
 
 .footer-navbar{
@@ -36,6 +38,7 @@
     font-size: 22px;
     font-weight: 600;
     color: #fff;
+    font-family: 'Lora', serif;
 }
 
 .footer-navbar ul{
@@ -63,6 +66,7 @@
     font-size: 22px;
     font-weight: 600;
     color: #fff;
+    font-family: 'Lora', serif;
 }
 
 .footer-catagory ul{
@@ -80,13 +84,14 @@
 .footer-newsletter{
     padding: 40px 10px;
     height: 100%;
-    width: 400px;
+    width: 350px;
 }
 
 .footer-newsletter h4{
     font-size: 16px;
     font-weight: 400;
     color: #fff;
+    font-family: 'Lora', serif;
 }
 
 
@@ -99,7 +104,7 @@
 
 .newsletter-input{
     height: 40px;
-    width: 300px;
+    width: 250px;
     border-radius: 10px;
     border: none;
     background: transparent;
@@ -115,10 +120,14 @@
     border-radius: 10px;
     background: #1d4b8f;
     color: #fff;
+    font-size: 14px;
+    font-family: 'Lora', serif;
+    transition: background 2s;
 }
 
 .newsletter-button:hover{
     background: #2b5ca5;
+    transition: background 2s;
 }
 
 
@@ -151,7 +160,7 @@
         width: 100%;
     }
     .newsletter{
-        width: 400px;
+        width: 320px;
     }
 }
 
@@ -163,16 +172,13 @@
         height: auto;
         padding-bottom: 20px;
     }
-    
     .footer-content{
         flex-direction: column;
         align-items: left;
     }
-
     .footer-header{
         padding: 40px 20px;
     }
-
     .footer-navbar{
         padding: 20px;
         width: 100%;
@@ -183,8 +189,5 @@
     }
     .footer-newsletter{
         padding: 40px 20px;
-    }
-    .newsletter{
-        width: 350px;
     }
 }
