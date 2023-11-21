@@ -1,0 +1,57 @@
+.usermodal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+}
+  
+.usermodal-content{
+    position: fixed;
+    background: #fff;
+    width: 20%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.usermodal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usermodal-header h2{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Trirong", serif;
+    margin: 0;
+}
+
+.usermodal-body{
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.userLogin-form{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.divider-line{
+    width: 60%;
+    height: 2px;
+    background: #c5bfbf;
+    margin: 10px;
+}

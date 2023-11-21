@@ -1,10 +1,10 @@
 import React from 'react';
 
 function PostModal({showModal}) {
-    const showHiddenModal =  showModal ? "modal display-block": "modal display-none";
+    const showHiddenModal =  showModal ? "postmodal display-block": "postmodal display-none";
     return (
         <div className={showHiddenModal}>
-            <div className='modal-content'>
+            <div className='postmodal-content'>
                 <h2>Hello world</h2>
             </div>
         </div>

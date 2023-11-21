@@ -98,6 +98,7 @@
 
 .navigation-icon-wrapper{
     display: flex;
+    align-items: center;
 }
 
 .navigation-icon{
@@ -204,6 +205,87 @@
     border-radius: 0.2rem;
 }
 
+/**************** Navigation User Dropdown ******************/
+.navigation-userdropdown{
+    position: relative;
+}
+
+.userdropdown-wrapper{
+    position: absolute;
+    margin: 10px 5px 0px 0px;
+    padding: 10px 5px 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    width: 10rem;
+    background: #fff;
+    border-radius: 5px;
+    right: 0;
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+.userdropdown-menu{
+    list-style-type: none;
+    padding: 0;
+}
+
+.userdropdown-item{
+    color: #161616;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.userdropdown-item:hover{
+    color: #f1f1f1;
+    background: var(--nav-linkactive);
+}
+
+.navigation-usericon{
+    padding: 0px 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.profiledropdown-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profiledropdown-item:hover{
+    background: rgb(163, 156, 156);
+}
+
+.profileImage{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0px 5px;
+}
+
+.profiledropdown-item h4{
+    font-size: 14px;
+    font-family: "Trirong", serif;
+    font-weight: 700;
+    margin: 0px;
+    color: var(--nav-linkcolor);
+}
 
 @media only screen and (max-width: 1024px) {
     .navigation-menu{

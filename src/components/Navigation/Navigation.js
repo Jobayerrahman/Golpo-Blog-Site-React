@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import Navigationlang from './Navigationlang';
 import Navigationsearch from './Navigationsearch';
 import Navigationtheme from './Navigationtheme';
+import Navigationuser from './Navigationuser';
 
 export default function Navigation(){
     return(
@@ -30,9 +31,10 @@ export default function Navigation(){
                                 <Nav.Link><NavLink className='navigation-link' to="/Contact">Contact</NavLink></Nav.Link>
                             </Nav>
                             <div className='navigation-icon-wrapper'>
+                                <Navigationtheme/>
                                 <Navigationsearch/>
                                 <Navigationlang/>
-                                <Navigationtheme/>
+                                <Navigationuser/>
                             </div>
                         </Navbar.Collapse>
                     </Container>
