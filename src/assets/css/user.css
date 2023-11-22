@@ -14,7 +14,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@
 }
 
 .usermodal-body{
-    padding: 40px 10px;
+    padding: 20px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,11 +124,12 @@
 @media only screen and (max-width: 500px) {
     .userLogin-modal{
         width: 90%;
-        height: 60%;
+        height: 80%;
     }
 
     .userRegister-modal{
         width: 90%;
         height: 90%;
+        overflow: scroll;
     }
 }
