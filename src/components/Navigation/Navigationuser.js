@@ -1,21 +1,32 @@
+import '../../assets/css/user.css';
 import React, { useState } from "react";
+import LoginModal from "../User/Login/LoginModal";
+import RegisterModal from "../User/Register/RegisterModal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faCircleUser, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
-import LoginModal from "../User/Login/LoginModal";
-import '../../assets/css/user.css';
 
 export default function Navigationuser(){
     const [open, setOpen] = useState(false);
     const [session, setSession] = useState(false);
-    const [ openModal, setOpenModal ] = useState(false);
-    const [ closeModal, setCloseModal ] = useState(false);
+    const [ openLoginModal, setOpenLoginModal ] = useState(false);
+    const [ openRegisterModal, setOpenRegisterModal ] = useState(false);
 
-    const handleOpenModal = (e) =>{
-        setOpenModal(true);
+    const handleOpenLoginModal = (e) =>{
+        setOpenLoginModal(true);
+        setOpenRegisterModal(false);
     }
 
-    const handleCloseModal = (e) =>{
-        setOpenModal(false);
+    const handleCloseLoginModal = (e) =>{
+        setOpenLoginModal(false);
+    }
+
+    const handleOpenRegisterModal = (e) =>{
+        setOpenRegisterModal(true);
+        setOpenLoginModal(false);
+    }
+
+    const handleCloseRegisterModal = (e) =>{
+        setOpenRegisterModal(false);
     }
 
     const handleLangDropdown = () => {
@@ -29,7 +40,7 @@ export default function Navigationuser(){
                         src="https://cdn.muzz.com/website-v4/img/shared/flags/bd.svg"
                         alt="Profile Pic" /> 
                         <h4>UserName</h4>
-                    </div>) : (<FontAwesomeIcon className='navigation-icon' icon={faUser} onClick={handleOpenModal} />) }
+                    </div>) : (<FontAwesomeIcon className='navigation-icon' icon={faUser} onClick={handleOpenLoginModal} />) }
             {open?(
                 <div className="userdropdown-wrapper">
                     <ul className="userdropdown-menu">
@@ -45,7 +56,17 @@ export default function Navigationuser(){
                 </div>
             ):null}   
 
-            <LoginModal showModal={openModal} handleCloseModal={handleCloseModal} />
+            <LoginModal 
+                onShowModal = {openLoginModal} 
+                onCloseModal = {handleCloseLoginModal}  
+                handleOpenRegisterModal = {handleOpenRegisterModal}
+            />
+
+            <RegisterModal 
+                onShowModal={openRegisterModal} 
+                onCloseModal={handleCloseRegisterModal} 
+                handleOpenLoginModal = {handleOpenLoginModal}
+            />
         </div>
     )
 }

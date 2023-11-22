@@ -11,8 +11,6 @@
 .usermodal-content{
     position: fixed;
     background: #fff;
-    width: 20%;
-    height: 60%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -20,6 +18,16 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+}
+
+.userLogin-modal{
+    width: 30%;
+    height: 60%;
+}
+
+.userRegister-modal{
+    width: 40%;
+    height: 85%;
 }
 
 .usermodal-header{
@@ -50,8 +58,77 @@
 }
 
 .divider-line{
-    width: 60%;
+    width: 70%;
     height: 2px;
-    background: #c5bfbf;
+    background: #c0c0c0;
     margin: 10px;
+}
+
+.userlogin-btn{
+    color: #fff !important;
+    background: #1d4b8f;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Lora', serif;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 0px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.userlogin-btn:hover{
+    background: #2b5ca5;
+}
+
+.userregister-btn{
+    color: #fff !important;
+    background: #1d788f;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Lora', serif;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 0px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.userregister-btn:hover{
+    background: #2b7ea5;
+}
+
+.usermodal-body h4{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Lora', serif;
+    color: #1d4b8f;
+}
+
+@media only screen and (max-width: 1024px) {
+    .userLogin-modal{
+        width: 55%;
+        height: 50%;
+    }
+
+    .userRegister-modal{
+        width: 65%;
+        height: 75%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .userLogin-modal{
+        width: 90%;
+        height: 60%;
+    }
+
+    .userRegister-modal{
+        width: 90%;
+        height: 90%;
+    }
 }
