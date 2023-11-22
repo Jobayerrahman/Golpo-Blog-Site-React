@@ -4,16 +4,19 @@ import PostModal from './Modal/PostModal';
 
 function CreatePost(props) {
     const [ openModal, setOpenModal ] = useState(false);
-    const [ closeModal, setCloseModal ] = useState(false);
 
-    const handleModal = (e) =>{
+    const handleOpenModal = (e) =>{
         setOpenModal(true);
+    }
+
+    const handleCloseModal = (e) =>{
+        setOpenModal(false);
     }
 
     return (
         <div className='createPost-wrapper'>
-            <Button className='createPost-Button' onClick={handleModal} >Post Your Write & Thought</Button>
-            <PostModal showModal={openModal} />
+            <Button className='createPost-Button' onClick={handleOpenModal} >Post Your Write & Thought</Button>
+            <PostModal showModal={openModal} onCloseModal={handleCloseModal} />
         </div>
     );
 }
