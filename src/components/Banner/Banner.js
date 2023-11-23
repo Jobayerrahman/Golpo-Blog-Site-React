@@ -7,8 +7,10 @@ export default function Banner({banner,blog}){
     const [displayX,setDisplayX] = useState("nodisplay"); 
     const [displayY,setDisplayY] = useState("nodisplay"); 
     const [category,setCategory] = useState(); 
+    const [date,setDate] = useState(); 
     
     useEffect(() => {
+        setDate(blog.date);
         if(banner === "HomeBanner"){
             setDisplayX("display");
             setCategory(blog.category);
@@ -24,8 +26,8 @@ export default function Banner({banner,blog}){
     }, [banner]);
     
     
-    const blogDate = blog.date;
-    var parsedDate = new Date(blogDate);
+    // const blogDate = blog.date;
+    var parsedDate = new Date(date);
     const options = {  day: 'numeric', year: 'numeric', month: 'long', day: 'numeric' };
     var finalDate = parsedDate.toLocaleDateString("en-GB", options);
 

@@ -7,9 +7,11 @@ import { faUser, faCircleUser, faArrowRightToBracket } from '@fortawesome/free-s
 
 export default function Navigationuser(){
     const [open, setOpen] = useState(false);
-    const [session, setSession] = useState(false);
     const [ openLoginModal, setOpenLoginModal ] = useState(false);
     const [ openRegisterModal, setOpenRegisterModal ] = useState(false);
+
+    const sessionStatus     = sessionStorage.getItem('session');
+    const sessionUserName   = sessionStorage.getItem('username');
 
     const handleOpenLoginModal = (e) =>{
         setOpenLoginModal(true);
@@ -33,13 +35,18 @@ export default function Navigationuser(){
         setOpen(!open);
     }
 
+    const handleLogout = () =>{
+        sessionStorage.clear();
+        window.location.reload();
+    }
+
     return(
         <div className="navigation-userdropdown">
-            {session? (<div className="profiledropdown-item" onClick={handleLangDropdown}>
+            {sessionStatus? (<div className="profiledropdown-item" onClick={handleLangDropdown}>
                     <img className="profileImage"
                         src="https://cdn.muzz.com/website-v4/img/shared/flags/bd.svg"
                         alt="Profile Pic" /> 
-                        <h4>UserName</h4>
+                        <h4>{sessionUserName}</h4>
                     </div>) : (<FontAwesomeIcon className='navigation-icon' icon={faUser} onClick={handleOpenLoginModal} />) }
             {open?(
                 <div className="userdropdown-wrapper">
@@ -48,7 +55,7 @@ export default function Navigationuser(){
                             <FontAwesomeIcon className='navigation-usericon' icon={faCircleUser} />
                             My Profile
                         </li>
-                        <li className="userdropdown-item">
+                        <li className="userdropdown-item" onClick={handleLogout}>
                             <FontAwesomeIcon className='navigation-usericon' icon={faArrowRightToBracket} />
                             Log out
                         </li>

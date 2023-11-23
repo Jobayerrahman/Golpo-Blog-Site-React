@@ -269,18 +269,10 @@
     {
       "fullName": "Jobayer Rahman",
       "email": "jobayer.rahman1997@gmail.com",
-      "userName": "jobayerrahman",
-      "password": "password",
-      "confirmPassword": "password",
-      "id": 2
-    },
-    {
-      "fullName": "Jobayer Rahman",
-      "email": "jobayer.rahman1997@gmail.com",
       "userName": "jobayer019",
       "password": "pass",
       "confirmPassword": "pass",
-      "id": 3
+      "id": 2
     }
   ]
 }

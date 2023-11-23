@@ -38,11 +38,12 @@ function RegisterModal(props) {
     const handleSubmit = (e) =>{
         e.preventDefault();
         let registerObject = {fullName,email,userName,password,confirmPassword};
-        axios.post('http://localhost:5000/users', {fullName,email,userName,password,confirmPassword})
+        axios.post('https://jsonserverdatagolpo.onrender.com/golpousers', {fullName,email,userName,password,confirmPassword})
           .then(function (response) {
             setFlaseMessage(true);
             setTimeout(()=>{
                 setFlaseMessage(false);
+                window.location.reload();
             },3000)
           })
           .catch(function (error) {

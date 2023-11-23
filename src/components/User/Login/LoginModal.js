@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -7,13 +8,13 @@ function LoginModal(props) {
     const { onShowModal, onCloseModal, handleOpenRegisterModal } = props;
     const showHiddenModal =  onShowModal ? "usermodal display-block": "usermodal display-none";
 
-    const [ email, setEmail ] = useState();
+    const [ username, setUsername ] = useState();
     const [ password, setPassword ] = useState();
 
     const handleInput = (e) =>{
         const inputValue = e.target.value;
-         if(e.target.name === 'email'){
-            setEmail(inputValue);
+         if(e.target.name === 'username'){
+            setUsername(inputValue);
         }
         else if(e.target.name === 'password'){
             setPassword(inputValue);
@@ -22,9 +23,29 @@ function LoginModal(props) {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        const postObject = {email,password};
-        console.log(postObject);
-        setEmail('');
+        const postObject = {username,password};
+
+        axios.get('https://jsonserverdatagolpo.onrender.com/golpousers')
+        .then((response) => {
+            response.data.map((user)=>{
+                if(user.userName === postObject.username){
+                    if(user.password === postObject.password){
+                        console.log("Login successfull");
+                        sessionStorage.setItem('username',postObject.username);
+                        sessionStorage.setItem('session',true);
+                        window.location.reload();
+                    }else{
+                        console.log("Password is wrong");
+                    }
+                }else{
+                    console.log("Username is wrong");
+                }
+            })
+        })
+        .catch((err) => { console.log('Login Failed due to :' + err.message) });
+
+        console.log(postObject.password);
+        setUsername('');
         setPassword('');
     }
 
@@ -39,7 +60,7 @@ function LoginModal(props) {
                     <Form className='userLogin-form'>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address*</Form.Label>
-                            <input className="form-control" type="email" name="email" onChange={handleInput} value={email} placeholder="Enter email"/>
+                            <input className="form-control" type="username" name="username" onChange={handleInput} value={username} placeholder="Enter email"/>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
