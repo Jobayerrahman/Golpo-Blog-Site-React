@@ -1,7 +1,9 @@
+import axios from "axios";
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import SuccessMessage from "../../FlashMessage/SuccessMessage";
 
 function RegisterModal(props) {
     const { onShowModal, onCloseModal, handleOpenLoginModal } = props;
@@ -12,6 +14,7 @@ function RegisterModal(props) {
     const [ userName, setUserName ] = useState();
     const [ password, setPassword ] = useState();
     const [ confirmPassword, setConfirmPassword ] = useState();
+    const [ flashMessage, setFlaseMessage ] = useState(false);
 
     const handleInput = (e) =>{
         const inputValue = e.target.value;
@@ -34,8 +37,18 @@ function RegisterModal(props) {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        const postObject = {fullName,email,userName,password,confirmPassword};
-        console.log(postObject);
+        let registerObject = {fullName,email,userName,password,confirmPassword};
+        axios.post('http://localhost:5000/users', {fullName,email,userName,password,confirmPassword})
+          .then(function (response) {
+            setFlaseMessage(true);
+            setTimeout(()=>{
+                setFlaseMessage(false);
+            },3000)
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        console.log(registerObject);
         setFullName('');
         setEmail('');
         setUserName('');
@@ -52,6 +65,7 @@ function RegisterModal(props) {
                     <FontAwesomeIcon className='navigation-icon' icon={faCircleXmark} onClick={onCloseModal} />
                 </div>
                 <div className='usermodal-body'>
+                    {flashMessage? (<SuccessMessage/>):null}
                     <Form className='userLogin-form'>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Full Name*</Form.Label>
