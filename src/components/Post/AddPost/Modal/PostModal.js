@@ -1,7 +1,9 @@
+import axios from "axios";
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import SuccessMessage from '../../../FlashMessage/SuccessMessage';
 
 function PostModal(props) {
     const { showModal,  onCloseModal } = props;
@@ -12,6 +14,7 @@ function PostModal(props) {
     const [ topicTitle, setTopicTitle ] = useState();
     const [ files, setFiles ] = useState();
     const [ textarea, setTextarea ] = useState();
+    const [ flashMessage, setFlaseMessage ] = useState(false);
 
     const handleInput = (e) =>{
         const inputValue = e.target.value;
@@ -35,6 +38,17 @@ function PostModal(props) {
     const handleSubmit = (e) =>{
         e.preventDefault();
         const postObject = {fullName,email,topicTitle,files,textarea};
+        axios.post('https://jsonserverdatagolpo.onrender.com/user_posts', {fullName,email,topicTitle,files,textarea})
+          .then(function () {
+            setFlaseMessage(true);
+            setTimeout(()=>{
+                setFlaseMessage(false);
+                window.location.reload();
+            },3000)
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
         console.log(postObject);
         setFullName('');
         setEmail('');
@@ -51,6 +65,7 @@ function PostModal(props) {
                     <FontAwesomeIcon className='navigation-icon' icon={faCircleXmark} onClick={onCloseModal} />
                 </div>
                 <div className='modal-body'>
+                    {flashMessage? (<SuccessMessage/>):null}
                     <Form className='modal-form'>
                         <Form.Group className="mb-3">
                             <Form.Label>Full Name*</Form.Label>

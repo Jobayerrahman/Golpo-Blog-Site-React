@@ -38,7 +38,7 @@ function RegisterModal(props) {
     const handleSubmit = (e) =>{
         e.preventDefault();
         let registerObject = {fullName,email,userName,password,confirmPassword};
-        axios.post('https://jsonserverdatagolpo.onrender.com/golpousers', {fullName,email,userName,password,confirmPassword})
+        axios.post('https://jsonserverdatagolpo.onrender.com/general_users', {fullName,email,userName,password,confirmPassword})
           .then(function (response) {
             setFlaseMessage(true);
             setTimeout(()=>{

@@ -25,7 +25,7 @@ function LoginModal(props) {
         e.preventDefault();
         const postObject = {username,password};
 
-        axios.get('https://jsonserverdatagolpo.onrender.com/golpousers')
+        axios.get('https://jsonserverdatagolpo.onrender.com/general_users')
         .then((response) => {
             response.data.map((user)=>{
                 if(user.userName === postObject.username){

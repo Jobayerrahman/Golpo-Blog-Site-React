@@ -1,12 +1,11 @@
-import React from 'react';
 import ViewPost from './ViewPost/ViewPost';
 
-function UserPost(props) {
+function UserPost({posts}) {
     return (
         <div className='postblogs-container'>
-            <ViewPost/>
-            <ViewPost/>
-            <ViewPost/>
+            {posts.map((post) => (
+                <ViewPost post={post} key={post.id}/>
+            ))}
         </div>
     );
 }
