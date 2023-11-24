@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState,useEffect, Suspense } from "react";
 import Socialmediaicon from "../Socialmedia/Socialmediaicon";
 import Category from "../Category/Category";
 import { Link } from "react-router-dom";
@@ -7,10 +7,12 @@ export default function Banner({banner,blog}){
     const [displayX,setDisplayX] = useState("nodisplay"); 
     const [displayY,setDisplayY] = useState("nodisplay"); 
     const [category,setCategory] = useState(); 
+    const [image,setImage] = useState(); 
     const [date,setDate] = useState(); 
     
     useEffect(() => {
         setDate(blog.date);
+        setImage(blog.image)
         if(banner === "HomeBanner"){
             setDisplayX("display");
             setCategory(blog.category);
@@ -35,11 +37,13 @@ export default function Banner({banner,blog}){
     return(
         <div className="banner-wrapper">
             <div className='banner-poster'>
+            <Suspense fallback={<Loading />}>
                 <img
                     className="banner-image"
-                    src={blog.image}
+                    src={image}
                     alt="Updating Blog" 
                 />
+            </Suspense>
             </div>
             <div className='banner-content'>
                 <h2>{blog.title}</h2>
@@ -57,3 +61,8 @@ export default function Banner({banner,blog}){
         </div>
     )
 }
+
+
+function Loading() {
+    return <h2>🌀 Loading...</h2>;
+  }
