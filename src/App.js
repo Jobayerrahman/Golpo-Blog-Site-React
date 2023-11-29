@@ -1,10 +1,13 @@
-import '../src/assets/css/bootstrap.min.css'
+import '../src/assets/css/bootstrap.min.css';
 import '../src/assets/css/style.css';
 import '../src/assets/css/blog.css';
 import '../src/assets/css/cetagory.css';
+import '../src/assets/css/skeleton.css';
 import Golpo from "./components/Golpo";
-import ThemeContext from './components/Library/ThemeContext';
 import useLocalStorage from 'use-local-storage-state';
+import ThemeContext from './components/Library/ThemeContext';
+
+
 function App() {
   const [theme,setTheme] = useLocalStorage('theme'? 'dark' : 'light')
 

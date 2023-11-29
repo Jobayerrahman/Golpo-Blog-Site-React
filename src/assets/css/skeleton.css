@@ -1,0 +1,15 @@
+.bannerSkeletons-Wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 50px 50px;
+}
+
+.bannerSkeletons-Wrapper h2{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: "Trirong", serif;
+}

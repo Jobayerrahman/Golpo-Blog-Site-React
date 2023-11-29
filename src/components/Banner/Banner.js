@@ -1,18 +1,20 @@
-import { useState,useEffect, Suspense } from "react";
-import Socialmediaicon from "../Socialmedia/Socialmediaicon";
-import Category from "../Category/Category";
 import { Link } from "react-router-dom";
+import { useState,useEffect } from "react";
+import Category from "../Category/Category";
+import Socialmediaicon from "../Socialmedia/Socialmediaicon";
 
 export default function Banner({banner,blog}){
     const [displayX,setDisplayX] = useState("nodisplay"); 
     const [displayY,setDisplayY] = useState("nodisplay"); 
+    const [title,setTitle] = useState(); 
     const [category,setCategory] = useState(); 
     const [image,setImage] = useState(); 
     const [date,setDate] = useState(); 
     
     useEffect(() => {
+        setTitle(blog.title);
         setDate(blog.date);
-        setImage(blog.image)
+        setImage(blog.image);
         if(banner === "HomeBanner"){
             setDisplayX("display");
             setCategory(blog.category);
@@ -37,23 +39,21 @@ export default function Banner({banner,blog}){
     return(
         <div className="banner-wrapper">
             <div className='banner-poster'>
-            <Suspense fallback={<Loading />}>
                 <img
                     className="banner-image"
                     src={image}
                     alt="Updating Blog" 
                 />
-            </Suspense>
             </div>
             <div className='banner-content'>
-                <h2>{blog.title}</h2>
+                <h2>{title}</h2>
                 <div className='blog-info'>
                     <Category category={category}/>
                     <p> - {finalDate} 12:00pm</p>
                 </div>
-                <div className={'mt-4 '+displayX} style={{ width: '100%' }}>
-                    <Link to={`/blog/${blog.id}`}><a>Read more</a></Link>
-                </div>
+                    <div className={'mt-4 '+displayX} style={{ width: '100%' }}>
+                        <Link to={`/blog/${blog.id}`}><a>Read more</a></Link>
+                    </div>
                 <div className={displayY}>
                     <Socialmediaicon/>
                 </div>
@@ -61,8 +61,3 @@ export default function Banner({banner,blog}){
         </div>
     )
 }
-
-
-function Loading() {
-    return <h2>🌀 Loading...</h2>;
-  }

@@ -1,4 +1,5 @@
-import Banner from "../components/Banner/Banner";
+import axios from "axios";
+import { useEffect, useState, lazy, Suspense } from "react";
 import BlogList from "../components/Blog/BlogList"
 import Categories from '../components/Category/Categories';
 import Blogcard from "../components/Blog/Blogcard";
@@ -8,8 +9,9 @@ import Container from 'react-bootstrap/Container';
 import AdSpace from "../components/AdSpace/AdSpace";
 import Preloader from '../components/Preloader/Preloader';
 import BlogContext from "../components/Library/BlogContext";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import BannerSkeleton from "../components/Skeletons/BannerSkeleton";
+
+const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 4000)).then(() => import("../components/Banner/Banner"));});
 
 export default function Homepage(){
     const blogURL = "https://jsonserverdatagolpo.onrender.com/blogs"; 
@@ -17,12 +19,12 @@ export default function Homepage(){
     const blogPerRow = 6;
     const [next, setNext] = useState(blogPerRow);
     const [blogs, setBlogs] = useState([]);
-    const [isLoading, setIsLoading] = useState([true]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => getBlog(), []);
     useEffect(()=>{
-        setTimeout(()=>{
-            setIsLoading(false);
+         setTimeout(()=>{
+             setIsLoading(false);
         },2500)
     })
 
@@ -38,6 +40,10 @@ export default function Homepage(){
     const getBlog = () => {
         axios.get(blogURL).then((response) => {
         const blogs = response.data;
+        const status = response.status;
+        if(status === 200 ){
+            setIsLoading(false);
+        }
         setBlogs(blogs);
         });
     }
@@ -56,7 +62,9 @@ export default function Homepage(){
                 isLoading ? (<Preloader/>) :(
                     <div>
                         <Container>
-                            <Banner banner={homebanner} blog={latestBlog}/>
+                            <Suspense fallback={<BannerSkeleton/>}>
+                                <Banner banner={homebanner} blog={latestBlog}/>
+                            </Suspense>
                             <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
                                 {bloglist}
                             </BlogList>
@@ -75,3 +83,5 @@ export default function Homepage(){
         </>
     )
 }
+
+
