@@ -277,18 +277,18 @@
   ],
   "posts": [
     {
-      "fullName": "Jobayer Rahman",
-      "email": "jobayer.rahman1997@gmail.com",
+      "fullName": "John Smith",
+      "email": "John.Smith@gmail.com",
       "topicTitle": "Twitter vs. Threads: Meta Has the Advantage",
-      "files": "C:\\fakepath\\5185.jpg",
+      "files": "http://localhost:3003/assets/images/mocha.webp",
       "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor leo vel nulla posuere accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor leo vel nulla posuere accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor leo vel nulla posuere accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor leo vel nulla posuere accumsan.",
       "id": 1
     },
     {
-      "fullName": "AF Rahman",
-      "email": "af.rahman1997@gmail.com",
+      "fullName": "AF Stave",
+      "email": "af.stave@gmail.com",
       "topicTitle": "Twitter vs. Threads: Meta Has the Advantage",
-      "files": "C:\\fakepath\\5185.jpg",
+      "files": "http://localhost:3003/assets/images/mocha.webp",
       "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor leo vel nulla posuere accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor leo vel nulla posuere accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor leo vel nulla posuere accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor leo vel nulla posuere accumsan.",
       "id": 1
     }

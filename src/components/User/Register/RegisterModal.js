@@ -4,17 +4,20 @@ import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import SuccessMessage from "../../FlashMessage/SuccessMessage";
+import FailedMessage from "../../FlashMessage/FailedMessage";
 
 function RegisterModal(props) {
     const { onShowModal, onCloseModal, handleOpenLoginModal } = props;
     const showHiddenModal =  onShowModal ? "usermodal display-block": "usermodal display-none";
 
-    const [ fullName, setFullName ] = useState();
-    const [ email, setEmail ] = useState();
-    const [ userName, setUserName ] = useState();
-    const [ password, setPassword ] = useState();
-    const [ confirmPassword, setConfirmPassword ] = useState();
-    const [ flashMessage, setFlaseMessage ] = useState(false);
+    const [ fullName, setFullName ] = useState('');
+    const [ email, setEmail ] = useState('');
+    const [ userName, setUserName ] = useState('');
+    const [ password, setPassword ] = useState('');
+    const [ confirmPassword, setConfirmPassword ] = useState('');
+    const [ message, setMessage ] = useState('');
+    const [ flashSuccessMessage, setFlashSuccessMessage ] = useState(false);
+    const [ flashFailedMessage, setFlashFailedMessage ] = useState(false);
 
     const handleInput = (e) =>{
         const inputValue = e.target.value;
@@ -37,19 +40,35 @@ function RegisterModal(props) {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        let registerObject = {fullName,email,userName,password,confirmPassword};
-        axios.post('https://jsonserverdatagolpo.onrender.com/general_users', {fullName,email,userName,password,confirmPassword})
-          .then(function (response) {
-            setFlaseMessage(true);
+        if(fullName !=='' && email !=='' && userName !=='' && password !=='' && confirmPassword !==''){
+            if( password === confirmPassword ){
+                let registerObject = {fullName,email,userName,password,confirmPassword};
+                axios.post('https://jsonserverdatagolpo.onrender.com/general_users', registerObject)
+                  .then(function (response) {
+                    setFlashSuccessMessage(true);
+                    setMessage('Registation Successfully!');
+                    setTimeout(()=>{
+                        setFlashSuccessMessage(false);
+                        window.location.reload();
+                    },3000)
+                  })
+                  .catch(function (error) {
+                    console.log(error);
+                  });
+            }else{
+                setFlashFailedMessage(true);
+                setMessage(`Password and Confirm Password doesn't match`)
+                setTimeout(()=>{
+                    setFlashFailedMessage(false);
+                },2000)
+            }
+        }else{
+            setFlashFailedMessage(true);
+            setMessage('Field can not empty')
             setTimeout(()=>{
-                setFlaseMessage(false);
-                window.location.reload();
-            },3000)
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-        console.log(registerObject);
+                setFlashFailedMessage(false);
+            },2000)
+        }
         setFullName('');
         setEmail('');
         setUserName('');
@@ -66,7 +85,8 @@ function RegisterModal(props) {
                     <FontAwesomeIcon className='navigation-icon' icon={faCircleXmark} onClick={onCloseModal} />
                 </div>
                 <div className='usermodal-body'>
-                    {flashMessage? (<SuccessMessage/>):null}
+                    {flashSuccessMessage? (<SuccessMessage message={message} />):null}
+                    {flashFailedMessage? (<FailedMessage message={message} />):null}
                     <Form className='userLogin-form'>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Full Name*</Form.Label>

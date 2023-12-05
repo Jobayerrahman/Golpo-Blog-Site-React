@@ -19,7 +19,7 @@ function ViewPost({post}) {
                 <Link className="postblog-heading"><h2>{post.topicTitle}</h2></Link>
                 <div className="postblog-info">
                     <h4>Blog Owner - {post.fullName}</h4>
-                    <Category category={category}/> <p> {category} - 22 May 2023 12:00pm</p>
+                    <p> {category} - 22 May 2023 12:00pm</p>
                 </div>
                 <p>{post.textarea}</p>
             </div>

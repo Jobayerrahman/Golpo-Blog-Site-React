@@ -15,7 +15,7 @@ export default function AppRouter(){
                 <Route exact path="/blog/:id" Component={Blogpage}></Route>
                 <Route exact path="/About" Component={Aboutpage}></Route>
                 <Route exact path="/Contact" Component={Contactpage}></Route>
-                <Route exact path="/Quotes" Component={Postpage}></Route>
+                <Route exact path="/Posts" Component={Postpage}></Route>
             </Routes>
         </>
     );

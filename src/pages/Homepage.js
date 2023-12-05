@@ -11,8 +11,8 @@ import Preloader from '../components/Preloader/Preloader';
 import BlogContext from "../components/Library/BlogContext";
 import SkeletonBanner from "../components/Skeletons/SkeletonBanner";
 import SkeletonBlog from "../components/Skeletons/SkeletonBlog";
-const Banner = lazy(() => import("../components/Banner/Banner"));
-// const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 20000)).then(() => import("../components/Banner/Banner"));});
+// const Banner = lazy(() => import("../components/Banner/Banner"));
+const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 5000)).then(() => import("../components/Banner/Banner"));});
 
 export default function Homepage(){
     const blogURL = "https://jsonserverdatagolpo.onrender.com/blogs"; 

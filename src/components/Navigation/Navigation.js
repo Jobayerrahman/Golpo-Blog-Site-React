@@ -8,6 +8,8 @@ import Navigationlang from './Navigationlang';
 import Navigationsearch from './Navigationsearch';
 import Navigationtheme from './Navigationtheme';
 import Navigationuser from './Navigationuser';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faSquarePlus  } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navigation(){
     return(
@@ -26,7 +28,10 @@ export default function Navigation(){
                                     <NavDropdown.Item><NavLink to="/Health" className='navigationLink-item'>Health</NavLink></NavDropdown.Item>
                                     <NavDropdown.Item><NavLink to="/Entertainment" className='navigationLink-item'>Entertainment</NavLink></NavDropdown.Item>
                                 </NavDropdown>
-                                <Nav.Link><NavLink className='navigation-link' to="/Quotes">Quotes</NavLink></Nav.Link>
+                                <Nav.Link><NavLink className='navigation-link' to="/Posts">
+                                    {/* <FontAwesomeIcon className='' icon={faSquarePlus} />     */}
+                                    Post
+                                </NavLink></Nav.Link>
                                 <Nav.Link><NavLink className='navigation-link' to="/About">About</NavLink></Nav.Link>
                                 <Nav.Link><NavLink className='navigation-link' to="/Contact">Contact</NavLink></Nav.Link>
                             </Nav>
