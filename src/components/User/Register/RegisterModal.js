@@ -38,42 +38,79 @@ function RegisterModal(props) {
         }
     }
 
+
     const handleSubmit = (e) =>{
         e.preventDefault();
         if(fullName !=='' && email !=='' && userName !=='' && password !=='' && confirmPassword !==''){
             if( password === confirmPassword ){
                 let registerObject = {fullName,email,userName,password,confirmPassword};
-                axios.post('https://jsonserverdatagolpo.onrender.com/general_users', registerObject)
-                  .then(function (response) {
-                    setFlashSuccessMessage(true);
-                    setMessage('Registation Successfully!');
+                axios.get('https://jsonserverdatagolpo.onrender.com/general_users')
+                .then((response) => {
+                    const userList = response.data;
+                    if(userList.length !== 0 ){
+                        if(!userList.find((user) => user.email === email)){
+                            submitUser(registerObject);
+                        }
+                        else{
+                            setFlashFailedMessage(true);
+                            setMessage(`Email already exist!`);
+                            setTimeout(()=>{
+                                setFlashFailedMessage(false);
+                            },3000);
+                            setEmail('');
+                        }
+                    }else{
+                        submitUser(registerObject);
+                    }
+                })
+                .catch((err) => { 
+                    setFlashFailedMessage(true);
+                    setMessage('Data fatching failed due to : ' + err.message) ;
                     setTimeout(()=>{
-                        setFlashSuccessMessage(false);
-                        window.location.reload();
-                    },3000)
-                  })
-                  .catch(function (error) {
-                    console.log(error);
-                  });
+                        setFlashFailedMessage(false);
+                    },5000);
+                }); 
+                
             }else{
                 setFlashFailedMessage(true);
                 setMessage(`Password and Confirm Password doesn't match`)
                 setTimeout(()=>{
                     setFlashFailedMessage(false);
                 },2000)
+                setPassword('');
+                setConfirmPassword('');
             }
         }else{
             setFlashFailedMessage(true);
-            setMessage('Field can not empty')
+            setMessage(`Input Field can't be empty`)
             setTimeout(()=>{
                 setFlashFailedMessage(false);
             },2000)
         }
-        setFullName('');
-        setEmail('');
-        setUserName('');
-        setPassword('');
-        setConfirmPassword('');
+    }
+
+    const submitUser = (userObject) =>{
+        axios.post('https://jsonserverdatagolpo.onrender.com/general_users', userObject)
+        .then(function (response) {
+            setFlashSuccessMessage(true);
+            setMessage('Registation Successfully!');
+            setTimeout(()=>{
+                setFlashSuccessMessage(false);
+                window.location.reload();
+            },3000);
+            setFullName('');
+            setEmail('');
+            setUserName('');
+            setPassword('');
+            setConfirmPassword('');
+        })
+        .catch(function (error) {
+            setFlashFailedMessage(true);
+            setMessage('Data fatching failed due to : ' + error.message) ;
+            setTimeout(()=>{
+                setFlashFailedMessage(false);
+            },5000);
+        });
     }
 
 

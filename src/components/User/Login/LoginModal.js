@@ -19,7 +19,7 @@ function LoginModal(props) {
     const handleInput = (e) =>{
         const inputValue = e.target.value;
          if(e.target.name === 'email'){
-            setEmail(inputValue);
+             setEmail(inputValue);
         }
         else if(e.target.name === 'password'){
             setPassword(inputValue);
@@ -32,51 +32,66 @@ function LoginModal(props) {
             const postObject = {email,password};
             axios.get('https://jsonserverdatagolpo.onrender.com/general_users')
             .then((response) => {
-                response.data.map((user)=>{
-                    if(user.email === postObject.email){
-                        if(user.password === postObject.password){
-                            sessionStorage.setItem('username',user.userName);
-                            sessionStorage.setItem('useremail',postObject.email);
-                            sessionStorage.setItem('fullname',user.fullName);
-                            sessionStorage.setItem('session',true);
-                            setFlashSuccessMessage(true);
-                            setMessage('Login successfull!');
-                            setTimeout(()=>{
-                                setFlashSuccessMessage(false);
-                                window.location.reload();
-                            },2000)
+                const userList = response.data;
+                if(userList.length !== 0 ){
+                    userList.map((user)=>{
+                        if(user.email === postObject.email){
+                            if(user.password === postObject.password){
+                                sessionStorage.setItem('username',user.userName);
+                                sessionStorage.setItem('useremail',postObject.email);
+                                sessionStorage.setItem('fullname',user.fullName);
+                                sessionStorage.setItem('session',true);
+                                setFlashSuccessMessage(true);
+                                setMessage('Login successfull! Please wait.');
+                                setTimeout(()=>{
+                                    setFlashSuccessMessage(false);
+                                    window.location.reload();
+                                },2000)
+                                setEmail('');
+                                setPassword('');
+                            }else{
+                                setFlashFailedMessage(true);
+                                setMessage("Password is wrong");
+                                setTimeout(()=>{
+                                    setFlashFailedMessage(false);
+                                },2000)
+                                setPassword('');
+                            }
                         }else{
                             setFlashFailedMessage(true);
-                            setMessage("Password is wrong");
+                            setMessage("Username is wrong");
                             setTimeout(()=>{
                                 setFlashFailedMessage(false);
                             },2000)
+                            setEmail('');
                         }
-                    }else{
-                        setFlashFailedMessage(true);
-                        setMessage("Username is wrong");
-                        setTimeout(()=>{
-                            setFlashFailedMessage(false);
-                        },2000)
-                    }
-                })
+                    })
+                }else{
+                    setFlashFailedMessage(true);
+                    setMessage(`User doesn't exist!`);
+                    setTimeout(()=>{
+                        setFlashFailedMessage(false);
+                    },3000);
+                    setEmail('');
+                    setPassword('');
+                }
             })
             .catch((err) => { 
                 setFlashFailedMessage(true);
-                setMessage('Login Failed due to :' + err.message) ;
+                setMessage('Login Failed due to : ' + err.message) ;
                 setTimeout(()=>{
                     setFlashFailedMessage(false);
-                },2000)
-            });
+                },5000);
+                setEmail('');
+                setPassword('');
+            }); 
         }else{
             setFlashFailedMessage(true);
-            setMessage('Field can not empty')
+            setMessage(`Input Field can't be empty`)
             setTimeout(()=>{
                 setFlashFailedMessage(false);
             },2000)
         }
-        setEmail('');
-        setPassword('');
     }
 
     return (
