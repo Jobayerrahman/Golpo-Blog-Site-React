@@ -16,6 +16,7 @@ export default function AppRouter(){
                 <Route exact path="/About" Component={Aboutpage}></Route>
                 <Route exact path="/Contact" Component={Contactpage}></Route>
                 <Route exact path="/Posts" Component={Postpage}></Route>
+                <Route exact path="/post/:id" Component={Blogpage}></Route>
             </Routes>
         </>
     );

@@ -3,7 +3,7 @@ import { useState,useEffect } from "react";
 import Category from "../Category/Category";
 import Socialmediaicon from "../Socialmedia/Socialmediaicon";
 
-export default function Banner({banner,bloglist}){
+export default function Banner({banner,blog}){
     const [displayX,setDisplayX] = useState("nodisplay"); 
     const [displayY,setDisplayY] = useState("nodisplay"); 
     const [title,setTitle] = useState(); 
@@ -30,8 +30,7 @@ export default function Banner({banner,bloglist}){
     }, [banner]);
     
     
-    const latestBlog     = bloglist[Object.keys(bloglist).length-1];
-    const blogDate       = latestBlog.date;
+    const blogDate       = blog.date;
     var parsedDate       = new Date(blogDate);
     const options        = {  day: 'numeric', year: 'numeric', month: 'long', day: 'numeric' };
     var finalDate        = parsedDate.toLocaleDateString("en-GB", options);
@@ -42,18 +41,18 @@ export default function Banner({banner,bloglist}){
             <div className='banner-poster'>
                 <img
                     className="banner-image"
-                    src={latestBlog.image}
+                    src={blog.image}
                     alt="Updating Blog" 
                 />
             </div>
             <div className='banner-content'>
-                <h2>{latestBlog.title}</h2>
+                <h2>{blog.title}</h2>
                 <div className='blog-info'>
-                    <Category category={latestBlog.category}/>
+                    <Category category={blog.category}/>
                     <p> - {finalDate} 12:00pm</p>
                 </div>
                     <div className={'mt-4 '+displayX} style={{ width: '100%' }}>
-                        <Link to={`/blog/${latestBlog.id}`}><a>Read more</a></Link>
+                        <Link to={`/blog/${blog.id}`}><a>Read more</a></Link>
                     </div>
                 <div className={displayY}>
                     <Socialmediaicon/>

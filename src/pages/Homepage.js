@@ -55,6 +55,8 @@ export default function Homepage(){
         </BlogContext.Provider>
     ));
 
+    const latestBlog     = blogs[Object.keys(blogs).length-1];
+
     return(
         <>
             {
@@ -62,7 +64,7 @@ export default function Homepage(){
                     <div>
                         <Container>
                             <Suspense fallback={<SkeletonBanner/>}>
-                                <Banner banner={homebanner} bloglist={blogs}/>
+                                <Banner banner={homebanner} blog={latestBlog}/>
                             </Suspense>
                             <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
                                 {bloglist}

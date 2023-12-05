@@ -16,7 +16,7 @@ function ViewPost({post}) {
                 />
             </div>
             <div className="postblog-content">
-                <Link className="postblog-heading"><h2>{post.topicTitle}</h2></Link>
+                <Link className="postblog-heading" to={`/post/${post.id}`}><h2>{post.topicTitle}</h2></Link>
                 <div className="postblog-info">
                     <h4>Blog Owner - {post.fullName}</h4>
                     <p> {category} - 22 May 2023 12:00pm</p>
