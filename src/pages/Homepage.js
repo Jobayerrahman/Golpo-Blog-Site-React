@@ -9,9 +9,10 @@ import Container from 'react-bootstrap/Container';
 import AdSpace from "../components/AdSpace/AdSpace";
 import Preloader from '../components/Preloader/Preloader';
 import BlogContext from "../components/Library/BlogContext";
-import BannerSkeleton from "../components/Skeletons/BannerSkeleton";
-
-const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 4000)).then(() => import("../components/Banner/Banner"));});
+import SkeletonBanner from "../components/Skeletons/SkeletonBanner";
+import SkeletonBlog from "../components/Skeletons/SkeletonBlog";
+const Banner = lazy(() => import("../components/Banner/Banner"));
+// const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 20000)).then(() => import("../components/Banner/Banner"));});
 
 export default function Homepage(){
     const blogURL = "https://jsonserverdatagolpo.onrender.com/blogs"; 
@@ -53,8 +54,6 @@ export default function Homepage(){
             <Blogcard/>
         </BlogContext.Provider>
     ));
-    
-    const latestBlog     = blogs[Object.keys(blogs).length-1];
 
     return(
         <>
@@ -62,8 +61,8 @@ export default function Homepage(){
                 isLoading ? (<Preloader/>) :(
                     <div>
                         <Container>
-                            <Suspense fallback={<BannerSkeleton/>}>
-                                <Banner banner={homebanner} blog={latestBlog}/>
+                            <Suspense fallback={<SkeletonBanner/>}>
+                                <Banner banner={homebanner} bloglist={blogs}/>
                             </Suspense>
                             <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
                                 {bloglist}

@@ -3,7 +3,7 @@ import { useState,useEffect } from "react";
 import Category from "../Category/Category";
 import Socialmediaicon from "../Socialmedia/Socialmediaicon";
 
-export default function Banner({banner,blog}){
+export default function Banner({banner,bloglist}){
     const [displayX,setDisplayX] = useState("nodisplay"); 
     const [displayY,setDisplayY] = useState("nodisplay"); 
     const [title,setTitle] = useState(); 
@@ -12,28 +12,29 @@ export default function Banner({banner,blog}){
     const [date,setDate] = useState(); 
     
     useEffect(() => {
-        setTitle(blog.title);
-        setDate(blog.date);
-        setImage(blog.image);
+        // setTitle(latestBlog.title);
+        // setDate(latestBlog.date);
+        // setImage(latestBlog.image);
         if(banner === "HomeBanner"){
             setDisplayX("display");
-            setCategory(blog.category);
+            // setCategory(latestBlog.category);
         }
         else if(banner === "CategoryBanner"){
             setDisplayX("display");
-            setCategory(blog.category);
+            // setCategory(latestBlog.category);
         }
         else if(banner === "BlogBanner"){
             setDisplayY("display");
-            setCategory(blog.category);
+            // setCategory(latestBlog.category);
         }
     }, [banner]);
     
     
-    // const blogDate = blog.date;
-    var parsedDate = new Date(date);
-    const options = {  day: 'numeric', year: 'numeric', month: 'long', day: 'numeric' };
-    var finalDate = parsedDate.toLocaleDateString("en-GB", options);
+    const latestBlog     = bloglist[Object.keys(bloglist).length-1];
+    const blogDate       = latestBlog.date;
+    var parsedDate       = new Date(blogDate);
+    const options        = {  day: 'numeric', year: 'numeric', month: 'long', day: 'numeric' };
+    var finalDate        = parsedDate.toLocaleDateString("en-GB", options);
 
 
     return(
@@ -41,18 +42,18 @@ export default function Banner({banner,blog}){
             <div className='banner-poster'>
                 <img
                     className="banner-image"
-                    src={image}
+                    src={latestBlog.image}
                     alt="Updating Blog" 
                 />
             </div>
             <div className='banner-content'>
-                <h2>{title}</h2>
+                <h2>{latestBlog.title}</h2>
                 <div className='blog-info'>
-                    <Category category={category}/>
+                    <Category category={latestBlog.category}/>
                     <p> - {finalDate} 12:00pm</p>
                 </div>
                     <div className={'mt-4 '+displayX} style={{ width: '100%' }}>
-                        <Link to={`/blog/${blog.id}`}><a>Read more</a></Link>
+                        <Link to={`/blog/${latestBlog.id}`}><a>Read more</a></Link>
                     </div>
                 <div className={displayY}>
                     <Socialmediaicon/>
