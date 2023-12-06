@@ -11,7 +11,7 @@ const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 50
 
 export default function Blogpage(){
     const blogURL                   = "https://jsonserverdatagolpo.onrender.com/blogs"; 
-    const { id }                    = useParams();
+    const { slug }                  = useParams();
     const blogbanner                = "BlogBanner";
     const [blogs, setBlogs]         = useState([]);
     const [isLoading, setIsLoading] = useState([true]);
@@ -33,7 +33,7 @@ export default function Blogpage(){
     }
 
 
-    const blog = blogs.find((blog)=> blog.id == id);
+    const blog = blogs.find((blog)=> blog.slug == slug);
 
 
    return(

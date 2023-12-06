@@ -1,27 +1,24 @@
 import React from 'react';
 import '../../../assets/css/post.css';
 import { Link } from "react-router-dom";
-import Category from '../../Category/Category';
-import bannerimage from "../../../assets/images/mocha.webp";
 
 function ViewPost({post}) {
-    const category  = "Default";
     return (
         <div className='postblog-wrapper'>
             <div className="postblog-poster">
                 <img 
                     className="postblog-image"
-                    src={bannerimage}
+                    src={post.image}
                     alt="Updating Blog" 
                 />
             </div>
             <div className="postblog-content">
-                <Link className="postblog-heading" to={`/post/${post.id}`}><h2>{post.topicTitle}</h2></Link>
+                <Link className="postblog-heading" to={`/post/${post.slug}`}><h2>{post.title}</h2></Link>
                 <div className="postblog-info">
                     <h4>Blog Owner - {post.fullName}</h4>
-                    <p> {category} - 22 May 2023 12:00pm</p>
+                    <p> {post.category} - {post.date} {post.time}</p>
                 </div>
-                <p>{post.textarea}</p>
+                <p>{post.describe}</p>
             </div>
         </div>
     );

@@ -28,9 +28,9 @@ export default function Navigation(){
                                     <NavDropdown.Item><NavLink to="/Health" className='navigationLink-item'>Health</NavLink></NavDropdown.Item>
                                     <NavDropdown.Item><NavLink to="/Entertainment" className='navigationLink-item'>Entertainment</NavLink></NavDropdown.Item>
                                 </NavDropdown>
-                                <Nav.Link><NavLink className='navigation-link' to="/Posts">
-                                    {/* <FontAwesomeIcon className='' icon={faSquarePlus} />     */}
-                                    Post
+                                <Nav.Link><NavLink className='navigation-link' to="/Timeline">
+                                    {/* <FontAwesomeIcon className='navigation-icon'icon={faSquarePlus} />     */}
+                                    Timeline
                                 </NavLink></Nav.Link>
                                 <Nav.Link><NavLink className='navigation-link' to="/About">About</NavLink></Nav.Link>
                                 <Nav.Link><NavLink className='navigation-link' to="/Contact">Contact</NavLink></Nav.Link>

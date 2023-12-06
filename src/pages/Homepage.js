@@ -50,7 +50,7 @@ export default function Homepage(){
 
     const bloglist      = blogs.slice(0, next).map(blog => (
         <BlogContext.Provider value={{ blogs: blog }}>
-                <Blogcard/>
+            <Blogcard/>
         </BlogContext.Provider>
     ));
 

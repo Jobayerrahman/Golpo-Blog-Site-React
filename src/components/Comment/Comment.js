@@ -34,7 +34,6 @@ export default function Comment({comments}){
     }
 
     // const commentlist     = comments.map((comment)=>{<SingleCommentComponent {...comment} />});
-    console.log(comments[0].commentator);
 
     return(
         <div className="comment-wrapper">

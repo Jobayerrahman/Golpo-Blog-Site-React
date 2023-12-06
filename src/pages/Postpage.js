@@ -1,24 +1,29 @@
 import axios from "axios";
-import { Container } from 'react-bootstrap';
-import React, { useEffect, useState } from 'react';
-import UserPost from '../components/Post/UserPost';
+import { useParams } from 'react-router';
+import Blog from "../components/Blog/Blog";
+import { Container } from "react-bootstrap";
+import Comment from "../components/Comment/Comment";
 import Preloader from '../components/Preloader/Preloader';
-import TypePost from '../components/Post/TypePost/TypePost';
-import CreatePost from '../components/Post/AddPost/CreatePost';
+import { useEffect, useState, lazy, Suspense } from "react";
+import Relatedblog from "../components/RelatedBlog/Relatedblog";
+import SkeletonBanner from "../components/Skeletons/SkeletonBanner";
+const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 5000)).then(() => import("../components/Banner/Banner"));});
 
-function Postpage() {
-    const postURL = "https://jsonserverdatagolpo.onrender.com/user_posts"; 
-    const [posts, setPosts] = useState([]);
+export default function Postpage(){
+    const postURL                   = "https://jsonserverdatagolpo.onrender.com/user_posts"; 
+    const { slug }                  = useParams();
+    const postbanner                = "PostBanner";
+    const [posts, setPosts]         = useState([]);
     const [isLoading, setIsLoading] = useState([true]);
+
 
     useEffect(() => getBlog(), []);
     useEffect(()=>{
         setTimeout(()=>{
             setIsLoading(false);
-        },1000)
+        },4000)
     })
 
-    
 
     const getBlog = () => {
         axios.get(postURL).then((response) => {
@@ -26,18 +31,25 @@ function Postpage() {
         setPosts(posts);
         });
     }
-    
-    return (
-        <>
-            {isLoading ? (<Preloader/>) :(
-                    <Container>
-                        <CreatePost/>
-                        <TypePost/>
-                        <UserPost posts={posts}/>
-                    </Container>
-                )}
-        </>
-    );
-}
 
-export default Postpage;
+
+    const post = posts.find((post)=> post.slug == slug);
+
+
+   return(
+    <>
+        {
+            isLoading ? <Preloader/> : (
+                <Container>
+                    <Suspense fallback={<SkeletonBanner/>}>
+                        <Banner blog={post} banner={postbanner}/>
+                    </Suspense>
+                    <Blog blog={post}/>
+                    <Comment comments={post.comments}/>
+                    <Relatedblog slug={post.id} cetagory={post.cetagory}/>
+                </Container>
+            )
+        }
+    </>
+   ) 
+}

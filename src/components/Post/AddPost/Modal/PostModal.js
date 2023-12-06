@@ -9,16 +9,17 @@ import FailedMessage from "../../../FlashMessage/FailedMessage";
 function PostModal(props) {
     const { showModal,  onCloseModal } = props;
     const showHiddenModal =  showModal ? "modal display-block": "modal display-none";
-
-    const [ fullName, setFullName ] = useState('');
-    const [ email, setEmail ] = useState('');
-    const [ topicTitle, setTopicTitle ] = useState('');
-    const [ files, setFiles ] = useState('');
-    const [ textarea, setTextarea ] = useState('');
-
+    
     const sessionStatus         = sessionStorage.getItem('session');
     const sessionEmail          = sessionStorage.getItem('useremail');
     const sessionFullname       = sessionStorage.getItem('fullname');
+
+    const [ fullName, setFullName ] = useState(sessionStatus ? sessionFullname:'');
+    const [ email, setEmail ] = useState(sessionStatus ? sessionEmail:'');
+    const [ title, setTitle ] = useState('');
+    const [ image, setImage ] = useState('');
+    const [ describe, setDescribe ] = useState('');
+
 
 
     const [ message, setMessage ] = useState('');
@@ -28,26 +29,26 @@ function PostModal(props) {
     const handleInput = (e) =>{
         const inputValue = e.target.value;
         if(e.target.name === 'fullName'){
-            sessionStatus? setFullName(sessionFullname) : setFullName(inputValue);
+            setFullName(inputValue);
         }
         else if(e.target.name === 'email'){
-            sessionStatus? setEmail(sessionEmail) : setEmail(inputValue);
+            setEmail(inputValue);
         }
-        else if(e.target.name === 'topicTitle'){
-            setTopicTitle(inputValue);
+        else if(e.target.name === 'title'){
+            setTitle(inputValue);
         }
-        else if(e.target.name === 'files'){
-            setFiles(inputValue);
+        else if(e.target.name === 'image'){
+            setImage(inputValue);
         }
-        else if(e.target.name === 'textarea'){
-            setTextarea(inputValue);
+        else if(e.target.name === 'describe'){
+            setDescribe(inputValue);
         }
     }
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        if(fullName !=='' && email !=='' && topicTitle !=='' && files !=='' && textarea !==''){
-            const postObject = {fullName,email,topicTitle,files,textarea};
+        if(fullName !=='' && email !=='' && title !=='' && image !=='' && describe !==''){
+            const postObject = {fullName,email,title,image,describe};
             axios.post('https://jsonserverdatagolpo.onrender.com/user_posts', postObject)
               .then(function () {
                 setFlashSuccessMessage(true);
@@ -72,9 +73,9 @@ function PostModal(props) {
         }
         setFullName('');
         setEmail('');
-        setTopicTitle('');
-        setFiles('');
-        setTextarea('');
+        setTitle('');
+        setImage('');
+        setDescribe('');
     }
 
     return (
@@ -108,17 +109,17 @@ function PostModal(props) {
 
                         <Form.Group className="mb-3" >
                             <Form.Label>Topic Title*</Form.Label>
-                            <input className="form-control" type="text" name="topicTitle" onChange={handleInput} value={topicTitle} placeholder="Enter your topic title"/>
+                            <input className="form-control" type="text" name="title" onChange={handleInput} value={title} placeholder="Enter your topic title"/>
                         </Form.Group>
 
                         <Form.Group className="mb-3">
                             <Form.Label>Necessary Picture</Form.Label>
-                            <input className="form-control" type="file" name="files" onChange={handleInput} value={files}/>
+                            <input className="form-control" type="file" name="image" onChange={handleInput} value={image}/>
                         </Form.Group>
 
                         <Form.Group className="mb-3">
                             <Form.Label>Write Your Blog or Article</Form.Label>
-                            <textarea className="form-control" name="textarea" onChange={handleInput} value={textarea} rows="10"/>
+                            <textarea className="form-control" name="describe" onChange={handleInput} value={describe} rows="10"/>
                         </Form.Group>
 
                         <a className='userlogin-btn' type="submit" onClick={handleSubmit}> Submit </a>

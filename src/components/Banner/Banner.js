@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import { useState,useEffect } from "react";
 import Category from "../Category/Category";
 import Socialmediaicon from "../Socialmedia/Socialmediaicon";
+import SkeletonBannerImage from "../Skeletons/SkeletonBannerImage";
 
 export default function Banner({banner, blog=""} ){
     const [displayX,setDisplayX]    = useState("nodisplay"); 
     const [displayY,setDisplayY]    = useState("nodisplay"); 
+    const [displayZ,setDisplayZ]    = useState("nodisplay"); 
     
     useEffect(() => {
         if(banner === "HomeBanner"){
@@ -16,6 +18,9 @@ export default function Banner({banner, blog=""} ){
         }
         else if(banner === "BlogBanner"){
             setDisplayY("display");
+        }
+        else if(banner === "PostBanner"){
+            setDisplayZ("display");
         }
     }, [banner]);
 
@@ -31,7 +36,7 @@ export default function Banner({banner, blog=""} ){
                 <img
                     className="banner-image"
                     src={blog.image}
-                    alt="Updating Blog" 
+                    alt={<SkeletonBannerImage/>} 
                 />
             </div>
             <div className='banner-content'>
@@ -45,6 +50,11 @@ export default function Banner({banner, blog=""} ){
                 </div>
                 <div className={displayY}>
                     <Socialmediaicon/>
+                </div>
+                <div className={displayZ}>
+                    <div className='blog-info'>
+                        <p>Owner Name - {blog.fullName}</p>
+                    </div>
                 </div>
             </div>
         </div>

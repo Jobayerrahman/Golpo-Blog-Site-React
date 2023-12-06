@@ -23,7 +23,7 @@ const Blogcard =({hoverEffect,onHover,onWithoutHover,isHover}) =>{
                 />
             </div>
             <div className="blog-content">
-                <Link className="blog-heading" to={`/blog/${blogs.id}`}><h2>{blogs.title}</h2></Link>
+                <Link className="blog-heading" to={`/blog/${blogs.slug}`}><h2>{blogs.title}</h2></Link>
                 <div className="blog-info">
                     <Category category={blogs.category}/> <p> - {finalDate} {blogs.time}</p>
                 </div>
