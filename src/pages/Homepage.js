@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState, lazy, Suspense } from "react";
-import BlogList from "../components/Blog/BlogList"
 import Categories from '../components/Category/Categories';
 import Blogcard from "../components/Blog/Blogcard";
 import YoutubeBanner from "../components/Banner/YoutubeBanner";
@@ -11,15 +10,15 @@ import Preloader from '../components/Preloader/Preloader';
 import BlogContext from "../components/Library/BlogContext";
 import SkeletonBanner from "../components/Skeletons/SkeletonBanner";
 import SkeletonBlog from "../components/Skeletons/SkeletonBlog";
-// const Banner = lazy(() => import("../components/Banner/Banner"));
-const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 5000)).then(() => import("../components/Banner/Banner"));});
+const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 15000)).then(() => import("../components/Banner/Banner"));});
+const BlogList = lazy(() => { return new Promise(resolve => setTimeout(resolve, 5000)).then(() => import("../components/Blog/BlogList"));});
 
 export default function Homepage(){
-    const blogURL = "https://jsonserverdatagolpo.onrender.com/blogs"; 
-    const homebanner    = "HomeBanner";
-    const blogPerRow = 6;
-    const [next, setNext] = useState(blogPerRow);
-    const [blogs, setBlogs] = useState([]);
+    const blogURL                   = "https://jsonserverdatagolpo.onrender.com/blogs"; 
+    const homebanner                = "HomeBanner";
+    const blogPerRow                = 6;
+    const [next, setNext]           = useState(blogPerRow);
+    const [blogs, setBlogs]         = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => getBlog(), []);
@@ -51,9 +50,14 @@ export default function Homepage(){
 
     const bloglist      = blogs.slice(0, next).map(blog => (
         <BlogContext.Provider value={{ blogs: blog }}>
-            <Blogcard/>
+                <Blogcard/>
         </BlogContext.Provider>
     ));
+
+    const blogSkeletonList = [...Array(6).keys()].map(i => {
+        return <SkeletonBlog key={i} />
+    })
+
 
     const latestBlog     = blogs[Object.keys(blogs).length-1];
 
@@ -66,9 +70,11 @@ export default function Homepage(){
                             <Suspense fallback={<SkeletonBanner/>}>
                                 <Banner banner={homebanner} blog={latestBlog}/>
                             </Suspense>
-                            <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
-                                {bloglist}
-                            </BlogList>
+                            <Suspense fallback={<div className="blog-list">{blogSkeletonList}</div>}>
+                                <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
+                                    {bloglist}
+                                </BlogList>
+                            </Suspense>
                             <AdSpace/>
                             <Categories/>
                             <AdSpace/>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DetailsModal(props) {
+function DetailsPost(props) {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function DetailsModal(props) {
     );
 }
 
-export default DetailsModal;
+export default DetailsPost;

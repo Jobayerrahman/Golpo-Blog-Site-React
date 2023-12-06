@@ -1,19 +1,20 @@
+import axios from "axios";
+import { useParams } from 'react-router';
 import Blog from "../components/Blog/Blog";
 import { Container } from "react-bootstrap";
 import Comment from "../components/Comment/Comment";
-import Banner from "../components/Banner/Banner";
-import Relatedblog from "../components/RelatedBlog/Relatedblog";
-import { useParams } from 'react-router';
-import { useEffect, useState } from "react";
-import axios from "axios";
 import Preloader from '../components/Preloader/Preloader';
+import { useEffect, useState, lazy, Suspense } from "react";
+import Relatedblog from "../components/RelatedBlog/Relatedblog";
+import SkeletonBanner from "../components/Skeletons/SkeletonBanner";
+const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 5000)).then(() => import("../components/Banner/Banner"));});
 
 export default function Blogpage(){
-    const blogURL = "https://jsonserverdatagolpo.onrender.com/blogs"; 
+    const blogURL                   = "https://jsonserverdatagolpo.onrender.com/blogs"; 
+    const { id }                    = useParams();
+    const blogbanner                = "BlogBanner";
+    const [blogs, setBlogs]         = useState([]);
     const [isLoading, setIsLoading] = useState([true]);
-    const [blogs, setBlogs] = useState([]);
-    const blogbanner = "BlogBanner";
-    const { id }   = useParams();
 
 
     useEffect(() => getBlog(), []);
@@ -40,7 +41,9 @@ export default function Blogpage(){
         {
             isLoading ? <Preloader/> : (
                 <Container>
-                    <Banner blog={blog} banner={blogbanner}/>
+                    <Suspense fallback={<SkeletonBanner/>}>
+                        <Banner blog={blog} banner={blogbanner}/>
+                    </Suspense>
                     <Blog blog={blog}/>
                     <Comment comments={blog.comments}/>
                     <Relatedblog slug={blog.id} cetagory={blog.cetagory}/>

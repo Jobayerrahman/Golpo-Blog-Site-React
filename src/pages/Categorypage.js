@@ -1,21 +1,22 @@
-import Banner from "../components/Banner/Banner";
+import axios from "axios";
+import { useParams } from 'react-router';
+import { Container } from "react-bootstrap";
 import BlogList from "../components/Blog/BlogList";
 import Blogcard from "../components/Blog/Blogcard";
 import Preloader from '../components/Preloader/Preloader';
 import BlogContext from "../components/Library/BlogContext";
-import { Container } from "react-bootstrap";
-import { useParams } from 'react-router';
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState, lazy, Suspense } from "react";
+import SkeletonBanner from "../components/Skeletons/SkeletonBanner";
+const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 5000)).then(() => import("../components/Banner/Banner"));});
 
 export default function Cetagorypage(){
-    const blogURL = "https://jsonserverdatagolpo.onrender.com/blogs"; 
-    const blogPerRow = 6;
-    const { category } = useParams();
-    const [next, setNext] = useState(blogPerRow);
-    const [blogs, setBlogs] = useState([]);
+    const blogURL                   = "https://jsonserverdatagolpo.onrender.com/blogs"; 
+    const blogPerRow                = 6;
+    const { category }              = useParams();
+    const [blogs, setBlogs]         = useState([]);
     const [isLoading, setIsLoading] = useState([true]);
-    const categorybanner    = "CategoryBanner"; 
+    const categorybanner            = "CategoryBanner"; 
+    const [next, setNext]           = useState(blogPerRow);
 
     useEffect(() => getBlog(), []);
     useEffect(()=>{
@@ -47,14 +48,17 @@ export default function Cetagorypage(){
             <Blogcard/>
         </BlogContext.Provider>
     ));
-    const latestBlog     = categories[Object.keys(bloglist).length-1];
+
+    const latestBlog  = categories[Object.keys(bloglist).length-1];
  
     return(
         <>
             {
                 isLoading ? (<Preloader/>) :(
                     <Container>
-                        <Banner banner={categorybanner} blog={latestBlog}/>
+                        <Suspense fallback={<SkeletonBanner/>}>
+                            <Banner banner={categorybanner} blog={latestBlog}/>
+                        </Suspense>
                         <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
                             {bloglist}
                         </BlogList>
