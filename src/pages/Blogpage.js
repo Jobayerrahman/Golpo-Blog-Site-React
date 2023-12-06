@@ -24,6 +24,7 @@ export default function Blogpage(){
         },4000)
     })
 
+    console.log(slug);
 
     const getBlog = () => {
         axios.get(blogURL).then((response) => {

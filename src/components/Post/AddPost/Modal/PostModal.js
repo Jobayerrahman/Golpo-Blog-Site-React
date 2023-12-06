@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
@@ -19,13 +19,16 @@ function PostModal(props) {
     const [ title, setTitle ] = useState('');
     const [ image, setImage ] = useState('');
     const [ describe, setDescribe ] = useState('');
-
-
-
+    
+    
+    
     const [ message, setMessage ] = useState('');
     const [ flashSuccessMessage, setFlashSuccessMessage ] = useState(false);
     const [ flashFailedMessage, setFlashFailedMessage ] = useState(false);
 
+    const postURL            = "https://jsonserverdatagolpo.onrender.com/user_posts";
+    const [posts, setPosts]  = useState([]);
+    
     const handleInput = (e) =>{
         const inputValue = e.target.value;
         if(e.target.name === 'fullName'){
@@ -38,17 +41,61 @@ function PostModal(props) {
             setTitle(inputValue);
         }
         else if(e.target.name === 'image'){
-            setImage(inputValue);
+            const inputFile  = e.target.files[0].name;
+            setImage("https://golpo-blog-site.vercel.app/assets/images/"+inputFile);
         }
         else if(e.target.name === 'describe'){
             setDescribe(inputValue);
         }
     }
 
+    useEffect(() => getBlog(), []);
+
+    const getBlog = () => {
+        axios.get(postURL).then((response) => {
+        const posts = response.data;
+        setPosts(posts);
+        });
+    }
+
+    let getDate = () =>{
+        var today = new Date();
+        var day = String(today.getDate()).padStart(2,'0');
+        var month = String(today.getMonth() + 1).padStart(2, '0');
+        var year = today.getFullYear();
+        today = year + '-' + month + '-' + day;
+        return today;
+    }
+
+    const getNextId = () =>{
+        const maxId  = posts.reduce((maxId, post)=> Math.max(post.id, maxId),-1);
+        const nextId = maxId + 1;
+        return nextId;
+    }
+
     const handleSubmit = (e) =>{
         e.preventDefault();
         if(fullName !=='' && email !=='' && title !=='' && image !=='' && describe !==''){
-            const postObject = {fullName,email,title,image,describe};
+            const whiteSpaceReplace = title.replace(/ /g, "%20");
+            const slug = whiteSpaceReplace + `%!${getNextId()}%`
+            const shortdescription = describe.substring(0, 200);
+            const date = getDate();
+            const time = new Date().toLocaleTimeString();
+
+            const postObject = {
+                id:getNextId(),
+                fullName,
+                email,
+                title,
+                slug,
+                image,
+                describe:shortdescription,
+                category:"Posted",
+                detail:describe,
+                date,
+                time,
+                comments:[]
+            };
             axios.post('https://jsonserverdatagolpo.onrender.com/user_posts', postObject)
               .then(function () {
                 setFlashSuccessMessage(true);
@@ -114,7 +161,7 @@ function PostModal(props) {
 
                         <Form.Group className="mb-3">
                             <Form.Label>Necessary Picture</Form.Label>
-                            <input className="form-control" type="file" name="image" onChange={handleInput} value={image}/>
+                            <input className="form-control" type="file" name="image" onChange={handleInput}/>
                         </Form.Group>
 
                         <Form.Group className="mb-3">

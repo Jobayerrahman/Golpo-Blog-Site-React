@@ -24,7 +24,6 @@ export default function Postpage(){
         },4000)
     })
 
-
     const getBlog = () => {
         axios.get(postURL).then((response) => {
         const posts = response.data;
@@ -34,7 +33,6 @@ export default function Postpage(){
 
 
     const post = posts.find((post)=> post.slug == slug);
-
 
    return(
     <>

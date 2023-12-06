@@ -10,16 +10,19 @@ import Preloader from '../components/Preloader/Preloader';
 import BlogContext from "../components/Library/BlogContext";
 import SkeletonBanner from "../components/Skeletons/SkeletonBanner";
 import SkeletonBlog from "../components/Skeletons/SkeletonBlog";
-const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 15000)).then(() => import("../components/Banner/Banner"));});
-const BlogList = lazy(() => { return new Promise(resolve => setTimeout(resolve, 5000)).then(() => import("../components/Blog/BlogList"));});
+import Banner from "../components/Banner/Banner";
+// const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 5000)).then(() => import("../components/Banner/Banner"));});
+const BlogList = lazy(() => { return new Promise(resolve => setTimeout(resolve, 3000)).then(() => import("../components/Blog/BlogList"));});
 
 export default function Homepage(){
-    const blogURL                   = "https://jsonserverdatagolpo.onrender.com/blogs"; 
-    const homebanner                = "HomeBanner";
-    const blogPerRow                = 6;
-    const [next, setNext]           = useState(blogPerRow);
-    const [blogs, setBlogs]         = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const blogURL                               = "https://jsonserverdatagolpo.onrender.com/blogs"; 
+    const homebanner                            = "HomeBanner";
+    const blogPerRow                            = 6;
+    const [next, setNext]                       = useState(blogPerRow);
+    const [blogs, setBlogs]                     = useState([]);
+    const [isLoading, setIsLoading]             = useState(true);
+    const [latestBlog, setLatestBlogs]          = useState({});
+    const [isBannerLoading, setIsBannerLoading] = useState(false);
 
     useEffect(() => getBlog(), []);
     useEffect(()=>{
@@ -27,25 +30,23 @@ export default function Homepage(){
              setIsLoading(false);
         },2500)
     })
-
-    const handleMoreBlog = () => {
-        setNext(next + blogPerRow);
-      };
-
-    const handleLessBlog = () => {
-        setNext(next - blogPerRow);
-      };
     
-
     const getBlog = () => {
         axios.get(blogURL).then((response) => {
-        const blogs = response.data;
-        const status = response.status;
-        if(status === 200 ){
-            setIsLoading(false);
-        }
-        setBlogs(blogs);
+            const blogs = response.data;
+            const status = response.status;
+            if(status === 200 ){
+                setIsLoading(false);
+            }
+            setBlogs(blogs);
+            getlatestBlog(blogs);
         });
+    }
+
+    const getlatestBlog = (blogs) =>{
+        const latest = blogs[Object.keys(blogs).length-1];
+        setLatestBlogs(latest);
+        setIsBannerLoading(true);
     }
 
     const bloglist      = blogs.slice(0, next).map(blog => (
@@ -58,8 +59,13 @@ export default function Homepage(){
         return <SkeletonBlog key={i} />
     })
 
+    const handleMoreBlog = () => {
+        setNext(next + blogPerRow);
+    };
 
-    const latestBlog     = blogs[Object.keys(blogs).length-1];
+    const handleLessBlog = () => {
+        setNext(next - blogPerRow);
+    };
 
     return(
         <>
@@ -67,9 +73,7 @@ export default function Homepage(){
                 isLoading ? (<Preloader/>) :(
                     <div>
                         <Container>
-                            <Suspense fallback={<SkeletonBanner/>}>
-                                <Banner banner={homebanner} blog={latestBlog}/>
-                            </Suspense>
+                            {isBannerLoading ? <Banner banner={homebanner} blog={latestBlog}/> : <SkeletonBanner/>  }
                             <Suspense fallback={<div className="blog-list">{blogSkeletonList}</div>}>
                                 <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
                                     {bloglist}
