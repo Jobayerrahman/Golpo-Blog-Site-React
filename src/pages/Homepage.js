@@ -64,10 +64,6 @@ export default function Homepage(){
         setNext(next + blogPerRow);
     };
 
-    const handleLessBlog = () => {
-        setNext(next - blogPerRow);
-    };
-
     return(
         <>
             {
@@ -76,7 +72,7 @@ export default function Homepage(){
                         <Container>
                             {isBannerLoading ? <Banner banner={homebanner} blog={latestBlog}/> : <SkeletonBanner/>  }
                             {isBannerLoading ? (
-                                <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
+                                <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog}>
                                     {bloglist}
                                 </BlogList>
                             ) : (

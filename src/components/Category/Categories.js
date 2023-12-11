@@ -9,7 +9,7 @@ export default function Catagories(){
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1
       };
@@ -17,68 +17,19 @@ export default function Catagories(){
     return(
         <div className="cetagory-wrapper">
             <div className="cetagory-card card-focus">
-                <div className="slider-item-wrapper">
-                    <div className="catagory-poster">
-                        <img
-                        className="catagory-image"
-                        src={histiryimage}
-                        alt="Updating Blog" 
-                        />
-                    </div>
-                    <div className="catagory-content">
-                        <span className="catagory catagory-History">History</span>
-                    </div>
-                </div>
+                <CategorySlider photo={natureimage} category="Nature"/>
             </div>
             <div className="cetagory-card">
-                <div className="catagory-poster">
-                    <img
-                    className="catagory-image"
-                    src={technology}
-                    alt="Updating Blog" 
-                    />
-                </div>
-                <div className="catagory-content">
-                    <span className="catagory catagory-Technology">Technology</span>
-                </div>
+                <CategorySlider photo={histiryimage} category="History"/>
             </div>
             <div className="cetagory-card">
-                <div className="catagory-poster">
-                    <img
-                    className="catagory-image"
-                    src={health}
-                    alt="Updating Blog" 
-                    />
-                </div>
-                <div className="catagory-content">
-                    <span className="catagory catagory-Health">Health</span>
-                </div>
+                <CategorySlider photo={technology} category="Technology"/>
             </div>
             <div className="cetagory-card">
-                <div className="catagory-poster">
-                    <img
-                    className="catagory-image"
-                    src={natureimage}
-                    alt="Updating Blog" 
-                    />
-                </div>
-                <div className="catagory-content">
-                    <span className="catagory catagory-Nature">Nature</span>
-                </div>
+                <CategorySlider photo={health} category="Health"/>
             </div>
             <div className="cetagory-card end-card">
-                <div className="slider-item-wrapper">
-                    <div className="catagory-poster">
-                        <img
-                        className="catagory-image"
-                        src={entertainment}
-                        alt="Updating Blog" 
-                        />
-                    </div>
-                    <div className="catagory-content">
-                        <span className="catagory catagory-Entertainment">Entertainment</span>
-                    </div>
-                </div>
+                <CategorySlider photo={entertainment} category="Entertainment"/>
             </div>
         </div>
     )

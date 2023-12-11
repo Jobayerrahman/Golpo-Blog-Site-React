@@ -175,12 +175,14 @@
 /************** React slick slider *************/
 .slick-slider{
     height: 100% !important;
+    border-radius: 10px;
 }
 .slick-slide div{
     height: 100% !important;
 }
 .slick-list{
     height: 100% !important;
+    border-radius: 10px;
 }
 .slick-track{
     height: 100% !important;
@@ -190,6 +192,15 @@
 }
 .slick-dots{
     bottom: 20px !important;
+}
+.slick-dots li button:before{
+    font-size: 8px;
+    color: #f1f1f1 !important;
+}
+.slick-dots li button::after{
+    font-size: 8px;
+    color: #f1f1f1 !important;
+    opacity: 0.75;
 }
 
 

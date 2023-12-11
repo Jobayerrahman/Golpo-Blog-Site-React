@@ -17,14 +17,14 @@ export default function BlogList({children,next,handleMoreBlog,handleLessBlog,bl
                             Load more
                         </Button>
                     )}
-                    {next > blogs.length && (
+                    {/* {next > blogs.length && (
                         <Button
                             className="mt-4"
                             onClick={handleLessBlog}
                         >
                             Load less
                         </Button>
-                    )}
+                    )} */}
                 </div>
             </div>
         </Container>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from "react-slick";
 
-function CategorySlider({photo}) {
+function CategorySlider({photo,category}) {
     const settings = {
         dots: true,
         infinite: true,
@@ -20,7 +20,10 @@ function CategorySlider({photo}) {
                     />
                 </div>
                 <div className="catagory-content">
-                    <span className="catagory catagory-Entertainment">Entertainment</span>
+                    <span className={`catagory catagory-${category}`}>{category}</span>
+                    <div className='catagory-context'>
+                        <h2>Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.</h2>
+                    </div>
                 </div>
             </div>
             <div className="slider-item-wrapper">
@@ -32,7 +35,10 @@ function CategorySlider({photo}) {
                     />
                 </div>
                 <div className="catagory-content">
-                    <span className="catagory catagory-Entertainment">Entertainment</span>
+                    <span className={`catagory catagory-${category}`}>{category}</span>
+                    <div className='catagory-context'>
+                        <h2>Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.</h2>
+                    </div>
                 </div>
             </div>
             <div className="slider-item-wrapper">
@@ -44,7 +50,10 @@ function CategorySlider({photo}) {
                     />
                 </div>
                 <div className="catagory-content">
-                    <span className="catagory catagory-Entertainment">Entertainment</span>
+                    <span className={`catagory catagory-${category}`}>{category}</span>
+                    <div className='catagory-context'>
+                        <h2>Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.</h2>
+                    </div>
                 </div>
             </div>
             <div className="slider-item-wrapper">
@@ -56,7 +65,10 @@ function CategorySlider({photo}) {
                     />
                 </div>
                 <div className="catagory-content">
-                    <span className="catagory catagory-Entertainment">Entertainment</span>
+                    <span className={`catagory catagory-${category}`}>{category}</span>
+                    <div className='catagory-context'>
+                        <h2>Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.</h2>
+                    </div>
                 </div>
             </div>
             <div className="slider-item-wrapper">
@@ -68,7 +80,10 @@ function CategorySlider({photo}) {
                     />
                 </div>
                 <div className="catagory-content">
-                    <span className="catagory catagory-Entertainment">Entertainment</span>
+                    <span className={`catagory catagory-${category}`}>{category}</span> 
+                    <div className='catagory-context'>
+                        <h2>Cyclone Mocha intensifies into 'extremely severe cyclonic storm': IMD.</h2>
+                    </div>
                 </div>
             </div>
         </Slider>
