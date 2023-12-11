@@ -7,16 +7,34 @@ function Blogcarousel({children}) {
     const options ={
         loop: true,
         nav:true,
+        margin:0,
+        center: true,
         responsive:{
-            0:{
+            390:{
                 items:1
             },
-            600:{
+            768:{
                 items:2
             },
-            1000:{
-                items:4
+            844:{
+                items:2
             },
+            900:{
+                items:2
+            },
+            1024:{
+                items:3
+            },
+            1225:{
+                items:3
+            },
+            1440:{
+                items:4,
+                margin:10
+            },
+            1600:{
+                items:5
+            }
         }
     }
     return (

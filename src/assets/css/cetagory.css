@@ -182,6 +182,11 @@
     .cetagory-wrapper{
         padding: 50px 20px;
     }
+    .cetagory-card{
+        margin: 5px 0px;
+        padding: 0px;
+        height: 12.8rem;
+    }
     .catagories{
         justify-content: flex-start;
         align-items: flex-start;
