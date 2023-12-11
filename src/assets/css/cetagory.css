@@ -124,11 +124,16 @@
 
 
 
+@media only screen and (max-width: 768px) {
+    .catagory{
+        font-size: 12px;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .cetagory-wrapper{
         padding: 50px 20px;
     }
-
     .catagories{
         justify-content: flex-start;
         align-items: flex-start;

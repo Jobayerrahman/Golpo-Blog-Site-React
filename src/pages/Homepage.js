@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState, lazy, Suspense } from "react";
+import { useEffect, useState } from "react";
 import Categories from '../components/Category/Categories';
 import Blogcard from "../components/Blog/Blogcard";
 import YoutubeBanner from "../components/Banner/YoutubeBanner";
@@ -11,8 +11,9 @@ import BlogContext from "../components/Library/BlogContext";
 import SkeletonBanner from "../components/Skeletons/SkeletonBanner";
 import SkeletonBlog from "../components/Skeletons/SkeletonBlog";
 import Banner from "../components/Banner/Banner";
+import BlogList from "../components/Blog/BlogList";
 // const Banner = lazy(() => { return new Promise(resolve => setTimeout(resolve, 5000)).then(() => import("../components/Banner/Banner"));});
-const BlogList = lazy(() => { return new Promise(resolve => setTimeout(resolve, 3000)).then(() => import("../components/Blog/BlogList"));});
+// const BlogList = lazy(() => { return new Promise(resolve => setTimeout(resolve, 3000)).then(() => import("../components/Blog/BlogList"));});
 
 export default function Homepage(){
     const blogURL                               = "https://jsonserverdatagolpo.onrender.com/blogs"; 
@@ -74,11 +75,18 @@ export default function Homepage(){
                     <div>
                         <Container>
                             {isBannerLoading ? <Banner banner={homebanner} blog={latestBlog}/> : <SkeletonBanner/>  }
-                            <Suspense fallback={<div className="blog-list">{blogSkeletonList}</div>}>
+                            {isBannerLoading ? (
                                 <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
                                     {bloglist}
                                 </BlogList>
-                            </Suspense>
+                            ) : (
+                                <div className="blog-list">{blogSkeletonList}</div>
+                            )  }
+                            {/* <Suspense fallback={<div className="blog-list">{blogSkeletonList}</div>}>
+                                <BlogList blogs={blogs} next={next} handleMoreBlog={handleMoreBlog} handleLessBlog={handleLessBlog}>
+                                    {bloglist}
+                                </BlogList>
+                            </Suspense> */}
                             <AdSpace/>
                             <Categories/>
                             <AdSpace/>

@@ -27,7 +27,7 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
 }
 .blog-content{
     padding: 20px;
@@ -36,6 +36,7 @@
 .blog-content .blog-shortline{
     font-size: 14px;
     font-weight: 400;
+    font-family: 'Lora', serif;
     color: var(--blog-details);
 }
 
@@ -65,13 +66,32 @@
         padding: 0;
     }
     .blog-card{
-        width: 20rem;
+        width: 18.5rem;
+        height: 27rem;
+    }
+    .blog-content{
+        padding: 10px;
     }
     .blog-details{
         padding: 40px 20px;
     }
     .blog-details-footer{
         align-items: center;
+    }
+    .blog-content .blog-shortline{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .blog-card{
+        width: 20rem;
+    }
+    .blog-content{
+        padding: 20px;
+    }
+    .blog-content .blog-shortline{
+        font-size: 14px;
     }
 }
 

@@ -46,7 +46,7 @@ export default function Banner({banner, blog=""} ){
                     <p> - {finalDate} 12:00pm</p>
                 </div>
                 <div className={'mt-4 '+displayX} style={{ width: '100%' }}>
-                    <Link to={`/blog/${blog.slug}`}><a>Read more</a></Link>
+                    <Link to={`/blog/${blog.slug}`}>Read more</Link>
                 </div>
                 <div className={displayY}>
                     <Socialmediaicon/>

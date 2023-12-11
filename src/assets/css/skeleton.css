@@ -33,7 +33,6 @@
     width: 60%;
     height: 450px;
     margin-bottom: 5px;
-    margin: 0px 10px;
     box-shadow: none;
 }
 
@@ -45,8 +44,8 @@
 }
 
 .skeleton.banner-tilte{
-    height: 6.75rem;
-    margin: 40px 10px;
+    height: 16.75rem;
+    margin: 0px 10px 30px 10px;
     border-radius: 7px;
 }
 
@@ -76,7 +75,7 @@
 }
 
 .skeleton.button {
-    height: 3.5rem;
+    height: 3rem;
     margin: 0px 10px;
     border-radius: 10px;
 }
@@ -114,7 +113,7 @@
 .skeleton.button, .skeleton.title-lg, .skeleton.title-md, .skeleton.title-sm{
     animation: shimmer 1.2s infinite linear;
     background-image: linear-gradient(
-        90deg, #e0e0e0 0px, #f0f2f3 200px, #e0e0e0 400px
+        90deg, #c7c7c7 0px, #f0f2f3 200px, #c7c7c7 400px
     );
     background-size: 1200px;
 }
@@ -131,9 +130,42 @@
     }
   }
 
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+    .skeleton.banner-image{
+        height: 350px;
+    }
+    .skeleton.banner-tilte{
+        height: 11.5rem;
+    }
+}
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
+    .skeleton.banner-image{
+        width: 100%;
+        height: 350px;
+        margin-bottom: 10px;
+    }
+    .flex-col{
+        width: 80% !important;
+        padding: 0px 10px;
+        margin-bottom: 10px;
+    }
+    .skeleton.banner-tilte{
+        height: 6.25rem;
+        margin: 20px 0px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .skeleton.banner-tilte{
+        height: 4.25rem;
+    }
+    .flex-col{
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 390px) {
     .skeleton.banner-image{
         width: 100%;
         height: 200px;

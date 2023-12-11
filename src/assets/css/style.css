@@ -35,59 +35,6 @@
     transition: background 0.5s;
 }
 
-
-.banner-wrapper{
-    display: flex;
-    justify-content: flex-start;
-    justify-items: center;
-    align-content: center;
-    padding: 100px 50px 50px;
-}
-.banner-image{
-    border-radius: 10px;
-    width: 700px;
-    height: 450px;
-    box-shadow: var(--box-shadow-md);
-}
-.banner-content{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0px 40px;
-}
-.banner-content h2{
-    font-size: 50px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: var(--text-color);
-    font-family: "Trirong", serif;
-}
-.banner-content span{
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: var(--text-color);
-    font-family: 'Lora', serif;
-}
-.banner-content a{
-    color: #fff !important;
-    background: var(--primary-color);
-    padding: 9px;
-    width: 200px !important;
-    text-align: center;
-    border-radius: 5px;
-    margin: 20px 0px;
-    text-decoration: none;
-    font-family: 'Lora', serif;
-}
-
-.banner-content a:hover{
-    background: var(--secondary-color);
-}
-
 /*********** YoutubeBanner ****************/
 .youtubeBanner-wrapper{
     display: flex;
@@ -127,6 +74,7 @@
     font-family: "Trirong", serif;
     color: var(--text-color);
 }
+
 .blog-heading h2{
     font-size: 20px;
     font-weight: 700;
@@ -256,14 +204,9 @@
 
 
 @media only screen and (max-width: 1024px) {
-    .banner-wrapper{
-        padding: 100px 0px 50px;
-        flex-direction: column;
+    .blog-heading h2{
+        font-size: 18px;
     }
-    .banner-content{
-        padding: 10px;
-    }
-
     .youtubeBanner-wrapper{
         flex-direction: column-reverse;
     }
@@ -279,21 +222,12 @@
 
 
 @media only screen and (max-width: 500px) {
-    .banner-wrapper{
-        padding: 100px 0px 50px;
-        flex-direction: column;
+    .blog-heading h2{
+        font-size: 20px;
     }
-    .banner-image{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    .banner-content{
-        padding: 10px;
-    }
-    .banner-content h2{
-        font-size: 40px;
-    }
+}
+
+@media only screen and (max-width: 500px) {
     .youtubeBanner-wrapper{
         padding: 50px 10px;
     }

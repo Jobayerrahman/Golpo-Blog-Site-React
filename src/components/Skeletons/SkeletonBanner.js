@@ -8,9 +8,9 @@ function SkeletonBanner(props) {
                 <Skeleton classes="banner-tilte width-100" /> 
                 <div className="flex-row" style={{marginBottom: "40px"}}>
                     <Skeleton classes="title-md width-30" /> 
-                    <Skeleton classes="title-md width-50" /> 
+                    <Skeleton classes="title-md width-40" /> 
                 </div>
-                <Skeleton classes="button width-60"/>
+                <Skeleton classes="button width-50"/>
             </div>
         </div>
     );
