@@ -130,6 +130,18 @@
     }
   }
 
+
+  @media only screen and (max-width: 1350px) {
+    .skeleton.banner-image{
+        width: 600px;
+        height: 380px;
+    }
+    .skeleton.banner-tilte{
+        height: 13rem;
+    }
+}
+
+
 @media only screen and (max-width: 1024px) {
     .skeleton.banner-image{
         height: 350px;
