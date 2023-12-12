@@ -61,6 +61,14 @@
 
 
 
+@media only screen and (max-width: 1330px) {
+    .blog-card{
+        width: 20.5rem;
+        height: 27.5rem;
+    }
+}
+
+
 @media only screen and (max-width: 1024px) {
     .blog-list{
         padding: 0;
@@ -95,9 +103,9 @@
     }
 }
 
+@media only screen and (max-width: 768px) {}
 
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 390px) {
     .blog-card{
         width: 22rem;
     }

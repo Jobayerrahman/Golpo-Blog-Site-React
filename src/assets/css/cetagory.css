@@ -127,6 +127,25 @@
     background: #1d734b;
 }
 
+@media only screen and (max-width: 1330px) {
+
+    .cetagory-card{
+        height: 12rem;
+    }
+
+    .card-focus{
+        width: 40rem;
+        height: 25rem;
+    }
+
+    .catagory-context h2{
+        font-size: 16.5px;
+    }
+
+}
+
+
+
 @media only screen and (max-width: 1024px) {
     .cetagory-wrapper{
         grid-template-columns: repeat(2, 1fr);

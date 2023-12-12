@@ -10,7 +10,7 @@ function Blogcarousel({children}) {
         margin:0,
         center: true,
         responsive:{
-            370:{
+            360:{
                 items:1
             },
             390:{
@@ -32,11 +32,14 @@ function Blogcarousel({children}) {
                 items:3
             },
             1440:{
-                items:4,
+                items:3,
                 margin:10
             },
             1600:{
                 items:5
+            },
+            2560:{
+                items:6
             }
         }
     }

@@ -27,6 +27,8 @@
     text-align: center;
     border-radius: 5px;
     margin: 10px 0px;
+    font-size: 14px;
+    font-weight: 500;
     font-family: 'Lora', serif;
     cursor: pointer;
 }
@@ -36,6 +38,16 @@
 }
 
 
+@media only screen and (max-width: 1330px) {
+    .youtubeBanner-wrapper h2{
+        font-size: 36px;
+    }
+    .youtube-Video{
+        width: 550px !important;
+        height: 300px !important;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .youtubeBanner-wrapper h2{
         font-size: 30px;
@@ -44,11 +56,10 @@
         width: 450px !important;
         height: 300px !important;
     }
-    .youtube-Video iframe{
-        border-radius: 10px;
-    }
 }
 
+
+@media only screen and (max-width: 768px) {}
 
 @media only screen and (max-width: 900px) {
     .youtubeBanner-wrapper{
@@ -62,9 +73,6 @@
 @media only screen and (max-width: 390px) {
     .youtubeBanner-wrapper{
         padding: 50px 10px;
-    }
-    .youtubeBanner-wrapper h2{
-        font-size: 40px;
     }
     .youtube-Video{
         height: 200px !important;
