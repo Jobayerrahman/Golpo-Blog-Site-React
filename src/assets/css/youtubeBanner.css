@@ -1,0 +1,75 @@
+/*********** YoutubeBanner ****************/
+.youtubeBanner-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    justify-items: center;
+    align-content: center;
+    padding: 50px;
+}
+
+.youtubeBanner-content{
+    padding: 60px 0px;
+}
+
+.youtubeBanner-wrapper h2{
+    font-size: 50px;
+    font-family: "Trirong", serif;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.youtubeBanner-wrapper a{
+    color: #fff !important;
+    background: #e4363f;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 0px;
+    font-family: 'Lora', serif;
+    cursor: pointer;
+}
+
+.youtube-Video iframe{
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .youtubeBanner-wrapper h2{
+        font-size: 30px;
+    }
+    .youtube-Video{
+        width: 450px !important;
+        height: 300px !important;
+    }
+    .youtube-Video iframe{
+        border-radius: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .youtubeBanner-wrapper{
+        flex-direction: column-reverse;
+    }
+    .youtube-Video{
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .youtubeBanner-wrapper{
+        padding: 50px 10px;
+    }
+    .youtubeBanner-wrapper h2{
+        font-size: 40px;
+    }
+    .youtube-Video{
+        height: 200px !important;
+    }
+    .youtube-Video iframe{
+        border-radius: 10px;
+    }
+}

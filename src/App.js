@@ -3,6 +3,7 @@ import '../src/assets/css/style.css';
 import '../src/assets/css/banner.css';
 import '../src/assets/css/cetagory.css';
 import '../src/assets/css/skeleton.css';
+import '../src/assets/css/youtubeBanner.css';
 import '../src/assets/css/bootstrap.min.css';
 
 import Golpo from "./components/Golpo";

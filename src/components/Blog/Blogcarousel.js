@@ -10,6 +10,9 @@ function Blogcarousel({children}) {
         margin:0,
         center: true,
         responsive:{
+            370:{
+                items:1
+            },
             390:{
                 items:1
             },
