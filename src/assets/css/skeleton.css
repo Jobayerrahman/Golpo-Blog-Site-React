@@ -131,7 +131,7 @@
   }
 
 
-  @media only screen and (max-width: 1350px) {
+  @media only screen and (max-width: 1400px) {
     .skeleton.banner-image{
         width: 600px;
         height: 380px;
