@@ -1,33 +1,47 @@
 @import "./style.css";
 /*********** About ************/
 .about-wrapper{
-    padding: 20px 0px;
+    padding: 30px 0px;
     display: flex;
+    width: 100%;
 }
 
 .about-introduction{
-    padding: 140px 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px;
 }
 
 .about-introduction h4{
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     color: #1d4b8f;
+    font-family: 'Lora', serif;
 }
 
 .about-introduction h2{
     margin-bottom: 30px;
-    font-size: 28px;
-    font-weight: 500;
-    letter-spacing: 2px;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     color: var(--text-color);
+    font-family: "Trirong", serif;
 }
 
 .about-introduction a{
-    padding: .5rem;
+    padding: 8px;
+    width: 160px !important;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
     background-color: transparent;
     border: 2px solid #1d4b8f;
-    border-radius: 5px;
+    color: var(--text-color) !important;
+    cursor: pointer;
+
 }
 
 .about-introduction a:hover{
@@ -36,6 +50,7 @@
 }
 
 .about-content{
+    width: 60%;
     padding: 60px 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -44,51 +59,49 @@
 
 .about-content h2{
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
+    font-family: "Trirong", serif;
     color: var(--text-color) !important;
 }
 
 .about-content p{
     font-size: 14px;
+    font-weight: 500;
+    font-family: 'Lora', serif;
     color: var(--text-color);
 }
 
-.about-mission{
+.about-content-scetion{
     padding: 20px;
     background-color: var(--card-background);
-    grid-row: 1/2;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+.about-mission{
+    grid-row: 1/2;
 }
 
 .about-vision{
-    padding: 20px;
-    background-color: var(--card-background);
     grid-row: 2/-1;
-    margin: 10px;
-    border-radius: 10px;
 }
 
 .about-story{
-    padding: 20px;
-    background-color: var(--card-background);
     grid-row: 1/2;
-    margin: 10px;
-    border-radius: 10px;
 }
 
 .about-work{
-    padding: 20px;
-    background-color: var(--card-background);
     grid-row: 2/-1;
-    margin: 10px;
-    border-radius: 10px;
+}
+
+.about-content-scetion:hover{
+    box-shadow: var(--box-shadow);
 }
 
 /************* Blog Counter **************/
 .blogcounter-wrapper{
-    padding: 50px 0px;
+    padding: 30px 0px;
     display: flex;
     justify-content: space-around;
 }
@@ -118,23 +131,60 @@
     color: #fff;
 }
 
+
+
 /************* Partner **************/
 .partner-wrapper{
-    padding: 150px;
+    padding: 100px;
     background-color: var(--background);
-    margin-top: 60px;
+    margin-top: 10px;
     color: var(--text-color);
 }
 
+.partner-image{
+    width: 350px;
+    height: 150px;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .about-wrapper{
+        padding: 20px 0px;
+    }
+    .about-content-scetion{
+        padding: 15px 10px;
+        margin: 10px;
+    }
+    .about-content h2{
+        font-size: 18px;
+    }
+    
+    .about-content p{
+        font-size: 14px;
+    }
+
+    .blogcounter-content{
+        height: 10rem;
+        margin: 10px;
+    }
+}
 
 @media only screen and (max-width: 1024px) {
     .about-wrapper{
-        flex-wrap: wrap;
-        padding: 100px 0px;
+        padding-top: 100px;
     }
     
     .about-introduction{
-        padding: 0px 40px;
+        padding: 40px;
+    }
+
+    .about-introduction h2{
+        font-size: 28px;
+        letter-spacing: 0.5px;
+    }
+
+    .about-content{
+        padding: 0px 20px;
     }
 
     .blogcounter-wrapper{
@@ -148,11 +198,34 @@
     }
 }
 
-
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
+    .about-wrapper{
+        flex-wrap: wrap;
+        padding-top: 70px;
+    }
+    .about-introduction{
+        padding: 20px;
+        width: 100%;
+    }
     .about-content{
-        padding: 60px 10px;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+
+@media only screen and (max-width: 390px) {
+    .about-introduction h2{
+        font-size: 24px;
+        letter-spacing: 0.5px;
+    }
+    .about-content{
+        width: 100%;
+        padding: 20px 10px;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
@@ -171,5 +244,9 @@
     
     .about-work{
         grid-row: 4;
+    }
+
+    .partner-wrapper{
+        padding: 50px 10px;
     }
 }

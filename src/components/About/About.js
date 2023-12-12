@@ -9,37 +9,29 @@ function About(props) {
                 <a>Discover more</a>
             </div>
             <div className='about-content'>
-                <div className='about-mission'>
+                <div className='about-content-scetion about-mission'>
                     <h2>Our Mission</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Ut porttitor leo vel nulla posuere accumsan. 
-                    Suspendisse sed tortor eget justo aliquam euismod. 
-                    Morbi ut massa et neque iaculis lacinia a eu est. 
-                    Etiam nec enim id mi maximus consequat sed ut tortor.</p> 
+                    Suspendisse sed tortor eget justo aliquam euismod.</p> 
                 </div>
-                <div className='about-vision'>
+                <div className='about-content-scetion about-vision'>
                     <h2>Our Vision</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Ut porttitor leo vel nulla posuere accumsan. 
-                    Suspendisse sed tortor eget justo aliquam euismod. 
-                    Morbi ut massa et neque iaculis lacinia a eu est. 
-                    Etiam nec enim id mi maximus consequat sed ut tortor.</p> 
+                    Suspendisse sed tortor eget justo aliquam euismod.</p> 
                 </div>
-                <div className='about-story'>
+                <div className='about-content-scetion about-story'>
                     <h2>Our Story</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Ut porttitor leo vel nulla posuere accumsan. 
-                    Suspendisse sed tortor eget justo aliquam euismod. 
-                    Morbi ut massa et neque iaculis lacinia a eu est. 
-                    Etiam nec enim id mi maximus consequat sed ut tortor.</p> 
+                    Suspendisse sed tortor eget justo aliquam euismod.</p> 
                 </div>
-                <div className='about-work'>
+                <div className='about-content-scetion about-work'>
                     <h2>Our Work</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Ut porttitor leo vel nulla posuere accumsan. 
-                    Suspendisse sed tortor eget justo aliquam euismod. 
-                    Morbi ut massa et neque iaculis lacinia a eu est. 
-                    Etiam nec enim id mi maximus consequat sed ut tortor.</p> 
+                    Suspendisse sed tortor eget justo aliquam euismod.</p> 
                 </div>
             </div>
         </div>

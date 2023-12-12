@@ -76,8 +76,8 @@ function PostModal(props) {
     const handleSubmit = (e) =>{
         e.preventDefault();
         if(fullName !=='' && email !=='' && title !=='' && image !=='' && describe !==''){
-            const whiteSpaceReplace = title.replace(/ /g, "%20");
-            const slug = whiteSpaceReplace + `%!${getNextId()}%`
+            const whiteSpaceReplace = title.replace(/ /g, "");
+            const slug = whiteSpaceReplace + `id:${getNextId()}`
             const shortdescription = describe.substring(0, 200);
             const date = getDate();
             const time = new Date().toLocaleTimeString();

@@ -43,27 +43,27 @@ function Query(props) {
                 <Form>
                     <Row>
                         <Col sm={12}>
-                            <Form.Group className="mb-3" controlId="formName">
+                            <Form.Group className="mb-2" controlId="formName">
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control type="text" value={name} onChange={handleInput} />
                             </Form.Group>
                         </Col>
                         <Col sm={12}>
-                            <Form.Group className="mb-3" controlId="formEmail">
+                            <Form.Group className="mb-2" controlId="formEmail">
                                 <Form.Label>Email address</Form.Label>
                                 <Form.Control type="email" value={email} onChange={handleInput} placeholder="" />
                             </Form.Group>
                         </Col>
                         <Col sm={12}>
-                            <Form.Group className="mb-3" controlId="formNumber">
+                            <Form.Group className="mb-2" controlId="formNumber">
                                 <Form.Label>Contact number</Form.Label>
-                                <Form.Control type="number" value={contact} onChange={handleInput} placeholder="" />
+                                <Form.Control type="text" value={contact} onChange={handleInput} placeholder="" />
                             </Form.Group>
                         </Col>
                     </Row>
                     <Row>
                         <Col sm={12}>
-                            <Form.Group className="mb-3" controlId="formTextarea">
+                            <Form.Group className="mb-2" controlId="formTextarea">
                                 <Form.Label>Message</Form.Label>
                                 <FloatingLabel controlId="floatingTextarea2">
                                     <Form.Control

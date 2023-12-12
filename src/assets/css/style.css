@@ -147,6 +147,11 @@
 }
 .slick-slide div{
     height: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items:center !important;
+    justify-content: center !important;
 }
 .slick-list{
     height: 100% !important;

@@ -1,29 +1,32 @@
 @import "./style.css";
 /************** Query *************/
 .query-wrapper{
-    padding: 100px 0px;
+    padding: 70px 0px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
 }
 
 .query-introduction{
-    padding: 70px 40px;
+    padding: 20px 40px;
     grid-column: 1/2;
 }
 
 .query-introduction h6{
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     color: #1d4b8f;
+    font-family: 'Lora', serif;
 }
 
 .query-introduction h2{
     margin-bottom: 30px;
     font-size: 42px;
-    font-weight: 500;
-    letter-spacing: 2px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     color: var(--text-color);
+    font-family: "Trirong", serif;
 }
 
 .query-introduction a{
@@ -45,6 +48,9 @@
 
 .query-form label{
     color: var(--text-color);
+    text-align: 14px;
+    font-weight: 600;
+    font-family: "Trirong", serif;
 }
 
 .query-form a{
@@ -65,7 +71,7 @@
 
 /************** Contact *************/
 .contact-wrapper{
-    padding: 100px 0px;
+    padding: 70px 0px;
     display: flex;
     justify-content: space-around;
 }
@@ -112,12 +118,14 @@
 }
 /************** Career *************/
 .career-wrapper{
-    padding: 100px 0px;
+    width: 100%;
+    padding: 70px 0px;
     display: flex;
     justify-content: space-around;
 }
 
 .career-introduction{
+    width: 50%;
     padding: 60px 80px;
 }
 
@@ -125,14 +133,16 @@
     font-size: 14px;
     font-weight: 600;
     color: #1d4b8f;
+    font-family: 'Lora', serif;
 }
 
 .career-introduction h2{
     margin-bottom: 40px;
     font-size: 42px;
-    font-weight: 500;
-    letter-spacing: 2px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     color: var(--text-color);
+    font-family: "Trirong", serif;
 }
 
 .career-introduction a{
@@ -148,7 +158,11 @@
 }
 
 .career-test{
+    width: 50%;
     padding: 20px 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .career-test .form-floating{
@@ -158,7 +172,9 @@
 .career-test h4{
     font-size: 16px;
     font-weight: 700;
+    margin-bottom: 10px;
     color: var(--text-color);
+    font-family: 'Lora', serif;
 }
 
 .career-textinput{
@@ -172,11 +188,11 @@
 .career-test a{
     color: #fff !important;
     background: #1d4b8f;
-    padding: 10px 30px;
-    width: 150px !important;
+    padding: 10px;
     text-align: center;
     border-radius: 5px;
     margin: 10px 0px;
+    width: 200px;
     text-decoration: none;
     cursor: pointer;
 }
@@ -185,6 +201,20 @@
     background: #2b5ca5;
 }
 
+
+@media only screen and (max-width: 1440px) {
+    .query-wrapper{
+        padding: 40px 0px;
+    }
+    .contact-wrapper{
+        padding: 40px 0px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .contact-content{
+        width: 16rem;
+    }
+}
 
 @media only screen and (max-width: 1024px) {
     .query-wrapper{
@@ -204,10 +234,42 @@
 
     .contact-wrapper{
         padding: 40px;
+        flex-wrap: wrap !important;
+    }
+
+    .contact-content{
+        margin: 10px;
+    }
+
+    .career-wrapper{
+        padding: 30px 40px;
+        margin-bottom: 20px;
+    }
+
+    .career-introduction{
+        padding: 30px 0px;
+    }
+
+    .career-test{
+        padding: 0px 20px;
+    }
+
+    .career-textinput{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .query-wrapper{
+        padding: 40px 0px;
+        height: 800px;
+    }
+    .contact-wrapper{
+        padding: 40px;
         flex-wrap: wrap;
         flex-direction: row;
     }
-
     .contact-content{
         margin: 10px;
     }
@@ -217,12 +279,13 @@
         flex-direction: column-reverse;
         margin-bottom: 20px;
     }
-
     .career-introduction{
+        width: 100%;
         padding: 30px 0px;
     }
 
     .career-test{
+        width: 100%;
         padding: 20px 0px;
     }
 
@@ -231,11 +294,18 @@
     }
 }
 
-
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 390px) {
+    .query-wrapper{
+        padding: 20px 0px;
+    }
+    .contact-wrapper{
+        padding: 50px 0px;
+    }
+    .contact-content{
+        width: 18rem;
+    }
     .career-wrapper{
-        padding: 30px 20px;
+        padding: 20px 20px;
     }
     .career-introduction h2{
         margin-bottom: 10px;

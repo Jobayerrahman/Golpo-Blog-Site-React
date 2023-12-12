@@ -32,8 +32,9 @@ export default function Navigation(){
                                     {/* <FontAwesomeIcon className='navigation-icon'icon={faSquarePlus} />     */}
                                     Timeline
                                 </NavLink></Nav.Link>
+                                <Nav.Link><NavLink className='navigation-link' to="/Books">Books</NavLink></Nav.Link>
                                 <Nav.Link><NavLink className='navigation-link' to="/About">About</NavLink></Nav.Link>
-                                <Nav.Link><NavLink className='navigation-link' to="/Contact">Contact</NavLink></Nav.Link>
+                                {/* <Nav.Link><NavLink className='navigation-link' to="/Contact">Contact</NavLink></Nav.Link> */}
                             </Nav>
                             <div className='navigation-icon-wrapper'>
                                 <Navigationtheme/>

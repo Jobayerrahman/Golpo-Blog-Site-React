@@ -190,4 +190,10 @@
     .footer-newsletter{
         padding: 40px 20px;
     }
+    .newsletter{
+        width: 292px;
+    }
+    .newsletter-input{
+        width: 200px;
+    }
 }
