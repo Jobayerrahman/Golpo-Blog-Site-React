@@ -42,8 +42,8 @@ function Replyinput({closeReply}) {
                 </Form.Group>
 
                 <div style={{ textAlign: 'right'}}>
-                    <Button variant="primary"   type="submit" style={{ width: '100px', marginRight: '10px'}} onClick={closeReply}>Send</Button>
-                    <Button variant="secondary" type="submit" style={{ width: '70px' }} onClick={closeReply} >cancel</Button>
+                    <Button onClick={closeReply}>Send</Button>
+                    <Button className='button-cencle' onClick={closeReply} >cancel</Button>
                 </div>
             </Form>
         </div>

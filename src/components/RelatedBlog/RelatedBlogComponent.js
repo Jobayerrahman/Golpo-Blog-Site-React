@@ -16,7 +16,7 @@ const RelatedBlogComponent = ({hoverEffect,onHover,onWithoutHover,isHover,id,ima
                 />
             </div>
             <div className="relatedblog-content">
-                <Link className="relatedblog-title" to={`/blog/${blogs.id}`}><h2>{blogs.title}</h2></Link>
+                <Link className="relatedblog-title" to={`/blog/${blogs.slug}`}><h2>{blogs.title}</h2></Link>
             </div>
         </div>
     )

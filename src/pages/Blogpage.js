@@ -33,6 +33,7 @@ export default function Blogpage(){
         });
     }
 
+    console.log(slug);
 
     const blog = blogs.find((blog)=> blog.slug == slug);
 
@@ -47,7 +48,7 @@ export default function Blogpage(){
                     </Suspense>
                     <Blog blog={blog}/>
                     <Comment comments={blog.comments}/>
-                    <Relatedblog slug={blog.id} cetagory={blog.cetagory}/>
+                    <Relatedblog slug={blog.id} category={blog.category}/>
                 </Container>
             )
         }

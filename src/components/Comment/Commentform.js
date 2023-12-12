@@ -53,7 +53,7 @@ export default function Commentform({name, textarea, input, comment}){
                 </Row>
                 <Row>
                     <Col>
-                        <Button onClick={comment} variant="primary" style={{ width: '200px' }}>
+                        <Button onClick={comment} style={{ width: '200px' }}>
                             <FontAwesomeIcon icon={faComment} style={{ marginRight: '20px' }} />
                             Send comment
                         </Button>

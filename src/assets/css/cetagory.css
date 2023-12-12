@@ -80,7 +80,7 @@
     font-weight: 500;
     font-family: 'Lora', serif;
     color: var(--text-color);
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 .catagories{
@@ -212,6 +212,19 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
+    
+    .catagory-menu-wrapper{
+        flex-wrap: wrap;
+    }
+    
+    .catagory-menu-wrapper h2{
+        margin-bottom: 10px;
+    }
+
+    .catagory{
+        margin-bottom: 10px;
+    }
+
     .catagory-context h2{
         font-size: 12px;
     }
