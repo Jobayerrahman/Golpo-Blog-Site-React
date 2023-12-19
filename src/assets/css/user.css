@@ -22,12 +22,13 @@
 
 .userLogin-modal{
     width: 30%;
-    height: 60%;
+    height: auto;
 }
 
 .userRegister-modal{
-    width: 40%;
-    height: 85%;
+    width: 30%;
+    height: 90%;
+    overflow: scroll;
 }
 
 .usermodal-header{
@@ -109,19 +110,45 @@
     color: #1d4b8f;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1440px) {
     .userLogin-modal{
-        width: 55%;
-        height: 50%;
+        width: 40%;
+        height: auto;
     }
 
     .userRegister-modal{
-        width: 65%;
-        height: 75%;
+        width: 40%;
+        height: 90%;
+        overflow: scroll;
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1024px) {
+    .userLogin-modal{
+        width: 45%;
+        height: auto;
+    }
+
+    .userRegister-modal{
+        width: 45%;
+        height: 90%;
+        overflow: scroll;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .userLogin-modal{
+        width: 60%;
+        height: auto;
+    }
+
+    .userRegister-modal{
+        width: 60%;
+        height: 90%;
+        overflow: scroll;
+    }
+}
+@media only screen and (max-width: 390px) {
     .userLogin-modal{
         width: 90%;
         height: 80%;
