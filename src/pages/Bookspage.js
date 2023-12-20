@@ -1,10 +1,14 @@
 import React from 'react';
-import Contact from '../components/Contact/Contact ';
+import '../assets/css/book.css';
+import { Container } from "react-bootstrap";
+import BookList from '../components/Book/BookList';
 
 function Bookspage(props) {
     return (
-        <div>
-            <Contact/>
+        <div className='bookPage-wrapper'>
+            <Container>
+                <BookList/>
+            </Container>
         </div>
     );
 }

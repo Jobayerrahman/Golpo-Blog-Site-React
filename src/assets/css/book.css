@@ -1,0 +1,126 @@
+.bookPage-wrapper{
+    padding: 60px 0px;   
+}
+
+.bookList-wrapper{
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book-wrapper{
+    background: var(--card-background);
+    border-radius: 5px;
+    width: 25.5rem;
+    height: 9.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: 10px;
+}
+
+.bookCover-wrapper{
+    width: 35%;
+    height: 100%;
+    margin-right: 5px 0px 0px 5px;
+}
+
+.bookCover-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.bookContent-wrapper{
+    width: 65%;
+    height: 100%;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bookContent-wrapper h2{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: "Trirong", serif;
+}
+
+.bookContent-wrapper h4{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: 'Lora', serif;
+}
+
+.bookContent-wrapper span{
+    font-size: 12px;
+    font-weight: 700;
+    color: #1d788f;
+    font-family: 'Lora', serif;
+}
+
+.bookContentButton-wrapper{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bookContentButton-wrapper a{
+    width: 120px !important;
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+    background-color: #1d4b8f;
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 5px;
+    font-family: "Trirong", serif;
+}
+
+.bookContentButton-wrapper a:hover{
+    background-color: #0559d8;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .bookPage-wrapper{
+        padding: 50px 0px;   
+    }
+    .book-wrapper{
+        width: 22rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .book-wrapper{
+        width: 24rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .bookPage-wrapper{
+        padding: 80px 0px;   
+    }
+    .book-wrapper{
+        width: 26.5rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .bookPage-wrapper{
+        padding: 50px 0px;   
+    }
+    .book-wrapper{
+        width: 20.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 390px) {}
