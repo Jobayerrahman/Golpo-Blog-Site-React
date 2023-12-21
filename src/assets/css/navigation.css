@@ -114,7 +114,7 @@
     position: relative;
 }
 
-.serach-wrapper{
+.search-wrapper{
     position: absolute;
     top: 100%;
     right: 0;
@@ -122,11 +122,66 @@
     padding: 20px 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     width: 18rem;
-    height: 8rem;
-    background: #fff;
+    height: auto;
+    background: var(--card-background);
     border-radius: 8px;
     animation: fade-in 1s;
 }
+
+.searchItems-wrapper{
+    padding: 10px;
+    height: 12.5rem;
+    overflow-x: hidden;
+    overflow-y: scroll;  
+}
+
+.search-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-items{
+    margin: 10px 0px;
+}
+
+.searchItems-wrapper::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+   
+.searchItems-wrapper::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.searchItems-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: darkgrey;
+    outline: none;
+}
+
+.searchItem-wrapper{
+    margin: 10px 0px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(247, 247, 247);
+}
+
+.blog-title{
+    text-decoration: none;
+    color: var(--text-color) !important;
+}
+
+.searchItem-wrapper h2{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Trirong", serif;
+}
+
+
+
+
+
 
 @keyframes fade-in {
   from {
@@ -137,7 +192,7 @@
   }
 }
 
-.serach-tag h4{
+.search-tag h4{
     font-size: 14px;
     font-weight: 500;
     margin-top: 15px;
@@ -323,7 +378,7 @@
         padding: 10px;
     }
     
-    .serach-wrapper{
+    .search-wrapper{
         left: 0;
     }
     .langdropdown-wrapper{
