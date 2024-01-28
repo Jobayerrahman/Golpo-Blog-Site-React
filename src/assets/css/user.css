@@ -10,7 +10,7 @@
   
 .usermodal-content{
     position: fixed;
-    background: #fff;
+    background: var(--background);
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -21,14 +21,29 @@
 }
 
 .userLogin-modal{
-    width: 30%;
+    width: 20%;
     height: auto;
 }
 
 .userRegister-modal{
-    width: 30%;
-    height: 90%;
-    overflow: scroll;
+    width: 20%;
+    height: 60%;
+    overflow-y: scroll;
+}
+
+.userRegister-modal::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+}
+
+.userRegister-modal::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.055);
+    border-radius: 10px;
+}
+
+.userRegister-modal::-webkit-scrollbar-thumb {
+    background-color: #585858;
+    border-radius: 10px;
 }
 
 .usermodal-header{
@@ -42,6 +57,7 @@
     font-weight: 700;
     font-family: "Trirong", serif;
     margin: 0;
+    color: var(--text-color);
 }
 
 .usermodal-body{
@@ -56,6 +72,10 @@
 .userLogin-form{
     margin-bottom: 20px;
     width: 100%;
+}
+
+.userLogin-form label{
+    color: var(--text-color);
 }
 
 .divider-line{
@@ -119,7 +139,7 @@
     .userRegister-modal{
         width: 40%;
         height: 90%;
-        overflow: scroll;
+        overflow-y: scroll;
     }
 }
 
@@ -132,7 +152,7 @@
     .userRegister-modal{
         width: 45%;
         height: 90%;
-        overflow: scroll;
+        overflow-y: scroll;
     }
 }
 
@@ -145,18 +165,18 @@
     .userRegister-modal{
         width: 60%;
         height: 90%;
-        overflow: scroll;
+        overflow-y: scroll;
     }
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 490px) {
     .userLogin-modal{
         width: 90%;
-        height: 80%;
+        height: auto;
     }
 
     .userRegister-modal{
         width: 90%;
-        height: 90%;
-        overflow: scroll;
+        height: 80%;
+        overflow-y: scroll;
     }
 }

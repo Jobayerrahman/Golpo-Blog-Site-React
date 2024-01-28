@@ -103,7 +103,11 @@
     }
 }
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .blog-list{
+        justify-content: center;
+    }
+}
 
 @media only screen and (max-width: 390px) {
     .blog-card{
