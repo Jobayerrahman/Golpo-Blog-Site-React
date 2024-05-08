@@ -24,16 +24,12 @@ export default function Blogpage(){
         },4000)
     })
 
-    console.log(slug);
-
     const getBlog = () => {
         axios.get(blogURL).then((response) => {
         const blogs = response.data;
         setBlogs(blogs);
         });
     }
-
-    console.log(slug);
 
     const blog = blogs.find((blog)=> blog.slug == slug);
 

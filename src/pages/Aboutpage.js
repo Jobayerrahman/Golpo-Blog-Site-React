@@ -17,7 +17,7 @@ function Aboutpage(props) {
             <Contact/>
             <Career/>
         </Container>
-        <Partner/>
+        {/* <Partner/> */}
         </>
     );
 }

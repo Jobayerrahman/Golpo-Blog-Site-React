@@ -5,7 +5,7 @@ function YoutubeBanner(props) {
     return (
         <div className='youtubeBanner-wrapper'>
             <div className='youtubeBanner-content'>
-                <h2>Follow us on <span>Youtube</span> for Visual content</h2>
+                <h2>Follow us on <span>Youtube</span> </h2>
                 <a>Subscribe Us</a>
             </div>
             <div className='youtubeBanner-Video'>

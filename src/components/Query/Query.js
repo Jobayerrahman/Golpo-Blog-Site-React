@@ -37,7 +37,10 @@ function Query(props) {
 
             <div className='query-introduction'>
                 <h6>Your Query</h6>
-                <h2>Put your any kind of query to Us</h2>
+                <h2>Put your query</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Ut porttitor leo vel nulla posuere accumsan. 
+                    Suspendisse sed tortor eget justo aliquam euismod.</p> 
             </div>
             <div className='query-form'>
                 <Form>
@@ -68,7 +71,7 @@ function Query(props) {
                                 <FloatingLabel controlId="floatingTextarea2">
                                     <Form.Control
                                     as="textarea"
-                                    style={{ height: '120px' }}
+                                    style={{ height: '120px'  }}
                                     value={textarea} 
                                     onChange={handleInput}
                                     />
@@ -78,7 +81,7 @@ function Query(props) {
                     </Row>
                     <Row>
                         <Col>
-                            <a type="submit" style={{ width: '200px' }}>
+                            <a type="submit" style={{ width: '200px'}}>
                                 Send Message
                             </a>
                         </Col>

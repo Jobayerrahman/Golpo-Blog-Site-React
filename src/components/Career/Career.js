@@ -13,6 +13,11 @@ function Career(props) {
     }
     return (
         <div className='career-wrapper'>
+            <div className='career-introduction'>
+                <h6>Golpo Career</h6>
+                <h2>Join with Us</h2>
+                {/* <a>Send Your CV</a> */}
+            </div>
             <div className='career-test'>
                 <h4>Tell Something About Yourself</h4>
                 <Form>
@@ -29,11 +34,6 @@ function Career(props) {
                     </Form.Group>
                 </Form>
                 <a>Send</a>
-            </div>
-            <div className='career-introduction'>
-                <h6>Golpo Career</h6>
-                <h2>Join with Us as Content writer and Researcher</h2>
-                {/* <a>Send Your CV</a> */}
             </div>
         </div>
     );

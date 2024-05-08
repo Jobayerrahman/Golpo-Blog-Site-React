@@ -59,7 +59,7 @@
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    margin: 10px 0px;
+    margin: 10px 0px !important;
     text-decoration: none;
     cursor: pointer;
 }
@@ -126,7 +126,7 @@
 
 .career-introduction{
     width: 50%;
-    padding: 60px 80px;
+    padding: 20px 40px;
 }
 
 .career-introduction h6{
@@ -159,7 +159,7 @@
 
 .career-test{
     width: 50%;
-    padding: 20px 100px;
+    padding: 20px 40px;
     display: flex;
     justify-content: center;
     flex-direction: column;
